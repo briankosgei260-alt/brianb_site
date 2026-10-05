@@ -1,565 +1,321 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brian Kipkemboi Kosgei | Software Engineer & Systems Specialist</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
-</head>
-<body class="bg-gray-950 text-gray-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
-
-  <!-- Navigation Bar -->
-  <nav class="sticky top-0 z-50 bg-gray-900/95 backdrop-blur border-b border-gray-800 px-6 py-4">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <a href="#" class="text-2xl font-black text-indigo-500 tracking-wider">BRIAN<span class="text-white">.DEV</span></a>
-      <div class="hidden lg:flex space-x-6 text-sm font-semibold text-gray-300">
-        <a href="#about" class="hover:text-indigo-400 transition">About Creator</a>
-        <a href="#solutions" class="hover:text-indigo-400 transition">IT Solutions</a>
-        <a href="#vscode-termux" class="hover:text-indigo-400 transition">VS Code & Termux</a>
-        <a href="#docs" class="hover:text-indigo-400 transition">Education & Docs</a>
-        <a href="#playground" class="hover:text-indigo-400 transition">Code Sandbox</a>
-        <a href="#tools" class="hover:text-indigo-400 transition">Dev Tools</a>
-        <a href="#cheatsheets" class="hover:text-indigo-400 transition">Cheatsheets</a>
-        <a href="#game" class="hover:text-indigo-400 transition">Minigame</a>
-        <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
-      </div>
-      <a href="https://wa.me/254759668580" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2.5 px-5 rounded-lg transition text-xs flex items-center gap-2 shadow-lg shadow-green-900/30">
-        <i class="fab fa-whatsapp text-sm"></i> Direct Contact
-      </a>
-    </div>
-  </nav>
-
-  <!-- Hero Header -->
-  <header class="max-w-7xl mx-auto px-6 py-20 flex flex-col lg:flex-row items-center justify-between gap-12">
-    <div class="lg:w-7/12 text-center lg:text-left">
-      <div class="inline-flex items-center gap-2 bg-indigo-950/80 text-indigo-400 text-xs font-bold px-3.5 py-1.5 rounded-full border border-indigo-800/60 mb-6">
-        <span class="w-2 h-2 rounded-full bg-indigo-400 animate-ping"></span>
-        Systems Engineer & Web Developer
-      </div>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-4">
-        Brian Kipkemboi Kosgei
-      </h1>
-      <p class="text-lg sm:text-xl text-indigo-400 font-semibold mb-6">
-        20 Years Old | Technical Specialist & Full-Stack Developer | Doha, Qatar
-      </p>
-      <p class="text-gray-400 text-base mb-8 leading-relaxed max-w-2xl">
-        Welcome to my interactive portfolio and developer hub. Explore structured technical documentation, system troubleshooting modules, code playgrounds, and online utilities.
-      </p>
-      <div class="flex flex-wrap justify-center lg:justify-start gap-4">
-        <a href="#about" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-7 rounded-xl transition shadow-lg shadow-indigo-900/40 flex items-center gap-2">
-          <i class="fas fa-user-circle"></i> View Profile & Resume
-        </a>
-        <a href="#docs" class="bg-gray-900 hover:bg-gray-800 text-gray-200 border border-gray-700 font-bold py-3.5 px-7 rounded-xl transition flex items-center gap-2">
-          <i class="fas fa-book-open"></i> Technical Docs
-        </a>
-      </div>
-    </div>
-
-    <!-- Creator Photo Frame -->
-    <div class="lg:w-5/12 flex justify-center">
-      <div class="relative group">
-        <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-600 rounded-3xl blur opacity-50 group-hover:opacity-75 transition duration-500"></div>
-        <div class="relative bg-gray-900 p-2 rounded-3xl border border-gray-800">
-          <img src="profile.jpg" alt="Brian Kipkemboi Kosgei" class="w-80 h-96 object-cover rounded-2xl shadow-2xl">
-          <div class="absolute bottom-6 left-6 right-6 bg-gray-900/90 backdrop-blur p-3 rounded-xl border border-gray-800 text-center">
-            <p class="text-xs font-bold text-white">Brian Kipkemboi Kosgei</p>
-            <p class="text-[10px] text-indigo-400">Technical Creator & Developer</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- CREATOR PROFILE & HIGHLIGHTS -->
-  <section id="about" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800/80">
-    <div class="text-center lg:text-left mb-12">
-      <span class="text-indigo-400 font-bold text-xs uppercase tracking-widest">Creator Overview</span>
-      <h2 class="text-3xl font-extrabold text-white mt-1">Creator Hub, Achievements & Education</h2>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-gray-900/80 p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition">
-        <div class="w-12 h-12 rounded-xl bg-indigo-950 flex items-center justify-center text-indigo-400 text-xl mb-6">
-          <i class="fas fa-user-tag"></i>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-4">Personal Details</h3>
-        <ul class="space-y-3 text-sm text-gray-300">
-          <li><strong class="text-gray-400">Full Name:</strong> Brian Kipkemboi Kosgei[cite: 1]</li>
-          <li><strong class="text-gray-400">Age:</strong> 20 Years Old (Oct 29, 2005)[cite: 1]</li>
-          <li><strong class="text-gray-400">Languages:</strong> English, Swahili, Kalenjin[cite: 1]</li>
-          <li><strong class="text-gray-400">Location:</strong> Doha, Qatar / Kenya[cite: 1, 2]</li>
-        </ul>
-      </div>
-
-      <div class="bg-gray-900/80 p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition">
-        <div class="w-12 h-12 rounded-xl bg-indigo-950 flex items-center justify-center text-indigo-400 text-xl mb-6">
-          <i class="fas fa-graduation-cap"></i>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-4">Education Background</h3>
-        <ul class="space-y-3 text-sm text-gray-300">
-          <li><strong class="text-gray-400">Secondary:</strong> High School Graduation Diploma[cite: 1]</li>
-          <li><strong class="text-gray-400">Technical Training:</strong> Systems & Engineering Foundations[cite: 1]</li>
-          <li><strong class="text-gray-400">Software:</strong> Full-Stack Web Development, Node.js, Python, Shell Automation[cite: 1]</li>
-        </ul>
-      </div>
-
-      <div class="bg-gray-900/80 p-8 rounded-2xl border border-gray-800 hover:border-gray-700 transition">
-        <div class="w-12 h-12 rounded-xl bg-indigo-950 flex items-center justify-center text-indigo-400 text-xl mb-6">
-          <i class="fas fa-trophy"></i>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-4">Milestones & Career</h3>
-        <ul class="space-y-3 text-sm text-gray-300">
-          <li><strong class="text-gray-400">Systems Admin:</strong> OS installations, driver optimization, registry configurations[cite: 1].</li>
-          <li><strong class="text-gray-400">IT Support:</strong> PC diagnostics, network resets, mobile terminals[cite: 1].</li>
-          <li><strong class="text-gray-400">Digital Creator:</strong> Creator of custom web solutions and educational tools[cite: 1].</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMPUTER SOLUTIONS -->
-  <section id="solutions" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800/80">
-    <div class="mb-12">
-      <span class="text-indigo-400 font-bold text-xs uppercase tracking-widest">Services & Capabilities</span>
-      <h2 class="text-3xl font-extrabold text-white mt-1">Computer Solutions & Technical Services</h2>
-    </div>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800 hover:border-indigo-500/50 transition">
-        <i class="fas fa-desktop text-indigo-400 text-3xl mb-4"></i>
-        <h3 class="text-lg font-bold text-white mb-2">OS & Driver Recovery</h3>
-        <p class="text-gray-400 text-sm">Clean Windows 10/11 installations, power registry updates, driver configurations for Dell Latitude and workstations.</p>
-      </div>
-
-      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800 hover:border-indigo-500/50 transition">
-        <i class="fas fa-code text-indigo-400 text-3xl mb-4"></i>
-        <h3 class="text-lg font-bold text-white mb-2">Web Application Dev</h3>
-        <p class="text-gray-400 text-sm">Responsive portfolio platforms, web interfaces, REST API integration, and mobile optimization.</p>
-      </div>
-
-      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800 hover:border-indigo-500/50 transition">
-        <i class="fas fa-terminal text-indigo-400 text-3xl mb-4"></i>
-        <h3 class="text-lg font-bold text-white mb-2">Linux Shell Scripting</h3>
-        <p class="text-gray-400 text-sm">Termux terminal configuration, automated bash scripts, and command-line server tools.</p>
-      </div>
-
-      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800 hover:border-indigo-500/50 transition">
-        <i class="fas fa-network-wired text-indigo-400 text-3xl mb-4"></i>
-        <h3 class="text-lg font-bold text-white mb-2">Network Diagnostics</h3>
-        <p class="text-gray-400 text-sm">IP routing troubleshooting, DNS flush procedures, network card resets, and security checks.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- VS CODE & TERMUX DOCUMENTATION -->
-  <section id="vscode-termux" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800/80">
-    <div class="mb-12">
-      <span class="text-indigo-400 font-bold text-xs uppercase tracking-widest">Environment Setup</span>
-      <h2 class="text-3xl font-extrabold text-white mt-1">Visual Studio Code & Termux Setup Guides</h2>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
-        <h3 class="text-xl font-bold text-blue-400 mb-4 flex items-center gap-2">
-          <i class="fas fa-code"></i> Visual Studio Code Optimization
-        </h3>
-        <ol class="list-decimal list-inside space-y-2 text-sm text-gray-300 mb-4">
-          <li>Install <strong>Live Server</strong> for real-time web previews.</li>
-          <li>Install <strong>Prettier</strong> for code formatting.</li>
-          <li>Install <strong>Tailwind CSS IntelliSense</strong> for inline styles.</li>
-        </ol>
-        <pre><code class="language-bash"># Essential VS Code Keyboard Shortcuts:
-# Ctrl + `         : Toggle Built-in Terminal
-# Shift + Alt + F  : Format Document
-# Ctrl + /         : Toggle Line Comment</code></pre>
-      </div>
-
-      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
-        <h3 class="text-xl font-bold text-green-400 mb-4 flex items-center gap-2">
-          <i class="fas fa-terminal"></i> Termux Mobile Terminal Setup
-        </h3>
-        <p class="text-xs text-gray-400 mb-3">Initialize a full Linux environment on Android devices:</p>
-        <pre><code class="language-bash"># Repository Update & Essential Packages
-pkg update && pkg upgrade -y
-pkg install git python nodejs clang -y
-
-# Storage Access Setup
-termux-setup-storage
-
-# Run Web Server Locally in Termux
-npx http-server</code></pre>
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION & DOCUMENTATION TABS -->
-  <section id="docs" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800/80">
-    <div class="mb-8">
-      <span class="text-indigo-400 font-bold text-xs uppercase tracking-widest">Developer Academy</span>
-      <h2 class="text-3xl font-extrabold text-white mt-1">Step-by-Step Technical Documentation</h2>
-    </div>
-
-    <div class="flex overflow-x-auto space-x-2 border-b border-gray-800 pb-3 mb-8">
-      <button onclick="openTab(event, 'doc-html')" class="tab-btn px-5 py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-bold whitespace-nowrap">HTML5 & CSS3</button>
-      <button onclick="openTab(event, 'doc-js')" class="tab-btn px-5 py-2.5 rounded-xl bg-gray-900 text-gray-300 hover:bg-gray-800 text-sm font-bold whitespace-nowrap">JavaScript Async</button>
-      <button onclick="openTab(event, 'doc-python')" class="tab-btn px-5 py-2.5 rounded-xl bg-gray-900 text-gray-300 hover:bg-gray-800 text-sm font-bold whitespace-nowrap">Python Scripting</button>
-      <button onclick="openTab(event, 'doc-linux')" class="tab-btn px-5 py-2.5 rounded-xl bg-gray-900 text-gray-300 hover:bg-gray-800 text-sm font-bold whitespace-nowrap">Linux & Shell</button>
-      <button onclick="openTab(event, 'doc-sysadmin')" class="tab-btn px-5 py-2.5 rounded-xl bg-gray-900 text-gray-300 hover:bg-gray-800 text-sm font-bold whitespace-nowrap">Windows Systems</button>
-    </div>
-
-    <div id="doc-html" class="tab-content space-y-6">
-      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
-        <h3 class="text-lg font-bold text-white mb-2">Modern HTML5 & Responsive CSS Structural Layout</h3>
-        <pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="UTF-8"&gt;
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-  &lt;title&gt;Developer Document&lt;/title&gt;
-  &lt;style&gt;
-    body { font-family: sans-serif; background: #0f172a; color: white; padding: 20px; }
-    .card { background: #1e293b; padding: 20px; border-radius: 12px; }
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;div class="card"&gt;
-    &lt;h1&gt;Developer Education Module&lt;/h1&gt;
-    &lt;p&gt;Structured web layout example.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-      </div>
-    </div>
-
-    <div id="doc-js" class="tab-content hidden space-y-6">
-      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
-        <h3 class="text-lg font-bold text-white mb-2">JavaScript Async API Data Fetching Pattern</h3>
-        <pre><code class="language-javascript">async function loadData(url) {
-  try {
-    const response = await fetch(url);
-    if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
-    const data = await response.json();
-    return data;
-  } catch (err) {
-    console.error("Execution failed:", err.message);
-  }
-}</code></pre>
-      </div>
-    </div>
-
-    <div id="doc-python" class="tab-content hidden space-y-6">
-      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
-        <h3 class="text-lg font-bold text-white mb-2">Python System Information Logger</h3>
-        <pre><code class="language-python">import platform
-import socket
-
-print(f"OS Platform : {platform.system()} {platform.release()}")
-print(f"Host Name   : {socket.gethostname()}")
-print(f"Local IP    : {socket.gethostbyname(socket.gethostname())}")</code></pre>
-      </div>
-    </div>
-
-    <div id="doc-linux" class="tab-content hidden space-y-6">
-      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
-        <h3 class="text-lg font-bold text-white mb-2">Linux Shell Script Executable Creation</h3>
-        <pre><code class="language-bash">#!/bin/bash
-echo "Initializing System Diagnostics..."
-df -h
-free -m</code></pre>
-      </div>
-    </div>
-
-    <div id="doc-sysadmin" class="tab-content hidden space-y-6">
-      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
-        <h3 class="text-lg font-bold text-white mb-2">Windows Network Flush & Power Plan Activation</h3>
-        <pre><code class="language-cmd">ipconfig /flushdns
-netsh winsock reset
-powercfg -duplicatescheme 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c</code></pre>
-      </div>
-    </div>
-  </section>
-
-  <!-- CODE PLAYGROUND -->
-  <section id="playground" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800/80">
-    <div class="mb-8">
-      <span class="text-indigo-400 font-bold text-xs uppercase tracking-widest">Live Execution</span>
-      <h2 class="text-3xl font-extrabold text-white mt-1">Interactive Code Sandbox</h2>
-    </div>
-
-    <div class="grid lg:grid-cols-2 gap-6">
-      <div class="flex flex-col">
-        <div class="flex justify-between items-center bg-gray-900 p-4 rounded-t-2xl border-t border-x border-gray-800">
-          <span class="text-xs font-bold uppercase tracking-wider text-gray-400">Editor</span>
-          <button onclick="runCode()" class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold py-2 px-5 rounded-lg transition flex items-center gap-1.5 shadow-md">
-            <i class="fas fa-play"></i> Run Code
-          </button>
-        </div>
-        <textarea id="code-input" class="w-full h-80 bg-gray-950 font-mono text-xs text-indigo-300 p-4 border border-gray-800 rounded-b-2xl focus:outline-none"><!DOCTYPE html>
-<html>
-<head>
-  <style>
-    body { background: #0f172a; color: white; font-family: sans-serif; text-align: center; padding: 30px; }
-    .btn { background: #6366f1; color: white; border: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; cursor: pointer; }
-    .btn:hover { background: #4f46e5; }
-  </style>
-</head>
-<body>
-  <h2>Brian's Sandbox Playground</h2>
-  <p>Test interactive web scripts live!</p>
-  <button class="btn" onclick="document.getElementById('msg').innerText = '🎉 Success! Script executed successfully.'">
-    Click Me
-  </button>
-  <p id="msg" style="color: #4ade80; margin-top: 15px; font-weight: bold;"></p>
-</body>
-</html></textarea>
-      </div>
-
-      <div class="flex flex-col">
-        <div class="bg-gray-900 p-4 rounded-t-2xl border-t border-x border-gray-800">
-          <span class="text-xs font-bold uppercase tracking-wider text-gray-400">Live Preview</span>
-        </div>
-        <iframe id="code-output" class="w-full h-80 bg-white rounded-b-2xl border border-gray-800"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- ONLINE UTILITIES -->
-  <section id="tools" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800/80">
-    <div class="mb-8">
-      <span class="text-indigo-400 font-bold text-xs uppercase tracking-widest">Developer Tools</span>
-      <h2 class="text-3xl font-extrabold text-white mt-1">Online Utilities</h2>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
-        <h3 class="text-lg font-bold text-white mb-3">JSON Formatter</h3>
-        <textarea id="json-input" placeholder="Paste unformatted JSON here..." class="w-full h-32 bg-gray-950 p-3 text-xs font-mono rounded-xl border border-gray-800 text-gray-200 mb-3 focus:outline-none"></textarea>
-        <button onclick="formatJSON()" class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold py-2.5 px-5 rounded-lg transition">Format JSON</button>
-      </div>
-
-      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
-        <h3 class="text-lg font-bold text-white mb-3">Base64 Encoder / Decoder</h3>
-        <textarea id="base64-input" placeholder="Type text to encode or decode..." class="w-full h-32 bg-gray-950 p-3 text-xs font-mono rounded-xl border border-gray-800 text-gray-200 mb-3 focus:outline-none"></textarea>
-        <div class="flex gap-3">
-          <button onclick="encodeBase64()" class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold py-2.5 px-5 rounded-lg transition">Encode</button>
-          <button onclick="decodeBase64()" class="bg-gray-800 hover:bg-gray-700 text-white text-xs font-bold py-2.5 px-5 rounded-lg transition">Decode</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CHEATSHEETS -->
-  <section id="cheatsheets" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800/80">
-    <div class="mb-8">
-      <span class="text-indigo-400 font-bold text-xs uppercase tracking-widest">Quick Reference</span>
-      <h2 class="text-3xl font-extrabold text-white mt-1">Command Cheatsheets</h2>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
-        <h3 class="text-md font-bold text-indigo-400 mb-3"><i class="fab fa-git-alt mr-2"></i> Git Quick Commands</h3>
-        <ul class="text-xs space-y-2 font-mono text-gray-300">
-          <li><span class="text-yellow-400">git init</span> : Initialize local repository</li>
-          <li><span class="text-yellow-400">git add .</span> : Stage changes</li>
-          <li><span class="text-yellow-400">git commit -m "msg"</span> : Save snapshot</li>
-          <li><span class="text-yellow-400">git push origin main</span> : Upload to GitHub</li>
-        </ul>
-      </div>
-
-      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
-        <h3 class="text-md font-bold text-indigo-400 mb-3"><i class="fas fa-terminal mr-2"></i> Linux & Termux</h3>
-        <ul class="text-xs space-y-2 font-mono text-gray-300">
-          <li><span class="text-green-400">ls -la</span> : List all details & hidden files</li>
-          <li><span class="text-green-400">chmod +x script.sh</span> : Enable script execution</li>
-          <li><span class="text-green-400">ps aux</span> : View active processes</li>
-          <li><span class="text-green-400">df -h</span> : Check storage space</li>
-        </ul>
-      </div>
-
-      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
-        <h3 class="text-md font-bold text-indigo-400 mb-3"><i class="fas fa-server mr-2"></i> HTTP Status Codes</h3>
-        <ul class="text-xs space-y-2 font-mono text-gray-300">
-          <li><span class="text-blue-400">200 OK</span> : Request successful</li>
-          <li><span class="text-blue-400">201 Created</span> : Entry created</li>
-          <li><span class="text-red-400">404 Not Found</span> : Resource missing</li>
-          <li><span class="text-red-400">500 Server Error</span> : Internal error</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- DEVELOPER MINIGAME -->
-  <section id="game" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800/80">
-    <div class="bg-gradient-to-r from-gray-900 via-indigo-950 to-gray-900 p-8 rounded-3xl border border-indigo-800/50 text-center">
-      <h2 class="text-3xl font-extrabold text-white mb-2 flex justify-center items-center gap-3">
-        <i class="fas fa-gamepad text-purple-400"></i> Interactive Minigame: "Bug Buster"
-      </h2>
-      <p class="text-gray-300 text-sm mb-6">Type the code snippet correctly before time runs out!</p>
-
-      <div class="max-w-xl mx-auto bg-gray-950 p-6 rounded-2xl border border-gray-800">
-        <div class="flex justify-between items-center mb-4 text-xs text-gray-400 font-mono">
-          <span>Score: <strong id="game-score" class="text-indigo-400 text-base">0</strong></span>
-          <span>Time: <strong id="game-time" class="text-red-400 text-base">15</strong>s</span>
-        </div>
-
-        <div id="target-snippet" class="bg-gray-900 p-3.5 rounded-xl font-mono text-sm text-yellow-300 mb-4 select-none">
-          git commit -m "fix bug"
-        </div>
-
-        <input type="text" id="game-input" placeholder="Type target snippet here..." oninput="checkGameSnippet()" class="w-full bg-gray-900 border border-gray-700 p-3 rounded-xl text-sm text-white font-mono focus:outline-none focus:border-indigo-500 mb-4">
-
-        <button onclick="startGame()" id="game-start-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-7 rounded-xl transition text-sm">
-          Start Game
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT & FOOTER -->
-  <footer id="contact" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800/80">
-    <div class="grid lg:grid-cols-2 gap-12">
-      <div>
-        <h2 class="text-3xl font-extrabold text-white mb-4">Direct Communication & Requests</h2>
-        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-          Contact me for IT diagnostics, web development projects, or general software support queries.
-        </p>
-
-        <div class="space-y-4 text-sm text-gray-300">
-          <p><i class="fas fa-envelope text-indigo-400 w-6"></i> Email: <a href="mailto:briankosgei260@gmail.com" class="text-indigo-400 hover:underline">briankosgei260@gmail.com</a></p>
-          <p><i class="fab fa-whatsapp text-green-400 w-6"></i> WhatsApp: <a href="https://wa.me/254759668580" target="_blank" class="text-green-400 hover:underline">+254 759 668 580</a></p>
-          <p><i class="fas fa-phone text-indigo-400 w-6"></i> Qatar Phone: <a href="tel:+9743119373" class="text-indigo-400 hover:underline">+974 3119 373</a>[cite: 1]</p>
-        </div>
-
-        <div class="flex gap-4 text-2xl text-gray-400 mt-8">
-          <a href="https://wa.me/254759668580" target="_blank" class="hover:text-green-400"><i class="fab fa-whatsapp"></i></a>
-          <a href="https://www.facebook.com/kosgeibriann" target="_blank" class="hover:text-blue-400"><i class="fab fa-facebook"></i></a>
-          <a href="https://www.tiktok.com/@..brian00?_r=1&_t=ZS-9AIVzfM0tHE" target="_blank" class="hover:text-pink-400"><i class="fab fa-tiktok"></i></a>
-          <a href="https://www.instagram.com/i29102005?stkn=MXQxbGRnemRkZ2k3OQ==" target="_blank" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
-          <a href="https://github.com/briankosgei260-alt" target="_blank" class="hover:text-white"><i class="fab fa-github"></i></a>
-        </div>
-      </div>
-
-      <form onsubmit="handleForm(event)" class="bg-gray-900 p-8 rounded-2xl border border-gray-800 space-y-4">
-        <h3 class="text-lg font-bold text-white mb-2">Send Message</h3>
-        <div>
-          <label class="block text-xs font-bold text-gray-400 mb-1">Your Name</label>
-          <input type="text" required id="form-name" class="w-full bg-gray-950 p-3 rounded-xl border border-gray-800 text-sm text-gray-200 focus:outline-none focus:border-indigo-500">
-        </div>
-        <div>
-          <label class="block text-xs font-bold text-gray-400 mb-1">Email or Phone</label>
-          <input type="text" required id="form-contact" class="w-full bg-gray-950 p-3 rounded-xl border border-gray-800 text-sm text-gray-200 focus:outline-none focus:border-indigo-500">
-        </div>
-        <div>
-          <label class="block text-xs font-bold text-gray-400 mb-1">Message</label>
-          <textarea required id="form-message" rows="3" class="w-full bg-gray-950 p-3 rounded-xl border border-gray-800 text-sm text-gray-200 focus:outline-none focus:border-indigo-500"></textarea>
-        </div>
-        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 rounded-xl transition text-sm shadow-lg shadow-indigo-900/30">
-          Submit Message
-        </button>
-      </form>
-    </div>
-
-    <div class="text-center border-t border-gray-900 pt-8 mt-12 text-gray-600 text-xs">
-      &copy; 2026 Brian Kipkemboi Kosgei[cite: 1]. All rights reserved.
-    </div>
-  </footer>
-
-  <!-- SCRIPT FUNCTIONS -->
-  <script>
-    function openTab(evt, tabId) {
-      document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
-      document.querySelectorAll('.tab-btn').forEach(b => {
-        b.classList.remove('bg-indigo-600', 'text-white');
-        b.classList.add('bg-gray-900', 'text-gray-300');
-      });
-      document.getElementById(tabId).classList.remove('hidden');
-      evt.currentTarget.classList.remove('bg-gray-900', 'text-gray-300');
-      evt.currentTarget.classList.add('bg-indigo-600', 'text-white');
-    }
-
-    function runCode() {
-      const input = document.getElementById('code-input').value;
-      const iframe = document.getElementById('code-output');
-      const doc = iframe.contentDocument || iframe.contentWindow.document;
-      doc.open();
-      doc.write(input);
-      doc.close();
-    }
-    window.onload = runCode;
-
-    function formatJSON() {
-      const input = document.getElementById('json-input');
-      try {
-        input.value = JSON.stringify(JSON.parse(input.value), null, 2);
-      } catch (e) {
-        alert("Invalid JSON format");
-      }
-    }
-
-    function encodeBase64() {
-      const input = document.getElementById('base64-input');
-      input.value = btoa(input.value);
-    }
-    function decodeBase64() {
-      const input = document.getElementById('base64-input');
-      try { input.value = atob(input.value); } catch (e) { alert("Invalid Base64 format"); }
-    }
-
-    function handleForm(e) {
-      e.preventDefault();
-      const name = document.getElementById('form-name').value;
-      const contact = document.getElementById('form-contact').value;
-      const msg = document.getElementById('form-message').value;
-      const text = `Hello Brian, my name is ${name} (${contact}). Message: ${msg}`;
-      window.open(`https://wa.me/254759668580?text=${encodeURIComponent(text)}`, '_blank');
-    }
-
-    const snippets = [
-      'git commit -m "fix bug"',
-      'npm start',
-      'python script.py',
-      'const sum = (a, b) => a + b;',
-      'chmod +x init.sh'
-    ];
-    let score = 0, timer = 15, interval = null, currentSnippet = '';
-
-    function startGame() {
-      score = 0; timer = 15;
-      document.getElementById('game-score').innerText = score;
-      document.getElementById('game-time').innerText = timer;
-      document.getElementById('game-input').value = '';
-      document.getElementById('game-input').focus();
-      nextSnippet();
-
-      clearInterval(interval);
-      interval = setInterval(() => {
-        timer--;
-        document.getElementById('game-time').innerText = timer;
-        if (timer <= 0) {
-          clearInterval(interval);
-          alert(`Game Over! Final Score: ${score}`);
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevHub Pro - Issue Tracker & Feedback Portal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { 50: '#f0f9ff', 500: '#06b6d4', 600: '#0891b2', 700: '#0e7490' }
+                    }
+                }
+            }
         }
-      }, 1000);
-    }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen font-sans antialiased transition-colors duration-200">
 
-    function nextSnippet() {
-      currentSnippet = snippets[Math.floor(Math.random() * snippets.length)];
-      document.getElementById('target-snippet').innerText = currentSnippet;
-      document.getElementById('game-input').value = '';
-    }
+    <!-- Header Navigation -->
+    <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-cyan-500 text-slate-950 p-2 rounded-lg font-bold text-xl">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <span class="font-extrabold text-xl tracking-tight text-white">DevHub<span class="text-cyan-400">Pro</span></span>
+            </div>
 
-    function checkGameSnippet() {
-      if (document.getElementById('game-input').value === currentSnippet) {
-        score += 10; timer += 3;
-        document.getElementById('game-score').innerText = score;
-        document.getElementById('game-time').innerText = timer;
-        nextSnippet();
-      }
-    }
-  </script>
+            <!-- Global Search Bar -->
+            <div class="flex-1 max-w-md mx-8">
+                <div class="relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-slate-400"></i>
+                    <input type="text" id="searchInput" placeholder="Search issues, dev notes, or polls..." 
+                           class="w-full bg-slate-800 text-slate-200 pl-10 pr-4 py-2 rounded-xl text-sm border border-slate-700 focus:outline-none focus:border-cyan-500">
+                </div>
+            </div>
+
+            <button id="newIssueBtn" onclick="openModal()" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold px-4 py-2 rounded-xl text-sm transition flex items-center gap-2">
+                <i class="fa-solid fa-plus"></i> Submit Issue
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Left Column: Issues & Features Feed (2 Cols) -->
+        <section class="lg:col-span-2 space-x-0 space-y-6">
+            <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+                <h2 class="text-xl font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-list-check text-cyan-400"></i> Reported Issues & Requests
+                </h2>
+                <div class="flex gap-2">
+                    <button onclick="filterIssues('all')" class="text-xs px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300">All</button>
+                    <button onclick="filterIssues('Open')" class="text-xs px-3 py-1.5 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20">Open</button>
+                    <button onclick="filterIssues('Resolved')" class="text-xs px-3 py-1.5 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Resolved</button>
+                </div>
+            </div>
+
+            <!-- Issues List -->
+            <div id="issuesContainer" class="space-y-4">
+                <!-- Issues rendered dynamic via JS -->
+            </div>
+        </section>
+
+        <!-- Right Column: Community Polls & Developer Updates (1 Col) -->
+        <aside class="space-y-6">
+            
+            <!-- Active Poll Card -->
+            <div class="bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 backdrop-blur">
+                <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-square-poll-vertical text-cyan-400"></i> Feature Poll
+                </h3>
+                <p id="pollQuestion" class="text-sm text-slate-300 mb-4">Which feature should we prioritize for the next release?</p>
+                <div id="pollOptions" class="space-y-3">
+                    <!-- Poll options rendered dynamic via JS -->
+                </div>
+            </div>
+
+            <!-- Developer Release Notes Card -->
+            <div class="bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 backdrop-blur">
+                <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-clipboard-list text-cyan-400"></i> Developer Notes
+                </h3>
+                <div class="space-y-4 text-xs text-slate-300">
+                    <div class="border-l-2 border-cyan-500 pl-3 py-1">
+                        <span class="text-cyan-400 font-mono font-semibold">v1.2.0 Patch Notes</span>
+                        <p class="mt-1">Added image attachment preview, instant poll voting, status toggle for developers, and real-time search filter.</p>
+                    </div>
+                    <div class="border-l-2 border-slate-600 pl-3 py-1">
+                        <span class="text-slate-400 font-mono font-semibold">v1.1.0 Roadmap</span>
+                        <p class="mt-1">Database integration and multi-user authentication coming soon.</p>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+    </main>
+
+    <!-- Create Issue Modal -->
+    <div id="issueModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50">
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-lg w-full p-6 shadow-2xl relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <h3 class="text-xl font-bold text-white mb-4">Report an Issue or Request</h3>
+            
+            <form id="issueForm" onsubmit="handleIssueSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">Title</label>
+                    <input type="text" id="issueTitle" required placeholder="e.g. Navigation menu not responding on mobile" 
+                           class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-100 focus:outline-none focus:border-cyan-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">Description</label>
+                    <textarea id="issueDesc" rows="3" required placeholder="Describe what happened or what feature you need..." 
+                              class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-100 focus:outline-none focus:border-cyan-500"></textarea>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">Attach Picture URL</label>
+                    <input type="url" id="issueImage" placeholder="https://images.unsplash.com/photo-..." 
+                           class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-100 focus:outline-none focus:border-cyan-500">
+                </div>
+                <div class="flex justify-end gap-3 pt-2">
+                    <button type="button" onclick="closeModal()" class="px-4 py-2 rounded-xl text-sm font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700">Cancel</button>
+                    <button type="submit" class="px-4 py-2 rounded-xl text-sm font-semibold bg-cyan-500 text-slate-950 hover:bg-cyan-400">Publish Issue</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Sample State Management
+        let issues = [
+            {
+                id: 1,
+                title: "Dark mode toggle fails on safari browsers",
+                description: "When toggling to dark mode, the navbar remains white on Safari mobile.",
+                image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&auto=format&fit=crop&q=60",
+                status: "Open",
+                devNote: "Investigating WebKit CSS rules. Fix scheduled for v1.2.1.",
+                upvotes: 14,
+                createdAt: "2 hours ago"
+            },
+            {
+                id: 2,
+                title: "Add PDF export feature for analytics reports",
+                description: "Users want to download their monthly metrics as a downloadable PDF file.",
+                image: "",
+                status: "Resolved",
+                devNote: "Implemented using jsPDF library in update v1.1.8.",
+                upvotes: 32,
+                createdAt: "1 day ago"
+            }
+        ];
+
+        let poll = {
+            question: "Which major feature should we build next?",
+            totalVotes: 45,
+            options: [
+                { id: 1, text: "Real-time Chat Support", votes: 20 },
+                { id: 2, text: "GraphQL API Access", votes: 15 },
+                { id: 3, text: "Custom Webhook Integrations", votes: 10 }
+            ]
+        };
+
+        // Render Issues Feed
+        function renderIssues(filter = 'all', query = '') {
+            const container = document.getElementById('issuesContainer');
+            container.innerHTML = '';
+
+            const filtered = issues.filter(item => {
+                const matchesFilter = filter === 'all' || item.status === filter;
+                const matchesSearch = item.title.toLowerCase().includes(query.toLowerCase()) || 
+                                      item.description.toLowerCase().includes(query.toLowerCase());
+                return matchesFilter && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = `<div class="p-8 text-center text-slate-500 bg-slate-800/30 rounded-2xl">No issues or requests found.</div>`;
+                return;
+            }
+
+            filtered.forEach(issue => {
+                const isResolved = issue.status === 'Resolved';
+                const statusBadge = isResolved 
+                    ? `<span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2.5 py-1 rounded-lg text-xs font-medium"><i class="fa-solid fa-circle-check"></i> Issue Solved</span>`
+                    : `<span class="bg-amber-500/10 text-amber-400 border border-amber-500/20 px-2.5 py-1 rounded-lg text-xs font-medium"><i class="fa-solid fa-spinner animate-spin"></i> Open</span>`;
+
+                container.innerHTML += `
+                    <div class="bg-slate-800/40 border border-slate-700/50 rounded-2xl p-5 hover:border-slate-600 transition">
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <div class="flex items-center gap-3 mb-2">
+                                    ${statusBadge}
+                                    <span class="text-xs text-slate-400"><i class="fa-regular fa-clock"></i> ${issue.createdAt}</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-white mb-2">${escapeHtml(issue.title)}</h3>
+                                <p class="text-sm text-slate-300 mb-4">${escapeHtml(issue.description)}</p>
+                            </div>
+                            <button onclick="upvoteIssue(${issue.id})" class="flex flex-col items-center justify-center bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl px-3 py-2 text-slate-300">
+                                <i class="fa-solid fa-caret-up text-cyan-400 text-lg"></i>
+                                <span class="text-xs font-bold">${issue.upvotes}</span>
+                            </button>
+                        </div>
+
+                        ${issue.image ? `<div class="mb-4 rounded-xl overflow-hidden border border-slate-700 max-h-60"><img src="${issue.image}" class="w-full object-cover" alt="Issue Screenshot"></div>` : ''}
+
+                        <!-- Developer Notes Section -->
+                        <div class="bg-slate-900/60 rounded-xl p-3 border border-slate-800 flex items-start gap-3">
+                            <i class="fa-solid fa-user-gear text-cyan-400 mt-1"></i>
+                            <div class="text-xs">
+                                <span class="font-bold text-slate-200">Developer Note:</span>
+                                <p class="text-slate-400 mt-0.5">${escapeHtml(issue.devNote || 'No developer comments added yet.')}</p>
+                            </div>
+                        </div>
+
+                        <!-- Quick Actions -->
+                        <div class="mt-4 pt-3 border-t border-slate-800/80 flex justify-end gap-2">
+                            <button onclick="toggleIssueStatus(${issue.id})" class="text-xs text-slate-400 hover:text-cyan-400 font-medium">
+                                Mark as ${isResolved ? 'Open' : 'Solved'}
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Render Poll Options
+        function renderPoll() {
+            const container = document.getElementById('pollOptions');
+            container.innerHTML = '';
+
+            poll.options.forEach(option => {
+                const percentage = Math.round((option.votes / poll.totalVotes) * 100) || 0;
+                container.innerHTML += `
+                    <button onclick="votePoll(${option.id})" class="w-full text-left bg-slate-900/80 hover:bg-slate-900 border border-slate-700/60 p-3 rounded-xl relative overflow-hidden group transition">
+                        <div class="bg-cyan-500/20 absolute left-0 top-0 bottom-0 transition-all duration-500" style="width: ${percentage}%"></div>
+                        <div class="relative z-10 flex justify-between items-center text-xs font-semibold">
+                            <span class="text-slate-200">${escapeHtml(option.text)}</span>
+                            <span class="text-cyan-400">${percentage}% (${option.votes})</span>
+                        </div>
+                    </button>
+                `;
+            });
+        }
+
+        // Handlers & Interactivity
+        function openModal() { document.getElementById('issueModal').classList.remove('hidden'); }
+        function closeModal() { document.getElementById('issueModal').classList.add('hidden'); }
+
+        function handleIssueSubmit(e) {
+            e.preventDefault();
+            const title = document.getElementById('issueTitle').value;
+            const description = document.getElementById('issueDesc').value;
+            const image = document.getElementById('issueImage').value;
+
+            issues.unshift({
+                id: Date.now(),
+                title,
+                description,
+                image,
+                status: "Open",
+                devNote: "Pending developer review.",
+                upvotes: 1,
+                createdAt: "Just now"
+            });
+
+            closeModal();
+            e.target.reset();
+            renderIssues();
+        }
+
+        function toggleIssueStatus(id) {
+            issues = issues.map(item => {
+                if (item.id === id) {
+                    const newStatus = item.status === 'Resolved' ? 'Open' : 'Resolved';
+                    return { ...item, status: newStatus, devNote: newStatus === 'Resolved' ? 'Issue marked as solved by developer.' : item.devNote };
+                }
+                return item;
+            });
+            renderIssues();
+        }
+
+        function upvoteIssue(id) {
+            issues = issues.map(item => item.id === id ? { ...item, upvotes: item.upvotes + 1 } : item);
+            renderIssues();
+        }
+
+        function votePoll(optionId) {
+            poll.options = poll.options.map(opt => opt.id === optionId ? { ...opt, votes: opt.votes + 1 } : opt);
+            poll.totalVotes += 1;
+            renderPoll();
+        }
+
+        function filterIssues(status) {
+            renderIssues(status, document.getElementById('searchInput').value);
+        }
+
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            renderIssues('all', e.target.value);
+        });
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+        }
+
+        // Initial Load
+        renderIssues();
+        renderPoll();
+    </script>
 </body>
 </html>
