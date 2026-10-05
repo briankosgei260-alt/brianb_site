@@ -3,184 +3,363 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brian Kipkemboi Kosgei | Global Creator Hub & Developer Academy</title>
+  <title>Brian Kipkemboi Kosgei | Software Developer & Systems Specialist</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
 </head>
-<body class="bg-gray-950 text-gray-100 font-sans antialiased leading-normal tracking-normal selection:bg-indigo-500 selection:text-white">
+<body class="bg-gray-950 text-gray-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
 
-  <!-- Navigation -->
-  <nav class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur border-b border-gray-800 p-4">
+  <!-- Navigation Bar -->
+  <nav class="sticky top-0 z-50 bg-gray-900/95 backdrop-blur border-b border-gray-800 px-6 py-4">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <a href="#" class="text-2xl font-black text-indigo-500 tracking-wider">BRIAN<span class="text-white">.CREATOR</span></a>
-      <div class="hidden lg:flex space-x-5 text-sm font-semibold">
-        <a href="#creator-hub" class="hover:text-indigo-400 transition">Creator Hub</a>
+      <a href="#" class="text-2xl font-black text-indigo-500 tracking-wider">BRIAN<span class="text-white">.DEV</span></a>
+      <div class="hidden lg:flex space-x-6 text-sm font-semibold text-gray-300">
+        <a href="#about" class="hover:text-indigo-400 transition">About Creator</a>
+        <a href="#education" class="hover:text-indigo-400 transition">Education Hub</a>
+        <a href="#solutions" class="hover:text-indigo-400 transition">IT Solutions</a>
         <a href="#vscode-termux" class="hover:text-indigo-400 transition">VS Code & Termux</a>
-        <a href="#docs" class="hover:text-indigo-400 transition">Step Notes</a>
-        <a href="#playground" class="hover:text-indigo-400 transition">Live Sandbox</a>
-        <a href="#game" class="hover:text-indigo-400 transition">Dev Game</a>
+        <a href="#docs" class="hover:text-indigo-400 transition">Tech Docs</a>
+        <a href="#playground" class="hover:text-indigo-400 transition">Code Sandbox</a>
+        <a href="#tools" class="hover:text-indigo-400 transition">Dev Tools</a>
+        <a href="#cheatsheets" class="hover:text-indigo-400 transition">Cheatsheets</a>
+        <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
       </div>
-      <a href="https://wa.me/254759668580" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition text-xs flex items-center gap-2">
-        <i class="fab fa-whatsapp text-base"></i> Direct Contact
+      <a href="https://wa.me/254759668580" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2.5 px-5 rounded-lg transition text-xs flex items-center gap-2 shadow-lg shadow-green-900/30">
+        <i class="fab fa-whatsapp text-sm"></i> Direct Contact
       </a>
     </div>
   </nav>
 
-  <!-- Hero Header -->
-  <header class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between py-16 px-6 gap-12">
-    <div class="lg:w-3/5 text-center lg:text-left">
-      <span class="bg-indigo-900/60 text-indigo-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-indigo-700/50">Creator & Systems Engineer</span>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white mt-4 mb-4 leading-tight">
+  <!-- Hero Header with Profile Showcase -->
+  <header class="max-w-7xl mx-auto px-6 py-16 flex flex-col lg:flex-row items-center justify-between gap-12">
+    <div class="lg:w-7/12 text-center lg:text-left">
+      <div class="inline-flex items-center gap-2 bg-indigo-950/80 text-indigo-400 text-xs font-bold px-3.5 py-1.5 rounded-full border border-indigo-800/60 mb-6">
+        <span class="w-2 h-2 rounded-full bg-indigo-400 animate-ping"></span>
+        Full-Stack Developer & Systems Specialist
+      </div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-4">
         Brian Kipkemboi Kosgei
       </h1>
-      <p class="text-xl text-indigo-400 font-bold mb-4">
-        20 Years Old | Software Developer | Technical Specialist | Doha, Qatar & Kenya
+      <p class="text-lg sm:text-xl text-indigo-400 font-semibold mb-6">
+        Software Engineering • Systems Administration • Web Solutions | Doha, Qatar
       </p>
-      <p class="text-gray-400 text-base mb-8 max-w-2xl">
-        Welcome to my Global Creator Hub! Explore step-by-step coding docs, VS Code setups, Termux guides, interactive sandboxes, and developer minigames.
+      <p class="text-gray-400 text-base mb-8 leading-relaxed max-w-2xl">
+        Welcome to my interactive portfolio and developer hub. Explore my educational resources, systems troubleshooting modules, live code playgrounds, and custom IT solutions.
       </p>
       <div class="flex flex-wrap justify-center lg:justify-start gap-4">
-        <a href="#creator-hub" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition">
-          <i class="fas fa-user-circle mr-2"></i> Creator Profile
+        <a href="#education" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-7 rounded-xl transition shadow-lg shadow-indigo-900/40 flex items-center gap-2">
+          <i class="fas fa-graduation-cap"></i> Education Hub
         </a>
-        <a href="#game" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition">
-          <i class="fas fa-gamepad mr-2"></i> Play Dev Game
+        <a href="#solutions" class="bg-gray-900 hover:bg-gray-800 text-gray-200 border border-gray-700 font-bold py-3.5 px-7 rounded-xl transition flex items-center gap-2">
+          <i class="fas fa-tools"></i> View Services
         </a>
       </div>
     </div>
-    <div class="lg:w-2/5 flex justify-center">
-      <div class="relative">
-        <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-3xl blur opacity-40"></div>
-        <img src="profile.jpg" alt="Brian Kipkemboi Kosgei" class="relative w-72 h-96 object-cover rounded-2xl shadow-2xl border-2 border-indigo-500">
+
+    <!-- Creator Photo Frame -->
+    <div class="lg:w-5/12 flex justify-center">
+      <div class="relative group">
+        <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-600 rounded-3xl blur opacity-60 group-hover:opacity-85 transition duration-500"></div>
+        <div class="relative bg-gray-900 p-2 rounded-3xl border border-gray-800">
+          <img src="profile.jpg" alt="Brian Kipkemboi Kosgei" class="w-80 h-[450px] object-cover rounded-2xl shadow-2xl">
+          <div class="absolute bottom-6 left-6 right-6 bg-gray-900/90 backdrop-blur p-3.5 rounded-xl border border-gray-800 text-center shadow-lg">
+            <p class="text-sm font-bold text-white">Brian Kipkemboi Kosgei</p>
+            <p class="text-xs text-indigo-400 font-medium">Software & Systems Developer</p>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- CREATOR HUB / ABOUT ME SECTION -->
-  <section id="creator-hub" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800">
-    <div class="mb-10 text-center lg:text-left">
-      <span class="text-indigo-400 font-bold text-xs uppercase tracking-wider">About The Creator</span>
-      <h2 class="text-3xl font-extrabold text-white">Creator Hub, Education & Milestones</h2>
-      <p class="text-gray-400 text-sm mt-1">Full professional breakdown, achievements, and technical journey.</p>
+  <!-- ABOUT CREATOR -->
+  <section id="about" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800/80">
+    <div class="text-center lg:text-left mb-12">
+      <span class="text-indigo-400 font-bold text-xs uppercase tracking-widest">Profile Overview</span>
+      <h2 class="text-3xl font-extrabold text-white mt-1">About the Developer</h2>
     </div>
 
-    <div class="grid lg:grid-cols-3 gap-8">
-      <!-- Card 1: Personal Info -->
-      <div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
-        <h3 class="text-xl font-bold text-indigo-400 mb-4 flex items-center gap-2">
-          <i class="fas fa-id-card"></i> Personal Profile
-        </h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gray-900/80 p-8 rounded-2xl border border-gray-800 hover:border-indigo-500/50 transition">
+        <div class="w-12 h-12 rounded-xl bg-indigo-950 flex items-center justify-center text-indigo-400 text-xl mb-6">
+          <i class="fas fa-id-card"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-4">Personal Details</h3>
         <ul class="space-y-3 text-sm text-gray-300">
-          <li><strong>Full Name:</strong> Brian Kipkemboi Kosgei</li>
-          <li><strong>Age:</strong> 20 Years Old (Born Oct 29, 2005)</li>
-          <li><strong>Languages:</strong> English, Swahili, Kalenjin</li>
-          <li><strong>Locations:</strong> Doha, Qatar / Kenya</li>
-          <li><strong>Core Stack:</strong> HTML5, CSS3, JavaScript, Node.js, Python, Bash</li>
+          <li><strong class="text-gray-400">Full Name:</strong> Brian Kipkemboi Kosgei[cite: 1]</li>
+          <li><strong class="text-gray-400">Date of Birth:</strong> October 29, 2005[cite: 1]</li>
+          <li><strong class="text-gray-400">Languages:</strong> English, Swahili, Kalenjin[cite: 1]</li>
+          <li><strong class="text-gray-400">Current Base:</strong> Doha, Qatar[cite: 1]</li>
         </ul>
       </div>
 
-      <!-- Card 2: Education & Training -->
-      <div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
-        <h3 class="text-xl font-bold text-indigo-400 mb-4 flex items-center gap-2">
-          <i class="fas fa-graduation-cap"></i> Education & Background
-        </h3>
+      <div class="bg-gray-900/80 p-8 rounded-2xl border border-gray-800 hover:border-indigo-500/50 transition">
+        <div class="w-12 h-12 rounded-xl bg-indigo-950 flex items-center justify-center text-indigo-400 text-xl mb-6">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-4">Core Competencies</h3>
         <ul class="space-y-3 text-sm text-gray-300">
-          <li><strong>Secondary Education:</strong> High School Diploma</li>
-          <li><strong>Technical Training:</strong> Automotive & Systems Engineering Foundations</li>
-          <li><strong>Software Engineering:</strong> Self-taught Full-Stack Web Development, System Administration & Scripting</li>
+          <li><strong class="text-gray-400">Frontend:</strong> HTML5, CSS3, JavaScript, Tailwind CSS[cite: 1]</li>
+          <li><strong class="text-gray-400">Backend & Tools:</strong> Node.js, Python, Git, VS Code[cite: 1]</li>
+          <li><strong class="text-gray-400">Systems & Mobile:</strong> Linux, Termux, Windows Optimization[cite: 1]</li>
         </ul>
       </div>
 
-      <!-- Card 3: Experience & Milestones -->
-      <div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
-        <h3 class="text-xl font-bold text-indigo-400 mb-4 flex items-center gap-2">
-          <i class="fas fa-trophy"></i> Experience & Milestones
-        </h3>
+      <div class="bg-gray-900/80 p-8 rounded-2xl border border-gray-800 hover:border-indigo-500/50 transition">
+        <div class="w-12 h-12 rounded-xl bg-indigo-950 flex items-center justify-center text-indigo-400 text-xl mb-6">
+          <i class="fas fa-award"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-4">Highlights</h3>
         <ul class="space-y-3 text-sm text-gray-300">
-          <li><strong>Systems Administration:</strong> Clean OS installations, driver optimization profiles, registry updates for Dell Latitude workstations.</li>
-          <li><strong>Technical Support:</strong> Hardware diagnostics, network configurations, and mobile terminal automation.</li>
-          <li><strong>Global Content Creator:</strong> Creator of custom music compositions and interactive developer tools.</li>
+          <li><strong class="text-gray-400">Technical Support:</strong> Hardware & OS troubleshooting[cite: 1].</li>
+          <li><strong class="text-gray-400">Web Publishing:</strong> Custom portal development & deployment[cite: 1].</li>
+          <li><strong class="text-gray-400">Automation:</strong> Bash shell scripting and workflow tools[cite: 1].</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- VISUAL STUDIO CODE & TERMUX SECTION -->
-  <section id="vscode-termux" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800">
-    <div class="mb-10">
-      <span class="text-indigo-400 font-bold text-xs uppercase tracking-wider">Developer Tooling</span>
-      <h2 class="text-3xl font-extrabold text-white">Visual Studio Code & Termux Setup Guides</h2>
-      <p class="text-gray-400 text-sm mt-1">Complete step-by-step setup for PC and Android terminal environments.</p>
+  <!-- EDUCATION HUB (FEATURED SECTION) -->
+  <section id="education" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800/80">
+    <div class="mb-12 text-center lg:text-left">
+      <span class="text-indigo-400 font-bold text-xs uppercase tracking-widest">Academic & Learning Pathway</span>
+      <h2 class="text-3xl font-extrabold text-white mt-1">Education Hub & Training</h2>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <div class="bg-gradient-to-b from-gray-900 to-indigo-950/40 p-8 rounded-2xl border border-indigo-800/60 shadow-xl">
+        <div class="w-12 h-12 rounded-xl bg-indigo-600 flex items-center justify-center text-white text-xl mb-6">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">Formal Education</span>
+        <h3 class="text-2xl font-bold text-white mt-1 mb-3">High School Graduation</h3>
+        <p class="text-gray-300 text-sm leading-relaxed mb-4">
+          Completed secondary education with strong foundations in mathematics, physical sciences, and technical problem-solving[cite: 1].
+        </p>
+        <div class="inline-block bg-indigo-900/60 text-indigo-300 text-xs font-semibold px-3 py-1 rounded-full border border-indigo-700/50">
+          Graduated Secondary School
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-b from-gray-900 to-indigo-950/40 p-8 rounded-2xl border border-indigo-800/60 shadow-xl">
+        <div class="w-12 h-12 rounded-xl bg-indigo-600 flex items-center justify-center text-white text-xl mb-6">
+          <i class="fas fa-microchip"></i>
+        </div>
+        <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">Technical Mastery</span>
+        <h3 class="text-2xl font-bold text-white mt-1 mb-3">Systems & Hardware Training</h3>
+        <p class="text-gray-300 text-sm leading-relaxed mb-4">
+          Specialized in hardware diagnostics, clean OS installations, power optimization, and registry configurations for PC systems[cite: 1].
+        </p>
+        <div class="inline-block bg-indigo-900/60 text-indigo-300 text-xs font-semibold px-3 py-1 rounded-full border border-indigo-700/50">
+          Systems Administration
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-b from-gray-900 to-indigo-950/40 p-8 rounded-2xl border border-indigo-800/60 shadow-xl">
+        <div class="w-12 h-12 rounded-xl bg-indigo-600 flex items-center justify-center text-white text-xl mb-6">
+          <i class="fas fa-code-branch"></i>
+        </div>
+        <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">Software Engineering</span>
+        <h3 class="text-2xl font-bold text-white mt-1 mb-3">Full-Stack Development</h3>
+        <p class="text-gray-300 text-sm leading-relaxed mb-4">
+          Self-directed & practical engineering in JavaScript (Node.js), HTML/CSS, Python scripting, Git version control, and Termux terminal setups[cite: 1].
+        </p>
+        <div class="inline-block bg-indigo-900/60 text-indigo-300 text-xs font-semibold px-3 py-1 rounded-full border border-indigo-700/50">
+          Software & Web Engineering
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPUTER SOLUTIONS -->
+  <section id="solutions" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800/80">
+    <div class="mb-12">
+      <span class="text-indigo-400 font-bold text-xs uppercase tracking-widest">Services & Capabilities</span>
+      <h2 class="text-3xl font-extrabold text-white mt-1">Computer Solutions & Technical Services</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800 hover:border-indigo-500/50 transition">
+        <i class="fas fa-desktop text-indigo-400 text-3xl mb-4"></i>
+        <h3 class="text-lg font-bold text-white mb-2">OS & Driver Recovery</h3>
+        <p class="text-gray-400 text-sm">Clean Windows 10/11 installations, power registry updates, driver setups for Dell Latitude laptops and workstations[cite: 1].</p>
+      </div>
+
+      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800 hover:border-indigo-500/50 transition">
+        <i class="fas fa-globe text-indigo-400 text-3xl mb-4"></i>
+        <h3 class="text-lg font-bold text-white mb-2">Web Application Dev</h3>
+        <p class="text-gray-400 text-sm">Responsive portfolio platforms, web interfaces, API integration, and mobile web optimization[cite: 1].</p>
+      </div>
+
+      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800 hover:border-indigo-500/50 transition">
+        <i class="fas fa-terminal text-indigo-400 text-3xl mb-4"></i>
+        <h3 class="text-lg font-bold text-white mb-2">Linux Shell Scripting</h3>
+        <p class="text-gray-400 text-sm">Termux terminal configuration, automated bash scripts, and command-line server tools[cite: 1].</p>
+      </div>
+
+      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800 hover:border-indigo-500/50 transition">
+        <i class="fas fa-network-wired text-indigo-400 text-3xl mb-4"></i>
+        <h3 class="text-lg font-bold text-white mb-2">Network Diagnostics</h3>
+        <p class="text-gray-400 text-sm">IP routing troubleshooting, DNS flush procedures, network card resets, and security checks[cite: 1].</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VS CODE & TERMUX SETUP GUIDES -->
+  <section id="vscode-termux" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800/80">
+    <div class="mb-12">
+      <span class="text-indigo-400 font-bold text-xs uppercase tracking-widest">Environment Setup</span>
+      <h2 class="text-3xl font-extrabold text-white mt-1">Visual Studio Code & Termux Setup Guides</h2>
     </div>
 
     <div class="grid md:grid-cols-2 gap-8">
-      <!-- VS Code Guide -->
-      <div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
-        <h3 class="text-xl font-bold text-blue-400 mb-3 flex items-center gap-2">
-          <i class="fas fa-code"></i> Visual Studio Code Guide
+      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+        <h3 class="text-xl font-bold text-blue-400 mb-4 flex items-center gap-2">
+          <i class="fas fa-code"></i> Visual Studio Code Optimization
         </h3>
         <ol class="list-decimal list-inside space-y-2 text-sm text-gray-300 mb-4">
-          <li>Install <strong>Live Server</strong> extension for instant web previews.</li>
+          <li>Install <strong>Live Server</strong> for real-time web previews.</li>
           <li>Install <strong>Prettier</strong> for clean code formatting.</li>
-          <li>Install <strong>Tailwind CSS IntelliSense</strong> for fast styling.</li>
+          <li>Install <strong>Tailwind CSS IntelliSense</strong> for inline styles.</li>
         </ol>
-        <pre><code class="language-bash"># Essential VS Code Keyboard Shortcuts:
-# Ctrl + `         : Open Built-in Terminal
-# Shift + Alt + F  : Format Document Code
-# Ctrl + /         : Toggle Comment</code></pre>
+        <pre><code class="language-bash"># Essential VS Code Shortcuts:
+# Ctrl + `         : Toggle Built-in Terminal
+# Shift + Alt + F  : Format Document
+# Ctrl + /         : Toggle Line Comment</code></pre>
       </div>
 
-      <!-- Termux & Mobile Terminal -->
-      <div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
-        <h3 class="text-xl font-bold text-green-400 mb-3 flex items-center gap-2">
-          <i class="fas fa-terminal"></i> Termux Terminal Setup
+      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+        <h3 class="text-xl font-bold text-green-400 mb-4 flex items-center gap-2">
+          <i class="fas fa-terminal"></i> Termux Mobile Terminal Setup
         </h3>
-        <p class="text-xs text-gray-400 mb-3">Run a full Linux environment on Android or PC Emulators:</p>
-        <pre><code class="language-bash"># Initialize Termux Repository
+        <p class="text-xs text-gray-400 mb-3">Initialize a full Linux environment on Android devices[cite: 1]:</p>
+        <pre><code class="language-bash"># Repository Update & Essential Packages
 pkg update && pkg upgrade -y
 pkg install git python nodejs clang -y
 
-# Setup Storage Access
+# Storage Access Setup
 termux-setup-storage
 
-# Run Local Web Server in Termux
+# Run Web Server Locally in Termux
 npx http-server</code></pre>
       </div>
     </div>
   </section>
 
-  <!-- LIVE CODE PLAYGROUND (FIXED CLICK ME) -->
-  <section id="playground" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800">
-    <h2 class="text-3xl font-extrabold mb-2 text-white flex items-center gap-3">
-      <i class="fas fa-laptop-code text-indigo-500"></i> Interactive Code Playground
-    </h2>
-    <p class="text-gray-400 text-sm mb-6">Modify HTML, CSS, or JS below and click **Run Code** to execute live!</p>
+  <!-- STEP-BY-STEP TECHNICAL DOCS -->
+  <section id="docs" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800/80">
+    <div class="mb-8">
+      <span class="text-indigo-400 font-bold text-xs uppercase tracking-widest">Developer Documentation</span>
+      <h2 class="text-3xl font-extrabold text-white mt-1">Interactive Code & Reference Docs</h2>
+    </div>
+
+    <div class="flex overflow-x-auto space-x-2 border-b border-gray-800 pb-3 mb-8">
+      <button onclick="openTab(event, 'doc-html')" class="tab-btn px-5 py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-bold whitespace-nowrap">HTML5 & CSS3</button>
+      <button onclick="openTab(event, 'doc-js')" class="tab-btn px-5 py-2.5 rounded-xl bg-gray-900 text-gray-300 hover:bg-gray-800 text-sm font-bold whitespace-nowrap">JavaScript Async</button>
+      <button onclick="openTab(event, 'doc-python')" class="tab-btn px-5 py-2.5 rounded-xl bg-gray-900 text-gray-300 hover:bg-gray-800 text-sm font-bold whitespace-nowrap">Python Scripting</button>
+      <button onclick="openTab(event, 'doc-linux')" class="tab-btn px-5 py-2.5 rounded-xl bg-gray-900 text-gray-300 hover:bg-gray-800 text-sm font-bold whitespace-nowrap">Linux & Shell</button>
+      <button onclick="openTab(event, 'doc-sysadmin')" class="tab-btn px-5 py-2.5 rounded-xl bg-gray-900 text-gray-300 hover:bg-gray-800 text-sm font-bold whitespace-nowrap">Windows Systems</button>
+    </div>
+
+    <div id="doc-html" class="tab-content space-y-6">
+      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+        <h3 class="text-lg font-bold text-white mb-2">Modern Responsive HTML Structure</h3>
+        <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Developer Portfolio&lt;/title&gt;
+&lt;/head&gt;
+&lt;body class="bg-gray-900 text-white"&gt;
+  &lt;header class="p-6 text-center"&gt;
+    &lt;h1&gt;Brian Kipkemboi Kosgei&lt;/h1&gt;
+    &lt;p&gt;Software & Systems Engineer&lt;/p&gt;
+  &lt;/header&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+    </div>
+
+    <div id="doc-js" class="tab-content hidden space-y-6">
+      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+        <h3 class="text-lg font-bold text-white mb-2">Async Data Fetching Pattern</h3>
+        <pre><code class="language-javascript">async function fetchData(url) {
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`HTTP Error: ${res.status}`);
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    console.error("Fetch Error:", err.message);
+  }
+}</code></pre>
+      </div>
+    </div>
+
+    <div id="doc-python" class="tab-content hidden space-y-6">
+      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+        <h3 class="text-lg font-bold text-white mb-2">Python System Information Script</h3>
+        <pre><code class="language-python">import platform
+import socket
+
+print(f"OS: {platform.system()} {platform.release()}")
+print(f"Hostname: {socket.gethostname()}")
+print(f"IP: {socket.gethostbyname(socket.gethostname())}")</code></pre>
+      </div>
+    </div>
+
+    <div id="doc-linux" class="tab-content hidden space-y-6">
+      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+        <h3 class="text-lg font-bold text-white mb-2">Linux Shell Script Template</h3>
+        <pre><code class="language-bash">#!/bin/bash
+echo "Running Diagnostics..."
+df -h
+free -m</code></pre>
+      </div>
+    </div>
+
+    <div id="doc-sysadmin" class="tab-content hidden space-y-6">
+      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+        <h3 class="text-lg font-bold text-white mb-2">Windows Network Reset & Power Plan Commands</h3>
+        <pre><code class="language-cmd">ipconfig /flushdns
+netsh winsock reset
+powercfg -duplicatescheme 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- CODE SANDBOX PLAYGROUND -->
+  <section id="playground" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800/80">
+    <div class="mb-8">
+      <span class="text-indigo-400 font-bold text-xs uppercase tracking-widest">Live Execution</span>
+      <h2 class="text-3xl font-extrabold text-white mt-1">Interactive Code Sandbox</h2>
+    </div>
 
     <div class="grid lg:grid-cols-2 gap-6">
       <div class="flex flex-col">
-        <div class="flex justify-between items-center bg-gray-900 p-3 rounded-t-xl border-t border-x border-gray-800">
+        <div class="flex justify-between items-center bg-gray-900 p-4 rounded-t-2xl border-t border-x border-gray-800">
           <span class="text-xs font-bold uppercase tracking-wider text-gray-400">Editor</span>
-          <button onclick="runCode()" class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold py-1.5 px-4 rounded transition flex items-center gap-1">
+          <button onclick="runCode()" class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold py-2 px-5 rounded-lg transition flex items-center gap-1.5 shadow-md">
             <i class="fas fa-play"></i> Run Code
           </button>
         </div>
-        <textarea id="code-input" class="w-full h-80 bg-gray-900 font-mono text-xs text-indigo-300 p-4 border border-gray-800 rounded-b-xl focus:outline-none focus:ring-1 focus:ring-indigo-500"><!DOCTYPE html>
+        <textarea id="code-input" class="w-full h-80 bg-gray-950 font-mono text-xs text-indigo-300 p-4 border border-gray-800 rounded-b-2xl focus:outline-none"><!DOCTYPE html>
 <html>
 <head>
   <style>
-    body { background: #0f172a; color: white; font-family: sans-serif; text-align: center; padding: 20px; }
+    body { background: #0f172a; color: white; font-family: sans-serif; text-align: center; padding: 30px; }
     .btn { background: #6366f1; color: white; border: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; cursor: pointer; }
     .btn:hover { background: #4f46e5; }
   </style>
 </head>
 <body>
-  <h2>Brian's Live Sandbox</h2>
-  <p>Test interactive buttons and JavaScript functions!</p>
-  <button class="btn" onclick="document.getElementById('msg').innerText = '🎉 Success! JavaScript executed cleanly.'">
-    Click Me
+  <h2>Brian's Live Code Sandbox</h2>
+  <p>Test interactive web layouts & scripts!</p>
+  <button class="btn" onclick="document.getElementById('msg').innerText = '🎉 Script executed successfully!'">
+    Test Button
   </button>
   <p id="msg" style="color: #4ade80; margin-top: 15px; font-weight: bold;"></p>
 </body>
@@ -188,58 +367,141 @@ npx http-server</code></pre>
       </div>
 
       <div class="flex flex-col">
-        <div class="bg-gray-900 p-3 rounded-t-xl border-t border-x border-gray-800">
-          <span class="text-xs font-bold uppercase tracking-wider text-gray-400">Live Preview Window</span>
+        <div class="bg-gray-900 p-4 rounded-t-2xl border-t border-x border-gray-800">
+          <span class="text-xs font-bold uppercase tracking-wider text-gray-400">Live Preview</span>
         </div>
-        <iframe id="code-output" class="w-full h-80 bg-white rounded-b-xl border border-gray-800"></iframe>
+        <iframe id="code-output" class="w-full h-80 bg-white rounded-b-2xl border border-gray-800"></iframe>
       </div>
     </div>
   </section>
 
-  <!-- DEVELOPER MINIGAME: BUG BUSTER -->
-  <section id="game" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800">
-    <div class="bg-gradient-to-r from-gray-900 via-indigo-950 to-gray-900 p-8 rounded-2xl border border-indigo-800/50 text-center">
-      <h2 class="text-3xl font-extrabold text-white mb-2 flex justify-center items-center gap-3">
-        <i class="fas fa-gamepad text-purple-400"></i> Interactive Developer Minigame: "Bug Buster"
-      </h2>
-      <p class="text-gray-300 text-sm mb-6">Test your speed! Type the target code snippet correctly before time runs out!</p>
+  <!-- ONLINE UTILITIES -->
+  <section id="tools" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800/80">
+    <div class="mb-8">
+      <span class="text-indigo-400 font-bold text-xs uppercase tracking-widest">Developer Tools</span>
+      <h2 class="text-3xl font-extrabold text-white mt-1">Online Utilities</h2>
+    </div>
 
-      <div class="max-w-xl mx-auto bg-gray-950 p-6 rounded-xl border border-gray-800">
-        <div class="flex justify-between items-center mb-4 text-xs text-gray-400 font-mono">
-          <span>Score: <strong id="game-score" class="text-indigo-400 text-base">0</strong></span>
-          <span>Time: <strong id="game-time" class="text-red-400 text-base">15</strong>s</span>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+        <h3 class="text-lg font-bold text-white mb-3">JSON Formatter</h3>
+        <textarea id="json-input" placeholder="Paste unformatted JSON here..." class="w-full h-32 bg-gray-950 p-3 text-xs font-mono rounded-xl border border-gray-800 text-gray-200 mb-3 focus:outline-none"></textarea>
+        <button onclick="formatJSON()" class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold py-2.5 px-5 rounded-lg transition">Format JSON</button>
+      </div>
+
+      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+        <h3 class="text-lg font-bold text-white mb-3">Base64 Encoder / Decoder</h3>
+        <textarea id="base64-input" placeholder="Type text to encode or decode..." class="w-full h-32 bg-gray-950 p-3 text-xs font-mono rounded-xl border border-gray-800 text-gray-200 mb-3 focus:outline-none"></textarea>
+        <div class="flex gap-3">
+          <button onclick="encodeBase64()" class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold py-2.5 px-5 rounded-lg transition">Encode</button>
+          <button onclick="decodeBase64()" class="bg-gray-800 hover:bg-gray-700 text-white text-xs font-bold py-2.5 px-5 rounded-lg transition">Decode</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHEATSHEETS -->
+  <section id="cheatsheets" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800/80">
+    <div class="mb-8">
+      <span class="text-indigo-400 font-bold text-xs uppercase tracking-widest">Quick Reference</span>
+      <h2 class="text-3xl font-extrabold text-white mt-1">Command Cheatsheets</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+        <h3 class="text-md font-bold text-indigo-400 mb-3"><i class="fab fa-git-alt mr-2"></i> Git Quick Commands</h3>
+        <ul class="text-xs space-y-2 font-mono text-gray-300">
+          <li><span class="text-yellow-400">git init</span> : Initialize local repository</li>
+          <li><span class="text-yellow-400">git add .</span> : Stage changes</li>
+          <li><span class="text-yellow-400">git commit -m "msg"</span> : Save snapshot</li>
+          <li><span class="text-yellow-400">git push origin main</span> : Upload to GitHub</li>
+        </ul>
+      </div>
+
+      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+        <h3 class="text-md font-bold text-indigo-400 mb-3"><i class="fas fa-terminal mr-2"></i> Linux & Termux</h3>
+        <ul class="text-xs space-y-2 font-mono text-gray-300">
+          <li><span class="text-green-400">ls -la</span> : List all details & hidden files</li>
+          <li><span class="text-green-400">chmod +x script.sh</span> : Enable script execution</li>
+          <li><span class="text-green-400">ps aux</span> : View active processes</li>
+          <li><span class="text-green-400">df -h</span> : Check storage space</li>
+        </ul>
+      </div>
+
+      <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+        <h3 class="text-md font-bold text-indigo-400 mb-3"><i class="fas fa-server mr-2"></i> HTTP Status Codes</h3>
+        <ul class="text-xs space-y-2 font-mono text-gray-300">
+          <li><span class="text-blue-400">200 OK</span> : Request successful</li>
+          <li><span class="text-blue-400">201 Created</span> : Entry created</li>
+          <li><span class="text-red-400">404 Not Found</span> : Resource missing</li>
+          <li><span class="text-red-400">500 Server Error</span> : Internal error</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & FOOTER -->
+  <footer id="contact" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800/80">
+    <div class="grid lg:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-3xl font-extrabold text-white mb-4">Direct Communication & Support</h2>
+        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+          Reach out for technical support, IT solutions, or software engineering inquiries.
+        </p>
+
+        <div class="space-y-4 text-sm text-gray-300">
+          <p><i class="fas fa-envelope text-indigo-400 w-6"></i> Email: <a href="mailto:briankosgei260@gmail.com" class="text-indigo-400 hover:underline">briankosgei260@gmail.com</a></p>
+          <p><i class="fab fa-whatsapp text-green-400 w-6"></i> WhatsApp: <a href="https://wa.me/254759668580" target="_blank" class="text-green-400 hover:underline">+254 759 668 580</a></p>
+          <p><i class="fas fa-phone text-indigo-400 w-6"></i> Qatar Contact: <a href="tel:+9743119373" class="text-indigo-400 hover:underline">+974 3119 373</a>[cite: 1]</p>
         </div>
 
-        <div id="target-snippet" class="bg-gray-900 p-3 rounded font-mono text-sm text-yellow-300 mb-4 select-none">
-          git commit -m "fix bug"
+        <div class="flex gap-4 text-2xl text-gray-400 mt-8">
+          <a href="https://wa.me/254759668580" target="_blank" class="hover:text-green-400"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.facebook.com/kosgeibriann" target="_blank" class="hover:text-blue-400"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.tiktok.com/@..brian00?_r=1&_t=ZS-9AIVzfM0tHE" target="_blank" class="hover:text-pink-400"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.instagram.com/i29102005?stkn=MXQxbGRnemRkZ2k3OQ==" target="_blank" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+          <a href="https://github.com/briankosgei260-alt" target="_blank" class="hover:text-white"><i class="fab fa-github"></i></a>
         </div>
+      </div>
 
-        <input type="text" id="game-input" placeholder="Type target snippet here..." oninput="checkGameSnippet()" class="w-full bg-gray-900 border border-gray-700 p-3 rounded text-sm text-white font-mono focus:outline-none focus:border-indigo-500 mb-4">
-
-        <button onclick="startGame()" id="game-start-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded transition text-sm">
-          Start Game
+      <form onsubmit="handleForm(event)" class="bg-gray-900 p-8 rounded-2xl border border-gray-800 space-y-4">
+        <h3 class="text-lg font-bold text-white mb-2">Send Message</h3>
+        <div>
+          <label class="block text-xs font-bold text-gray-400 mb-1">Your Name</label>
+          <input type="text" required id="form-name" class="w-full bg-gray-950 p-3 rounded-xl border border-gray-800 text-sm text-gray-200 focus:outline-none focus:border-indigo-500">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-gray-400 mb-1">Email or Phone</label>
+          <input type="text" required id="form-contact" class="w-full bg-gray-950 p-3 rounded-xl border border-gray-800 text-sm text-gray-200 focus:outline-none focus:border-indigo-500">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-gray-400 mb-1">Message</label>
+          <textarea required id="form-message" rows="3" class="w-full bg-gray-950 p-3 rounded-xl border border-gray-800 text-sm text-gray-200 focus:outline-none focus:border-indigo-500"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 rounded-xl transition text-sm shadow-lg shadow-indigo-900/30">
+          Submit Message
         </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="max-w-7xl mx-auto px-6 py-12 border-t border-gray-800 text-center">
-    <h3 class="text-xl font-bold text-white mb-1">Brian Kipkemboi Kosgei</h3>
-    <p class="text-gray-400 text-xs mb-4">Creator & Systems Engineer | Global Educational Hub</p>
-
-    <div class="flex justify-center gap-6 text-2xl text-gray-400 mb-6">
-      <a href="https://wa.me/254759668580" target="_blank" class="hover:text-green-400"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://github.com/briankosgei260-alt" target="_blank" class="hover:text-white"><i class="fab fa-github"></i></a>
-      <a href="mailto:briankosgei260@gmail.com" class="hover:text-indigo-400"><i class="fas fa-envelope"></i></a>
+      </form>
     </div>
 
-    <p class="text-gray-600 text-xs">&copy; 2026 Brian Kipkemboi Kosgei. All rights reserved.</p>
+    <div class="text-center border-t border-gray-900 pt-8 mt-12 text-gray-600 text-xs">
+      &copy; 2026 Brian Kipkemboi Kosgei[cite: 1]. All rights reserved.
+    </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- JAVASCRIPT UTILITIES -->
   <script>
-    // Live Code Sandbox Runner
+    function openTab(evt, tabId) {
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
+      document.querySelectorAll('.tab-btn').forEach(b => {
+        b.classList.remove('bg-indigo-600', 'text-white');
+        b.classList.add('bg-gray-900', 'text-gray-300');
+      });
+      document.getElementById(tabId).classList.remove('hidden');
+      evt.currentTarget.classList.remove('bg-gray-900', 'text-gray-300');
+      evt.currentTarget.classList.add('bg-indigo-600', 'text-white');
+    }
+
     function runCode() {
       const input = document.getElementById('code-input').value;
       const iframe = document.getElementById('code-output');
@@ -250,55 +512,32 @@ npx http-server</code></pre>
     }
     window.onload = runCode;
 
-    // Developer Minigame Logic
-    const snippets = [
-      'git commit -m "fix bug"',
-      'npm start',
-      'python script.py',
-      'const sum = (a, b) => a + b;',
-      'chmod +x init.sh',
-      'docker-compose up -d'
-    ];
-    let score = 0;
-    let timer = 15;
-    let interval = null;
-    let currentSnippet = '';
-
-    function startGame() {
-      score = 0;
-      timer = 15;
-      document.getElementById('game-score').innerText = score;
-      document.getElementById('game-time').innerText = timer;
-      document.getElementById('game-input').value = '';
-      document.getElementById('game-input').focus();
-      nextSnippet();
-
-      clearInterval(interval);
-      interval = setInterval(() => {
-        timer--;
-        document.getElementById('game-time').innerText = timer;
-        if (timer <= 0) {
-          clearInterval(interval);
-          alert(`Game Over! Final Score: ${score}`);
-        }
-      }, 1000);
-    }
-
-    function nextSnippet() {
-      currentSnippet = snippets[Math.floor(Math.random() * snippets.length)];
-      document.getElementById('target-snippet').innerText = currentSnippet;
-      document.getElementById('game-input').value = '';
-    }
-
-    function checkGameSnippet() {
-      const input = document.getElementById('game-input').value;
-      if (input === currentSnippet) {
-        score += 10;
-        timer += 3; // bonus time
-        document.getElementById('game-score').innerText = score;
-        document.getElementById('game-time').innerText = timer;
-        nextSnippet();
+    function formatJSON() {
+      const input = document.getElementById('json-input');
+      try {
+        input.value = JSON.stringify(JSON.parse(input.value), null, 2);
+      } catch (e) {
+        alert("Invalid JSON format");
       }
+    }
+
+    function encodeBase64() {
+      const input = document.getElementById('base64-input');
+      input.value = btoa(input.value);
+    }
+
+    function decodeBase64() {
+      const input = document.getElementById('base64-input');
+      try { input.value = atob(input.value); } catch (e) { alert("Invalid Base64 format"); }
+    }
+
+    function handleForm(e) {
+      e.preventDefault();
+      const name = document.getElementById('form-name').value;
+      const contact = document.getElementById('form-contact').value;
+      const msg = document.getElementById('form-message').value;
+      const text = `Hello Brian, my name is ${name} (${contact}). Message: ${msg}`;
+      window.open(`https://wa.me/254759668580?text=${encodeURIComponent(text)}`, '_blank');
     }
   </script>
 </body>
