@@ -1,333 +1,960 @@
+```html
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brian Kipkemboi Kosgei | Full Programming Textbook & Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
-</head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased leading-relaxed tracking-normal selection:bg-emerald-500 selection:text-slate-950">
-
-  <!-- NAVIGATION BAR -->
-  <nav class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur border-b border-slate-800 p-4">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <a href="#" class="text-2xl font-black text-emerald-400 tracking-wider">BRIAN<span class="text-white">.DEVBOOK</span></a>
-      <div class="hidden lg:flex space-x-6 text-xs font-bold uppercase tracking-wider">
-        <a href="#about" class="hover:text-emerald-400 transition">About</a>
-        <a href="#textbook-hub" class="text-amber-400 hover:text-amber-300 transition"><i class="fa-solid fa-book"></i> 300+ Pages Textbook (Gated)</a>
-        <a href="#financial-hub" class="text-emerald-400 hover:text-emerald-300 transition"><i class="fa-solid fa-wallet"></i> M-Pesa / PayPal Portal</a>
-        <a href="#playground" class="hover:text-emerald-400 transition">Code Sandbox</a>
-        <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
-      </div>
-      
-      <!-- STATUS & PIN ACCESS -->
-      <div class="flex items-center gap-3">
-        <div id="unlockBadge" class="bg-red-500/10 border border-red-500/30 text-red-400 text-[10px] font-bold px-3 py-1 rounded-full flex items-center gap-1.5">
-          <i class="fa-solid fa-lock"></i> <span>TEXTBOOK LOCKED</span>
-        </div>
-        <button onclick="openPinModal()" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs px-3 py-1.5 rounded-lg transition flex items-center gap-1">
-          <i class="fa-solid fa-key"></i> Enter PIN
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO SECTION -->
-  <header id="about" class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between py-16 px-6 gap-12">
-    <div class="lg:w-3/5 text-center lg:text-left">
-      <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Software Engineering Master Textbook & Architecture Guide</span>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white mt-4 mb-4 leading-tight">
-        Brian Kipkemboi Kosgei
-      </h1>
-      <p class="text-xl text-emerald-400 font-bold mb-4">
-        Technical Specialist • Software Architect • Author
-      </p>
-      <p class="text-slate-400 text-base mb-8 max-w-2xl leading-relaxed">
-        Welcome to my complete published programming textbook. Inside you will find over 300+ pages of deep technical chapters, step-by-step algorithms, system architecture model diagrams, and production code for Java, Kotlin, Python, and JavaScript.
-      </p>
-      <div class="flex flex-wrap justify-center lg:justify-start gap-4">
-        <a href="#textbook-hub" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3 px-6 rounded-xl transition text-sm flex items-center gap-2 shadow-lg shadow-amber-950">
-          <i class="fa-solid fa-book-open"></i> Read Full Textbook Chapters
-        </a>
-        <a href="https://wa.me/254759668580?text=Hello%20Brian,%20I%20want%20to%20get%20the%20Access%20PIN%20for%20your%20Programming%20Textbook." target="_blank" 
-           class="bg-emerald-600 hover:bg-emerald-500 text-slate-950 font-bold py-3 px-6 rounded-xl transition text-sm flex items-center gap-2">
-          <i class="fab fa-whatsapp text-lg"></i> Text for Access PIN (254700)
-        </a>
-      </div>
-    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian Kipkemboi Kosgei - Master Programming Textbook & Portfolio</title>
     
-    <div class="lg:w-2/5 flex justify-center">
-      <div class="relative">
-        <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-amber-500 rounded-3xl blur opacity-30"></div>
-        <img src="profile.jpg" onerror="this.src='https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?w=600&auto=format&fit=crop&q=60'" alt="Brian Kipkemboi Kosgei" class="relative w-72 h-96 object-cover rounded-2xl border-2 border-slate-800 shadow-2xl">
-      </div>
-    </div>
-  </header>
-
-  <!-- GATED 300+ PAGES FULL TEXTBOOK HUB -->
-  <section id="textbook-hub" class="max-w-5xl mx-auto px-6 py-16 border-t border-slate-800">
-    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
-      <div>
-        <span class="bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Published Academic & Engineering Literature</span>
-        <h2 class="text-3xl font-extrabold text-white mt-2 flex items-center gap-3">
-          <i class="fa-solid fa-book text-amber-400"></i> The Complete Programming Textbook (300+ Pages)
-        </h2>
-        <p class="text-slate-400 text-sm mt-1">Full, unedited textbook chapters complete with theory, procedures, models, and code.</p>
-      </div>
-
-      <button onclick="openPinModal()" class="bg-emerald-600 hover:bg-emerald-500 text-slate-950 font-black px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider transition flex items-center gap-2 shadow-lg">
-        <i class="fa-solid fa-key"></i> Enter Access PIN
-      </button>
-    </div>
-
-    <!-- GATED CONTAINER -->
-    <div class="relative bg-slate-900 border border-slate-800 rounded-3xl p-6 md:p-12 overflow-hidden shadow-2xl">
-      
-      <!-- LOCKED OVERLAY -->
-      <div id="lockedOverlay" class="absolute inset-0 bg-slate-950/94 backdrop-blur-md flex flex-col justify-center items-center p-6 text-center z-20">
-        <div class="w-16 h-16 rounded-3xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-3xl mb-4 border border-amber-500/30">
-          <i class="fa-solid fa-lock"></i>
-        </div>
-        <h3 class="text-2xl font-black text-white mb-2">Textbook Access Restricted</h3>
-        <p class="text-slate-400 text-sm max-w-md mb-6">
-          This textbook contains full operational chapters. Complete the M-Pesa or PayPal deposit, or text Brian on WhatsApp to receive your Master PIN (`254700`).
-        </p>
-        <div class="flex flex-wrap justify-center gap-4">
-          <a href="#financial-hub" class="bg-emerald-600 hover:bg-emerald-500 text-slate-950 font-black px-6 py-3 rounded-xl text-xs uppercase tracking-wider transition flex items-center gap-2">
-            <i class="fa-solid fa-mobile-screen"></i> Pay via M-Pesa / PayPal
-          </a>
-          <a href="https://wa.me/254759668580?text=Hello%20Brian,%20I%20want%20to%20buy%20the%20Access%20PIN%20for%20your%20Programming%20Textbook." target="_blank"
-             class="bg-slate-800 hover:bg-slate-700 text-emerald-400 border border-slate-700 font-bold px-6 py-3 rounded-xl text-xs transition flex items-center gap-2">
-            <i class="fab fa-whatsapp text-lg"></i> Text on WhatsApp
-          </a>
-          <button onclick="openPinModal()" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-6 py-3 rounded-xl text-xs uppercase tracking-wider transition">
-            I Have a PIN
-          </button>
-        </div>
-      </div>
-
-      <!-- BLURRED PREVIEW -->
-      <div class="filter blur-sm select-none opacity-30 pointer-events-none space-y-8">
-        <h2 class="text-2xl font-bold text-white">Chapter 1: Advanced Java Enterprise Architecture</h2>
-        <p>Object-oriented principles, memory management, and thread-safe design patterns...</p>
-        <h2 class="text-2xl font-bold text-white">Chapter 2: Kotlin Mobile & Asynchronous Coroutines</h2>
-        <p>Non-blocking execution models, StateFlow, and Clean Architecture in Android apps...</p>
-      </div>
-
-      <!-- UNLOCKED FULL TEXTBOOK CONTENT -->
-      <div id="unlockedContent" class="hidden space-y-16 text-slate-300 text-sm">
-        
-        <!-- CHAPTER 1: JAVA -->
-        <div class="border-b border-slate-800 pb-12">
-          <span class="text-emerald-400 text-xs font-bold uppercase tracking-wider">Chapter 1 of 12</span>
-          <h2 class="text-2xl md:text-3xl font-black text-white mt-1 mb-4">Java Enterprise Architecture & Concurrency Models</h2>
-          
-          <p class="mb-4">
-            Java remains a bedrock of enterprise software engineering due to its robust garbage collection, static typing, and rigorous object-oriented paradigm. When building scalable backend services (such as Spring Boot microservices), managing concurrent requests safely across multiple CPU threads is paramount.
-          </p>
-
-          <h4 class="text-base font-bold text-white mt-6 mb-2">1.1 System Architecture Model: Thread-Safe Singleton Controller</h4>
-          <p class="mb-4">
-            In multi-threaded environments, instantiating database handlers or configuration managers without synchronization leads to race conditions and duplicate allocations. The Singleton design pattern guarantees a single instance across the JVM.
-          </p>
-
-          <!-- ASCII Model Diagram -->
-          <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 font-mono text-xs text-indigo-300 mb-6 overflow-x-auto">
-            <p class="text-slate-500 mb-2">[ Architecture Model: Double-Checked Locking Mechanism ]</p>
-            <pre>
-Thread A ---> [ Check Instance (Null?) ] 
-                   |---> [ Synchronized Monitor Block ] ---> [ Create Single Instance ]
-Thread B ---> [ Check Instance (Null?) ] ---> (Bypasses Lock if initialized) ---> [ Return Instance ]
-            </pre>
-          </div>
-
-          <h4 class="text-base font-bold text-white mt-6 mb-2">1.2 Step-by-Step Implementation Procedure</h4>
-          <ol class="list-decimal list-inside space-y-2 mb-6 text-slate-400 text-xs">
-            <li>Declare a <code class="text-emerald-400">private static volatile</code> instance variable to prevent instruction reordering by the compiler.</li>
-            <li>Make the class constructor <code class="text-emerald-400">private</code> to restrict external instantiation via the <code class="text-emerald-400">new</code> keyword.</li>
-            <li>Expose a <code class="text-emerald-400">public static getInstance()</code> method utilizing double-checked locking with a synchronized block.</li>
-          </ol>
-
-          <pre><code class="language-java">// Production Java Source: Thread-Safe Singleton Connection Pool
-public class EnterpriseDatabasePool {
-    private static volatile EnterpriseDatabasePool instance;
-    private final String connectionString = "jdbc:mysql-cluster://primary:3306/enterprise_db";
-
-    private EnterpriseDatabasePool() {
-        if (instance != null) {
-            throw new IllegalStateException("Reflection attack detected. Use getInstance().");
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            900: '#064e3b',
+                        },
+                        mpesa: '#00a651'
+                    }
+                }
+            }
         }
+    </script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Highlight.js for Code Highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0f17;
+            color: #e2e8f0;
+        }
+        code, pre {
+            font-family: 'Fira Code', monospace;
+        }
+        .blur-locked {
+            filter: blur(8px);
+            user-select: none;
+            pointer-events: none;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111827;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #374151;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4b5563;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col bg-slate-950 text-slate-100">
+
+    <!-- TOP NAVIGATION BAR -->
+    <header class="sticky top-0 z-40 bg-slate-900/90 backdrop-blur border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                
+                <!-- Logo & Author -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-slate-950 font-black text-xl shadow-lg shadow-emerald-500/20">
+                        BK
+                    </div>
+                    <div>
+                        <span class="font-bold text-white text-lg tracking-tight block leading-none">Brian K. Kosgei</span>
+                        <span class="text-xs text-emerald-400 font-mono">Systems Architect & Author</span>
+                    </div>
+                </div>
+
+                <!-- Status Badge & Account Balance -->
+                <div class="flex items-center space-x-3 sm:space-x-6">
+                    
+                    <!-- Balance Chip -->
+                    <div class="hidden sm:flex items-center bg-slate-800 border border-slate-700/80 rounded-lg px-3 py-1.5 space-x-2">
+                        <i class="fa-solid me-1 fa-wallet text-emerald-400"></i>
+                        <span class="text-xs text-slate-400 font-medium">Balance:</span>
+                        <span id="userBalance" class="text-sm font-bold font-mono text-emerald-400">KES 0.00</span>
+                    </div>
+
+                    <!-- Lock / Unlock Badge -->
+                    <div id="statusBadge" class="flex items-center bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-semibold px-3 py-1.5 rounded-full space-x-1.5">
+                        <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                        <span id="statusBadgeText">TEXTBOOK LOCKED</span>
+                    </div>
+
+                    <!-- WhatsApp Quick Button -->
+                    <a href="https://wa.me/254759668580?text=Hello%20Brian,%20I%20would%20like%20to%20unlock%20your%20Master%20Programming%20Textbook." target="_blank" class="hidden md:flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold px-3 py-2 rounded-lg transition-all shadow-md shadow-emerald-600/20">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>WhatsApp</span>
+                    </a>
+
+                    <!-- Enter PIN Button -->
+                    <button onclick="openPinModal()" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-slate-200 hover:text-white text-xs font-semibold px-3 py-2 rounded-lg transition-all flex items-center space-x-1.5">
+                        <i class="fa-solid fa-key text-amber-400"></i>
+                        <span>Enter PIN</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-slate-900 border-b border-slate-800 overflow-hidden py-12 sm:py-16">
+        <div class="absolute inset-0 bg-grid-white/[0.02] bg-[size:30px_30px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <div class="lg:col-span-8 space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-3 py-1 text-xs text-emerald-400 font-medium">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>Production-Grade Architecture & Microservices</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                        Brian's Master Programming <br class="hidden sm:inline">
+                        <span class="bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 bg-clip-text text-transparent">
+                            Textbook & Paywalled Portfolio
+                        </span>
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+                        Authored by <strong class="text-white">Brian Kipkemboi Kosgei</strong> — Technical Specialist & Systems Engineer. 
+                        Master real-world enterprise backends with deep dives into Java Microservices, Kotlin Coroutines, Python FastAPI, and Modern JavaScript State Engines.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="#paywallSection" class="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-slate-950 font-bold px-6 py-3 rounded-xl transition-all flex items-center space-x-2 shadow-lg shadow-emerald-500/25">
+                            <i class="fa-solid fa-unlock text-slate-950"></i>
+                            <span>Unlock Full Textbook (KES 200 / $5)</span>
+                        </a>
+
+                        <a href="https://wa.me/254759668580?text=Hi%20Brian,%20I'm%20reaching%20out%20from%20your%20portfolio." target="_blank" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold px-5 py-3 rounded-xl transition-all flex items-center space-x-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                            <span>Contact (+254 759 668 580)</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Author Quick Spec Card -->
+                <div class="lg:col-span-4 bg-slate-950/80 border border-slate-800 rounded-2xl p-6 shadow-2xl relative">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-14 h-14 rounded-full bg-slate-800 border-2 border-emerald-500 flex items-center justify-center text-emerald-400 text-2xl font-bold">
+                            BK
+                        </div>
+                        <div>
+                            <h2 class="text-lg font-bold text-white">Brian K. Kosgei</h2>
+                            <p class="text-xs text-slate-400">Lead Systems Engineer</p>
+                            <span class="inline-block mt-1 bg-emerald-950 text-emerald-400 text-[10px] font-mono px-2 py-0.5 rounded border border-emerald-800">Available for Hire</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2.5 text-xs text-slate-300 pt-2 border-t border-slate-800">
+                        <div class="flex justify-between py-1">
+                            <span class="text-slate-500">Specialization:</span>
+                            <span class="font-mono text-slate-200">Distributed Microservices</span>
+                        </div>
+                        <div class="flex justify-between py-1">
+                            <span class="text-slate-500">Primary Tech:</span>
+                            <span class="font-mono text-emerald-400">Java, Kotlin, Python, JS</span>
+                        </div>
+                        <div class="flex justify-between py-1">
+                            <span class="text-slate-500">Location:</span>
+                            <span class="font-mono text-slate-200">Nairobi, Kenya</span>
+                        </div>
+                        <div class="flex justify-between py-1">
+                            <span class="text-slate-500">Master PIN Code:</span>
+                            <span class="font-mono text-amber-400 font-bold">254700</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+
+        <!-- UNLOCK & MPESA / PAYPAL PAYMENT SECTION -->
+        <section id="paywallSection" class="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-8 border-b border-slate-800 pb-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-emerald-400"></i>
+                        <span>Unlock Full Textbook Repository</span>
+                    </h2>
+                    <p class="text-slate-400 text-sm mt-1">Get immediate, lifetime access to all 300+ textbook pages & architectural code breakdowns.</p>
+                </div>
+                
+                <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-3 flex items-center space-x-3">
+                    <i class="fa-solid fa-lock-open text-emerald-400 text-2xl"></i>
+                    <div>
+                        <div class="text-xs text-slate-400">Access Fee</div>
+                        <div class="text-xl font-black font-mono text-white">KES 200.00 / <span class="text-emerald-400">$5 USD</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- MPESA STK PUSH SIMULATOR FORM (Betika-style) -->
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-inner">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded-full bg-mpesa inline-block"></span>
+                            <h3 class="font-bold text-white text-base">M-Pesa Express Instant STK Push</h3>
+                        </div>
+                        <span class="text-xs bg-emerald-950 text-emerald-400 border border-emerald-800 px-2 py-0.5 rounded font-mono">Live Simulator</span>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">M-Pesa Phone Number</label>
+                            <div class="relative">
+                                <span class="absolute left-3 top-2.5 text-slate-400 text-sm font-mono">+254</span>
+                                <input type="tel" id="mpesaPhone" placeholder="712345678" value="759668580" class="w-full bg-slate-950 border border-slate-700 rounded-lg pl-14 pr-4 py-2 text-sm font-mono text-white focus:outline-none focus:border-emerald-500">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Select Amount (KES)</label>
+                            <div class="grid grid-cols-4 gap-2 mb-2">
+                                <button onclick="setAmount(100)" class="amt-btn bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs py-2 rounded-lg text-slate-200 font-mono transition-all">100</button>
+                                <button onclick="setAmount(200)" class="amt-btn bg-emerald-600 border border-emerald-500 text-xs py-2 rounded-lg text-white font-mono font-bold shadow transition-all">200</button>
+                                <button onclick="setAmount(500)" class="amt-btn bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs py-2 rounded-lg text-slate-200 font-mono transition-all">500</button>
+                                <button onclick="setAmount(1000)" class="amt-btn bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs py-2 rounded-lg text-slate-200 font-mono transition-all">1000</button>
+                            </div>
+                            <input type="number" id="mpesaAmount" value="200" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-sm font-mono text-emerald-400 font-bold focus:outline-none focus:border-emerald-500">
+                        </div>
+
+                        <button onclick="triggerStkPush()" class="w-full bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white font-bold py-3 rounded-lg shadow-lg shadow-emerald-600/30 transition-all flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <span>Send M-Pesa STK Push</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- GLOBAL PAYMENTS & MANUAL UNLOCK -->
+                <div class="flex flex-col justify-between space-y-4">
+                    
+                    <!-- Global Card / PayPal Card -->
+                    <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="font-bold text-white text-base flex items-center gap-2">
+                                <i class="fa-solid fa-globe text-cyan-400"></i>
+                                <span>International Card / PayPal ($5 USD)</span>
+                            </h3>
+                            <span class="text-[10px] text-slate-400 uppercase">Global Instant</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-4">Pay securely using Debit/Credit Card or PayPal account. Request your automated PIN code.</p>
+                        <a href="https://paypal.me" target="_blank" class="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-semibold py-2.5 rounded-lg transition-all flex items-center justify-center space-x-2 text-sm shadow-md">
+                            <i class="fa-brands fa-paypal"></i>
+                            <span>Pay $5.00 USD via PayPal / Card</span>
+                        </a>
+                    </div>
+
+                    <!-- Direct WhatsApp Activation Box -->
+                    <div class="bg-slate-900/90 border border-emerald-500/30 rounded-xl p-5 flex items-center justify-between">
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Have a Receipt or Need Direct Help?</h4>
+                            <p class="text-xs text-slate-400 mt-0.5">Contact Brian directly on WhatsApp for manual PIN issuance.</p>
+                        </div>
+                        <a href="https://wa.me/254759668580?text=Hi%20Brian,%20I%20need%20a%20PIN%20code%20to%20unlock%20your%20textbook." target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-lg text-xs font-bold transition-all whitespace-nowrap">
+                            Request PIN
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TEXTBOOK SECTION (300+ PAGES COMPREHENSIVE REPOSITORY) -->
+        <section id="textbookSection" class="relative">
+            
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                <div>
+                    <h2 class="text-2xl font-black text-white tracking-tight flex items-center gap-2">
+                        <i class="fa-solid fa-book-bookmark text-emerald-400"></i>
+                        <span>Comprehensive Master Programming Repository</span>
+                    </h2>
+                    <p class="text-slate-400 text-xs sm:text-sm">300+ Pages equivalent of production architecture, memory models, and enterprise code.</p>
+                </div>
+
+                <!-- Master PIN Quick Unlock Button -->
+                <button onclick="openPinModal()" class="bg-amber-500/10 border border-amber-500/30 text-amber-400 hover:bg-amber-500/20 text-xs px-3 py-2 rounded-lg font-mono transition-all flex items-center space-x-2 self-start sm:self-auto">
+                    <i class="fa-solid fa-key"></i>
+                    <span>Unlock via Master PIN (254700)</span>
+                </button>
+            </div>
+
+            <!-- OVERLAY LOCK PROMPT (Visible when locked) -->
+            <div id="textbookOverlay" class="absolute inset-0 z-20 flex flex-col items-center justify-center bg-slate-950/80 backdrop-blur-md border border-slate-800 rounded-2xl p-6 text-center transition-all duration-300">
+                <div class="w-16 h-16 bg-red-500/10 border border-red-500/30 rounded-2xl flex items-center justify-center text-red-400 text-3xl mb-4 shadow-xl">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2">Content Paywalled & Locked</h3>
+                <p class="text-slate-300 text-sm max-w-md mb-6 leading-relaxed">
+                    This comprehensive textbook contains over 300 pages of advanced software engineering concepts. Deposit KES 200 via M-Pesa or enter Master PIN <code class="bg-slate-800 text-amber-400 px-1.5 py-0.5 rounded font-mono">254700</code> to unlock immediately.
+                </p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <a href="#paywallSection" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs px-5 py-3 rounded-xl transition-all shadow-lg shadow-emerald-600/30">
+                        Pay via M-Pesa STK Push
+                    </a>
+                    <button onclick="openPinModal()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold text-xs px-5 py-3 rounded-xl transition-all">
+                        Enter PIN Code
+                    </button>
+                </div>
+            </div>
+
+            <!-- TEXTBOOK CHAPTERS WRAPPER -->
+            <div id="textbookContainer" class="blur-locked space-y-8 transition-all duration-500">
+                
+                <!-- CHAPTER 1 -->
+                <article class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6">
+                    <div class="border-b border-slate-800 pb-4">
+                        <span class="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider">Chapter 1</span>
+                        <h3 class="text-2xl font-bold text-white mt-1">Java Enterprise Microservices & Low-Level Concurrency</h3>
+                    </div>
+
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Enterprise Java applications rely heavily on high-throughput microservices, robust memory management, and thread safety under heavy concurrent access. Below is a detailed breakdown of Spring Boot request processing, JVM heap/stack allocation models, and double-checked locking patterns.
+                    </p>
+
+                    <!-- ASCII Architecture Diagram -->
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 overflow-x-auto">
+                        <div class="text-xs text-slate-500 font-mono mb-2">// ASCII System Architecture: Spring Boot Reactive/Servlet Request Lifecycle</div>
+                        <pre class="text-xs text-emerald-400 leading-tight">
++------------------+      +---------------------+      +---------------------+
+| Client HTTP Req  | ---> | Embedded Tomcat/Netty| ---> | DispatcherServlet   |
++------------------+      +---------------------+      +---------------------+
+                                                                  |
+                                                                  v
++------------------+      +---------------------+      +---------------------+
+| Database / Redis | <--- | Service Layer (@Svc) | <--- | Handler Mapping     |
++------------------+      +---------------------+      +---------------------+
+                        </pre>
+                    </div>
+
+                    <h4 class="text-base font-bold text-white pt-2">Thread-Safe Double-Checked Locking Singleton Pattern</h4>
+                    <p class="text-xs text-slate-400">Ensure lazy initialization without performance overhead in multi-threaded Spring enterprise contexts.</p>
+
+                    <pre><code class="language-java">package com.briankosgei.architecture.singleton;
+
+import java.io.Serializable;
+
+/**
+ * Enterprise Double-Checked Locking Singleton Implementation
+ * Author: Brian Kipkemboi Kosgei
+ */
+public class DatabaseConnectionPool implements Serializable, Cloneable {
+
+    // volatile keyword guarantees memory visibility across threads
+    private static volatile DatabaseConnectionPool instance;
+    private final String connectionString;
+
+    private DatabaseConnectionPool() {
+        // Prevent reflection-based instantiation
+        if (instance != null) {
+            throw new IllegalStateException("Instance already initialized.");
+        }
+        this.connectionString = "jdbc:postgresql://prod-db.internal:5432/enterprise_db";
     }
 
-    public static EnterpriseDatabasePool getInstance() {
-        if (instance == null) {
-            synchronized (EnterpriseDatabasePool.class) {
-                if (instance == null) {
-                    instance = new EnterpriseDatabasePool();
+    public static DatabaseConnectionPool getInstance() {
+        if (instance == null) { // First check (no locking)
+            synchronized (DatabaseConnectionPool.class) {
+                if (instance == null) { // Second check (with locking)
+                    instance = new DatabaseConnectionPool();
                 }
             }
         }
         return instance;
     }
 
-    public void executeQuery(String sql) {
-        System.out.println("Executing query on cluster via: " + connectionString);
+    public String getConnectionString() {
+        return connectionString;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        throw new CloneNotSupportedException("Cloning not allowed for Singletons");
     }
 }</code></pre>
-        </div>
+                </article>
 
-        <!-- CHAPTER 2: KOTLIN -->
-        <div class="border-b border-slate-800 pb-12">
-          <span class="text-emerald-400 text-xs font-bold uppercase tracking-wider">Chapter 2 of 12</span>
-          <h2 class="text-2xl md:text-3xl font-black text-white mt-1 mb-4">Kotlin Coroutines & Reactive MVVM Architecture</h2>
-          
-          <p class="mb-4">
-            Modern mobile and backend applications require asynchronous data streams that do not block the main execution thread. Kotlin Coroutines introduce lightweight threads known as <em>coroutines</em>, managed via structured concurrency and dispatchers.
-          </p>
+                <!-- CHAPTER 2 -->
+                <article class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6">
+                    <div class="border-b border-slate-800 pb-4">
+                        <span class="text-xs font-mono text-teal-400 font-bold uppercase tracking-wider">Chapter 2</span>
+                        <h3 class="text-2xl font-bold text-white mt-1">Kotlin Coroutines, MVVM & Reactive Flow Pipelines</h3>
+                    </div>
 
-          <h4 class="text-base font-bold text-white mt-6 mb-2">2.1 System Architecture Model: Repository & StateFlow Flow</h4>
-          <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 font-mono text-xs text-indigo-300 mb-6 overflow-x-auto">
-            <p class="text-slate-500 mb-2">[ Architecture Model: Non-Blocking Dispatcher Pipeline ]</p>
-            <pre>
-[ UI / Activity ] --(viewModelScope)---> [ Dispatchers.IO (Network API) ]
-       ^                                            |
-       |---(Emits StateFlow Updates)-------------- [ Result Wrapper ]
-            </pre>
-          </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Kotlin Coroutines revolutionize non-blocking asynchronous programming on the JVM and Android platforms. By leveraging structured concurrency, lightweight thread dispatchers, and StateFlow reactivity, developers build responsive, leak-free applications.
+                    </p>
 
-          <pre><code class="language-kotlin">// Production Kotlin Source: Coroutine Repository with Result State Wrapper
-sealed class NetworkResult<out T> {
-    object Loading : NetworkResult<Nothing>()
-    data class Success<T>(val data: T) : NetworkResult<T>()
-    data class Error(val exception: Throwable) : NetworkResult<Nothing>()
+                    <!-- ASCII Architecture Diagram -->
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 overflow-x-auto">
+                        <div class="text-xs text-slate-500 font-mono mb-2">// ASCII Diagram: MVVM Reactive Data Flow with Kotlin StateFlow</div>
+                        <pre class="text-xs text-teal-400 leading-tight">
+ [ UI View / Fragment ]  <--- Collects StateFlow ---  [ ViewModel ]
+           |                                                ^
+     User Triggers Action                              Emits State
+           v                                                |
+ [ Dispatchers.IO ] ---- Execute Suspended Work ----> [ Repository / API ]
+                        </pre>
+                    </div>
+
+                    <h4 class="text-base font-bold text-white pt-2">Structured Concurrency & StateFlow Repository Pattern</h4>
+
+                    <pre><code class="language-kotlin">package com.briankosgei.architecture.coroutines
+
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.withContext
+
+sealed class UiState<out T> {
+    object Loading : UiState<Nothing>()
+    data class Success<T>(val data: T) : UiState<T>()
+    data class Error(val message: String) : UiState<Nothing>()
 }
 
-class SystemTelemetryRepository(private val apiService: TelemetryApiService) {
-    
-    suspend fun streamServerMetrics(nodeId: String): Flow<NetworkResult<MetricModel>> = flow {
-        emit(NetworkResult.Loading)
-        try {
-            val response = apiService.fetchMetrics(nodeId)
-            if (response.isSuccessful && response.body() != null) {
-                emit(NetworkResult.Success(response.body()!!))
-            } else {
-                emit(NetworkResult.Error(Exception("Telemetry payload error: ${response.code()}")))
-            }
-        } catch (e: Exception) {
-            emit(NetworkResult.Error(e))
-        }
-    }.flowOn(Dispatchers.IO)
-}</code></pre>
-        </div>
-
-        <!-- CHAPTER 3: PYTHON -->
-        <div class="border-b border-slate-800 pb-12">
-          <span class="text-emerald-400 text-xs font-bold uppercase tracking-wider">Chapter 3 of 12</span>
-          <h2 class="text-2xl md:text-3xl font-black text-white mt-1 mb-4">Python FastAPI Asynchronous Microservices</h2>
-          
-          <p class="mb-4">
-            Python's asynchronous capabilities powered by <code class="text-emerald-400">asyncio</code> and FastAPI allow developers to build high-throughput APIs capable of handling thousands of concurrent connections with automatic OpenAPI documentation generation.
-          </p>
-
-          <pre><code class="language-python"># Production Python Source: FastAPI Telemetry Ingestion Gateway
-from fastapi import FastAPI, HTTPException, status
-from pydantic import BaseModel, Field
-
-app = FastAPI(title="Brian Global Telemetry Hub", version="3.0.1")
-
-class TelemetryPayload(device_id: str, cpu_load: float = Field(..., ge=0.0, le=100.0)):
-    device_id: str
-    cpu_load: float
-    status_flag: str = "nominal"
-
-@app.post("/api/v3/telemetry/ingest", status_code=status.HTTP_201_CREATED)
-async def ingest_telemetry_data(payload: TelemetryPayload):
-    if payload.cpu_load > 90.0:
-        return {"alert": "CRITICAL_CPU_LOAD", "device": payload.device_id, "load": payload.cpu_load}
-    return {"message": "Telemetry successfully committed", "device": payload.device_id}</code></pre>
-        </div>
-
-        <!-- CHAPTER 4: JAVASCRIPT -->
-        <div>
-          <span class="text-emerald-400 text-xs font-bold uppercase tracking-wider">Chapter 4 of 12</span>
-          <h2 class="text-2xl md:text-3xl font-black text-white mt-1 mb-4">Modern JavaScript ES6+ State Engines & DOM Manipulation</h2>
-          
-          <p class="mb-4">
-            Building responsive client-side applications requires robust state management and event delegation to prevent memory leaks in single-page architecture.
-          </p>
-
-          <pre><code class="language-javascript">// Production JavaScript Source: Publisher-Subscriber State Controller
-class ApplicationStateEngine {
-  constructor(initialState = {}) {
-    this.state = initialState;
-    this.listeners = new Map();
-  }
-
-  subscribe(key, callback) {
-    if (!this.listeners.has(key)) this.listeners.set(key, []);
-    this.listeners.get(key).push(callback);
-  }
-
-  setState(key, value) {
-    this.state[key] = value;
-    if (this.listeners.has(key)) {
-      this.listeners.get(key).forEach(cb => cb(value, this.state));
+class UserRepository {
+    suspend fun fetchUserData(userId: String): String = withContext(Dispatchers.IO) {
+        // Simulate network API request delay
+        kotlinx.coroutines.delay(1000)
+        "User Specs for ID: $userId [Brian Kosgei Enterprise System]"
     }
-  }
+}
+
+class UserViewModel(private val repository: UserRepository) {
+
+    private val _uiState = MutableStateFlow<UiState<String>>(UiState.Loading)
+    val uiState: StateFlow<UiState<String>> = _uiState.asStateFlow()
+
+    suspend fun loadUser(id: String) {
+        _uiState.value = UiState.Loading
+        try {
+            val result = repository.fetchUserData(id)
+            _uiState.value = UiState.Success(result)
+        } catch (e: Exception) {
+            _uiState.value = UiState.Error(e.localizedMessage ?: "Unknown Error")
+        }
+    }
 }</code></pre>
+                </article>
+
+                <!-- CHAPTER 3 -->
+                <article class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6">
+                    <div class="border-b border-slate-800 pb-4">
+                        <span class="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider">Chapter 3</span>
+                        <h3 class="text-2xl font-bold text-white mt-1">Python FastAPI Asynchronous Microservices & Pydantic Validation</h3>
+                    </div>
+
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        FastAPI utilizes Python's native `asyncio` event loop to deliver performance on par with Node.js and Go. Combined with Pydantic for strict schema compilation and automated OpenAPI documentation, it forms the bedrock for modern Python backend microservices.
+                    </p>
+
+                    <pre><code class="language-python"># Author: Brian Kipkemboi Kosgei
+# High-Throughput Async FastAPI Service Example
+
+from fastapi import FastAPI, HTTPException, Depends, status
+from pydantic import BaseModel, Field, EmailStr
+import asyncio
+import uvicorn
+
+app = FastAPI(
+    title="Brian Kosgei Microservice Engine",
+    version="3.0.0"
+)
+
+class PaymentPayload(BaseModel):
+    phone_number: str = Field(..., example="254759668580", regex=r"^\d{12}$")
+    amount: float = Field(..., gt=0, example=200.0)
+    account_reference: str = Field(..., min_length=3, max_length=20)
+
+class PaymentResponse(BaseModel):
+    transaction_id: str
+    status: str
+    message: str
+
+async def verify_stk_gateway():
+    # Simulate non-blocking async network check
+    await asyncio.sleep(0.05)
+    return True
+
+@app.post("/api/v1/stk-push", response_model=PaymentResponse, status_code=status.HTTP_200_OK)
+async def process_stk_payment(payload: PaymentPayload, gateway_active: bool = Depends(verify_stk_gateway)):
+    if not gateway_active:
+        raise HTTPException(status_code=503, detail="Gateway Temporarily Unavailable")
+        
+    # Simulate processing with event loop release
+    await asyncio.sleep(0.2)
+    
+    return PaymentResponse(
+        transaction_id="QK8923HX12",
+        status="SUCCESS",
+        message=f"STK Push of KES {payload.amount} initialized for {payload.phone_number}"
+    )
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)</code></pre>
+                </article>
+
+                <!-- CHAPTER 4 -->
+                <article class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6">
+                    <div class="border-b border-slate-800 pb-4">
+                        <span class="text-xs font-mono text-amber-400 font-bold uppercase tracking-wider">Chapter 4</span>
+                        <h3 class="text-2xl font-bold text-white mt-1">Modern JavaScript (ES6+) Reactive State Engines & DOM Architecture</h3>
+                    </div>
+
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Vanilla JavaScript remains one of the most resilient tools for modern web applications. By mastering custom Observer patterns, event delegation, and immutable state machines, complex applications can run cleanly without heavy runtime framework bloat.
+                    </p>
+
+                    <pre><code class="language-javascript">/**
+ * Lightweight Observable State Engine
+ * Author: Brian Kipkemboi Kosgei
+ */
+class StateStore {
+    constructor(initialState = {}) {
+        this.state = initialState;
+        this.listeners = [];
+    }
+
+    getState() {
+        return Object.freeze({ ...this.state });
+    }
+
+    setState(newState) {
+        this.state = { ...this.state, ...newState };
+        this.notify();
+    }
+
+    subscribe(listener) {
+        this.listeners.push(listener);
+        return () => {
+            this.listeners = this.listeners.filter(l => l !== listener);
+        };
+    }
+
+    notify() {
+        this.listeners.forEach(listener => listener(this.getState()));
+    }
+}
+
+// Global App State Instance
+const appStore = new StateStore({
+    isUnlocked: false,
+    balance: 0.00,
+    userPhone: "254759668580"
+});
+
+// Listener Component
+appStore.subscribe((state) => {
+    console.log("[State Update]:", state);
+});</code></pre>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- LIVE HTML/CSS/JS CODE EDITOR PLAYGROUND -->
+        <section class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6 shadow-2xl">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+                <div>
+                    <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-code text-emerald-400"></i>
+                        <span>Live Code Editor & Interactive Playground</span>
+                    </h2>
+                    <p class="text-slate-400 text-xs sm:text-sm">Write standard HTML, CSS, and JS to preview execution live in the sandboxed frame.</p>
+                </div>
+
+                <button onclick="runCode()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs px-4 py-2.5 rounded-lg transition-all flex items-center space-x-2 self-start sm:self-auto shadow-md">
+                    <i class="fa-solid fa-play"></i>
+                    <span>Execute Code</span>
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Editor Input -->
+                <div class="flex flex-col space-y-2">
+                    <label class="text-xs font-mono text-slate-400">Editor Input (HTML / CSS / JS)</label>
+                    <textarea id="codeEditor" rows="12" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 font-mono text-xs text-slate-200 focus:outline-none focus:border-emerald-500 leading-relaxed resize-y">&lt;div style="background: #0f172a; padding: 20px; border-radius: 12px; font-family: sans-serif; text-align: center; color: white;"&gt;
+  &lt;h3 style="color: #10b981; margin-bottom: 8px;"&gt;Brian Kosgei's Live Engine&lt;/h3&gt;
+  &lt;p style="color: #94a3b8; font-size: 14px;"&gt;Interactive Sandbox Execution Test&lt;/p&gt;
+  &lt;button onclick="alert('System operational!')" style="background: #10b981; color: #000; border: none; padding: 8px 16px; border-radius: 6px; font-weight: bold; cursor: pointer; margin-top: 10px;"&gt;
+    Click Me
+  &lt;/button&gt;
+&lt;/div&gt;</textarea>
+                </div>
+
+                <!-- Preview Frame -->
+                <div class="flex flex-col space-y-2">
+                    <label class="text-xs font-mono text-slate-400">Execution Render Output</label>
+                    <div class="w-full h-full min-h-[250px] bg-slate-950 border border-slate-800 rounded-xl overflow-hidden relative">
+                        <iframe id="previewFrame" class="w-full h-full border-0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEVELOPER TOOLKIT (JSON FORMATTER & BASE64 CONVERTER) -->
+        <section class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6">
+            <div class="border-b border-slate-800 pb-4">
+                <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-wrench text-teal-400"></i>
+                    <span>Developer Utilities Toolkit</span>
+                </h2>
+                <p class="text-slate-400 text-xs sm:text-sm">Quick utility calculators and string parsers for active engineering workflows.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Utility 1: JSON Formatter -->
+                <div class="bg-slate-950 border border-slate-800 rounded-xl p-5 space-y-4">
+                    <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-brackets-curly text-emerald-400"></i>
+                        <span>JSON Formatter & Validator</span>
+                    </h3>
+                    <textarea id="jsonInput" rows="5" placeholder='{"name":"Brian Kosgei","role":"Engineer"}' class="w-full bg-slate-900 border border-slate-800 rounded-lg p-3 font-mono text-xs text-slate-200 focus:outline-none focus:border-emerald-500"></textarea>
+                    
+                    <div class="flex space-x-2">
+                        <button onclick="formatJSON()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs px-3 py-2 rounded-lg font-mono">Format JSON</button>
+                        <button onclick="minifyJSON()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs px-3 py-2 rounded-lg font-mono">Minify JSON</button>
+                    </div>
+                </div>
+
+                <!-- Utility 2: Base64 Encoder / Decoder -->
+                <div class="bg-slate-950 border border-slate-800 rounded-xl p-5 space-y-4">
+                    <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-key text-teal-400"></i>
+                        <span>Base64 Encoder / Decoder</span>
+                    </h3>
+                    <textarea id="base64Input" rows="5" placeholder="Enter text to encode or base64 string to decode..." class="w-full bg-slate-900 border border-slate-800 rounded-lg p-3 font-mono text-xs text-slate-200 focus:outline-none focus:border-teal-500"></textarea>
+                    
+                    <div class="flex space-x-2">
+                        <button onclick="encodeBase64()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs px-3 py-2 rounded-lg font-mono">Encode</button>
+                        <button onclick="decodeBase64()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs px-3 py-2 rounded-lg font-mono">Decode</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-3">
+            <p class="text-sm font-semibold text-slate-300">
+                Brian Kipkemboi Kosgei — Lead Software Systems Engineer & Technical Author
+            </p>
+            <p class="text-xs text-slate-500">
+                Contact: +254 759 668 580 | Master PIN: <span class="text-amber-400 font-mono">254700</span> | Nairobi, Kenya
+            </p>
+            <p class="text-[11px] text-slate-600">
+                &copy; <span id="year"></span> Brian's Programming Repository. All Rights Reserved.
+            </p>
         </div>
+    </footer>
 
-      </div>
+    <!-- STK PUSH PHONE SIMULATOR MODAL (BETIKA-STYLE) -->
+    <div id="stkModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-sm p-6 shadow-2xl relative text-slate-100">
+            
+            <button onclick="closeStkModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
 
-    </div>
-  </section>
-
-  <!-- FINANCIAL HUB -->
-  <section id="financial-hub" class="max-w-7xl mx-auto px-6 py-16 border-t border-slate-800">
-    <div class="text-center mb-10">
-      <span class="bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Payment Gateway</span>
-      <h2 class="text-3xl font-extrabold text-white mt-2">Unlock Textbook Access or Order Services</h2>
-      <p class="text-slate-400 text-sm mt-1">Pay via M-Pesa STK Push or PayPal to instantly receive your Master Access PIN (`254700`).</p>
-    </div>
-
-    <div class="grid lg:grid-cols-2 gap-8">
-      
-      <!-- M-PESA STK EXPRESS -->
-      <div class="bg-slate-900 border border-emerald-500/40 rounded-3xl p-6 md:p-8 shadow-2xl relative">
-        <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-2xl bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-black text-lg">
-              <i class="fa-solid fa-mobile-screen-button"></i>
+            <!-- Phone Icon Header -->
+            <div class="text-center space-y-2 mb-6">
+                <div class="w-12 h-12 bg-mpesa/20 border border-mpesa/40 rounded-full flex items-center justify-center text-mpesa mx-auto text-xl">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white">Safaricom Sim Tool Kit</h3>
+                <p class="text-xs text-slate-400">Paybill 888888 (Brian Kosgei Textbook)</p>
             </div>
-            <div>
-              <h3 class="text-base font-extrabold text-white">M-Pesa Express Deposit</h3>
-              <p class="text-xs text-slate-400">Trigger STK Prompt on Mobile</p>
+
+            <!-- Transaction Details -->
+            <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 mb-6 space-y-2 text-xs">
+                <div class="flex justify-between">
+                    <span class="text-slate-400">Paybill Number:</span>
+                    <span class="font-mono font-bold text-white">888888</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-slate-400">Account Ref:</span>
+                    <span class="font-mono font-bold text-emerald-400">TEXTBOOK-PASS</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-slate-400">Amount:</span>
+                    <span id="stkModalAmount" class="font-mono font-bold text-white">KES 200.00</span>
+                </div>
             </div>
-          </div>
-          <span class="text-xs font-bold text-emerald-400 bg-emerald-950 px-3 py-1 rounded-full border border-emerald-800">Safaricom</span>
+
+            <!-- PIN Input Step -->
+            <div id="stkPinStep" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Enter M-Pesa PIN to Authorize</label>
+                    <input type="password" maxlength="4" id="mpesaPin" placeholder="••••" class="w-full bg-slate-950 border border-slate-700 rounded-lg py-2.5 text-center text-xl font-mono tracking-widest text-white focus:outline-none focus:border-emerald-500">
+                </div>
+
+                <button onclick="processStkPayment()" class="w-full bg-mpesa hover:bg-emerald-600 text-white font-bold py-3 rounded-xl transition-all shadow-lg text-sm">
+                    Confirm & Send Payment
+                </button>
+            </div>
+
+            <!-- Loader Step -->
+            <div id="stkLoaderStep" class="hidden text-center py-6 space-y-3">
+                <div class="inline-block w-8 h-8 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin"></div>
+                <p class="text-xs font-mono text-emerald-400">Processing M-Pesa STK Request...</p>
+            </div>
+
+            <!-- Success Receipt Step -->
+            <div id="stkSuccessStep" class="hidden space-y-4">
+                <div class="bg-emerald-950/80 border border-emerald-800 rounded-xl p-4 text-xs font-mono space-y-2 text-emerald-200">
+                    <div class="font-bold text-center text-emerald-400 text-sm">SAFARICOM M-PESA RECEIPT</div>
+                    <hr class="border-emerald-800 my-1">
+                    <div>Ref Code: <span id="receiptCode" class="font-bold text-white">QK8923HX12</span></div>
+                    <div>Amount: <span id="receiptAmt" class="font-bold text-white">KES 200.00</span></div>
+                    <div>Paid To: Brian Kipkemboi Kosgei</div>
+                    <div class="text-[10px] text-emerald-400 mt-2">Textbook Repository Unlocked Automatically.</div>
+                </div>
+
+                <button onclick="closeStkModal()" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-2.5 rounded-xl text-xs">
+                    Close & Access Book
+                </button>
+            </div>
+
         </div>
+    </div>
 
-        <form onsubmit="triggerStkPush(event)" class="space-y-4">
-          <div>
-            <label class="block text-xs font-bold text-slate-300 mb-1.5">Safaricom Phone Number</label>
-            <div class="relative flex items-center">
-              <span class="absolute left-3 text-slate-400 font-bold text-xs">+254</span>
-              <input type="tel" id="phoneNumber" required placeholder="712345678" pattern="[0-9]{9}" 
-                     class="w-full bg-slate-950 text-white font-bold text-xs pl-14 pr-4 py-3 rounded-xl border border-slate-800 focus:outline-none focus:border-emerald-500">
+    <!-- ENTER PIN MODAL -->
+    <div id="pinModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-sm p-6 shadow-2xl relative text-slate-100">
+            
+            <button onclick="closePinModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="text-center space-y-2 mb-6">
+                <div class="w-12 h-12 bg-amber-500/20 border border-amber-500/40 rounded-full flex items-center justify-center text-amber-400 mx-auto text-xl">
+                    <i class="fa-solid fa-key"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white">Enter Master Access PIN</h3>
+                <p class="text-xs text-slate-400">Enter the 6-digit access code (Default: <code class="text-amber-400 font-mono">254700</code>)</p>
             </div>
-          </div>
 
-          <div>
-            <label class="block text-xs font-bold text-slate-300 mb-1.5">Payment / Access Amount (KES)</label>
-            <div class="relative flex items-center">
-              <span class="absolute left-3 text-slate-400 font-bold text-xs">KES</span>
-              <input type="number" id="depositAmount" min="50" max="250000" required value="200" 
-                     class="w-full bg-slate-950 text-white font-black text-sm pl-12 pr-4 py-3 rounded-xl border border-slate-800 focus:outline-none focus:border-emerald-500">
+            <div class="space-y-4">
+                <div>
+                    <input type="text" id="accessPinInput" maxlength="6" placeholder="254700" class="w-full bg-slate-950 border border-slate-700 rounded-lg py-2.5 text-center text-2xl font-mono tracking-widest text-amber-400 focus:outline-none focus:border-amber-500">
+                    <p id="pinErrorMsg" class="text-[11px] text-red-400 mt-1.5 hidden text-center">Invalid PIN code. Use 254700 or acquire via M-Pesa.</p>
+                </div>
+
+                <button onclick="verifyPinCode()" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 rounded-xl transition-all shadow-lg text-sm">
+                    Unlock Content
+                </button>
             </div>
-          </div>
 
-          <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // State variables
+        let isUnlocked = false;
+        let currentBalance = 0;
+        const MASTER_PIN = "254700";
+
+        // Initialize HighlightJS & Current Year
+        document.addEventListener('DOMContentLoaded', () => {
+            hljs.highlightAll();
+            document.getElementById('year').textContent = new Date().getFullYear();
+            runCode();
+        });
+
+        // Set Preset Payment Amount
+        function setAmount(amt) {
+            document.getElementById('mpesaAmount').value = amt;
+            document.querySelectorAll('.amt-btn').forEach(btn => {
+                if (parseInt(btn.textContent) === amt) {
+                    btn.className = "amt-btn bg-emerald-600 border border-emerald-500 text-xs py-2 rounded-lg text-white font-mono font-bold shadow transition-all";
+                } else {
+                    btn.className = "amt-btn bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs py-2 rounded-lg text-slate-200 font-mono transition-all";
+                }
+            });
+        }
+
+        // Open/Close PIN Modal
+        function openPinModal() {
+            document.getElementById('pinModal').classList.remove('hidden');
+            document.getElementById('accessPinInput').focus();
+        }
+        function closePinModal() {
+            document.getElementById('pinModal').classList.add('hidden');
+            document.getElementById('pinErrorMsg').classList.add('hidden');
+        }
+
+        // Verify Access PIN Code
+        function verifyPinCode() {
+            const pinVal = document.getElementById('accessPinInput').value.trim();
+            if (pinVal === MASTER_PIN) {
+                unlockRepository();
+                closePinModal();
+            } else {
+                document.getElementById('pinErrorMsg').classList.remove('hidden');
+            }
+        }
+
+        // Trigger M-Pesa STK Push Modal
+        function triggerStkPush() {
+            const phone = document.getElementById('mpesaPhone').value.trim();
+            const amt = parseFloat(document.getElementById('mpesaAmount').value) || 0;
+
+            if (!phone || phone.length < 8) {
+                alert("Please enter a valid M-Pesa phone number.");
+                return;
+            }
+            if (amt <= 0) {
+                alert("Please enter a valid amount.");
+                return;
+            }
+
+            document.getElementById('stkModalAmount').textContent = `KES ${amt.toFixed(2)}`;
+            document.getElementById('stkPinStep').classList.remove('hidden');
+            document.getElementById('stkLoaderStep').classList.add('hidden');
+            document.getElementById('stkSuccessStep').classList.add('hidden');
+            document.getElementById('mpesaPin').value = "";
+            document.getElementById('stkModal').classList.remove('hidden');
+        }
+
+        function closeStkModal() {
+            document.getElementById('stkModal').classList.add('hidden');
+        }
+
+        // Process Simulated STK Payment
+        function processStkPayment() {
+            const pin = document.getElementById('mpesaPin').value;
+            if (pin.length < 4) {
+                alert("Please enter a 4-digit M-Pesa PIN.");
+                return;
+            }
+
+            document.getElementById('stkPinStep').classList.add('hidden');
+            document.getElementById('stkLoaderStep').classList.remove('hidden');
+
+            setTimeout(() => {
+                const amt = parseFloat(document.getElementById('mpesaAmount').value) || 200;
+                
+                // Update Balance
+                currentBalance += amt;
+                document.getElementById('userBalance').textContent = `KES ${currentBalance.toFixed(2)}`;
+
+                // Generate Random M-Pesa Transaction Ref Code
+                const randomRef = "QK" + Math.floor(10000000 + Math.random() * 90000000);
+                document.getElementById('receiptCode').textContent = randomRef;
+                document.getElementById('receiptAmt').textContent = `KES ${amt.toFixed(2)}`;
+
+                document.getElementById('stkLoaderStep').classList.add('hidden');
+                document.getElementById('stkSuccessStep').classList.remove('hidden');
+
+                // Unlock Content
+                unlockRepository();
+            }, 2000);
+        }
+
+        // Unlock Textbook Content System
+        function unlockRepository() {
+            isUnlocked = true;
+            
+            // Remove Blur & Lock Overlay
+            document.getElementById('textbookContainer').classList.remove('blur-locked');
+            document.getElementById('textbookOverlay').classList.add('hidden');
+
+            // Update Header Status Badge
+            const badge = document.getElementById('statusBadge');
+            const badgeText = document.getElementById('statusBadgeText');
+
+            badge.className = "flex items-center bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold px-3 py-1.5 rounded-full space-x-1.5";
+            badgeText.textContent = "TEXTBOOK UNLOCKED";
+            badge.querySelector('span').className = "w-2 h-2 rounded-full bg-emerald-400 animate-pulse";
+        }
+
+        // Live HTML/CSS/JS Editor Execution Engine
+        function runCode() {
+            const code = document.getElementById('codeEditor').value;
+            const iframe = document.getElementById('previewFrame');
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            
+            iframeDoc.open();
+            iframeDoc.write(code);
+            iframeDoc.close();
+        }
+
+        // JSON Utility Functions
+        function formatJSON() {
+            const input = document.getElementById('jsonInput');
+            try {
+                const parsed = JSON.parse(input.value);
+                input.value = JSON.stringify(parsed, null, 2);
+            } catch (e) {
+                alert("Invalid JSON Syntax");
+            }
+        }
+
+        function minifyJSON() {
+            const input = document.getElementById('jsonInput');
+            try {
+                const parsed = JSON.parse(input.value);
+                input.value = JSON.stringify(parsed);
+            } catch (e) {
+                alert("Invalid JSON Syntax");
+            }
+        }
+
+        // Base64 Utility Functions
+        function encodeBase64() {
+            const input = document.getElementById('base64Input');
+            try {
+                input.value = btoa(input.value);
+            } catch (e) {
+                alert("Encoding failed.");
+            }
+        }
+
+        function decodeBase64() {
+            const input = document.getElementById('base64Input');
+            try {
+                input.value = atob(input.value);
+            } catch (e) {
+                alert("Invalid Base64 string.");
+            }
+        }
+    </script>
+</body>
+</html>
+```
