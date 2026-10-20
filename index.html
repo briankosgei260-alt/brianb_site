@@ -19,7 +19,7 @@
       <div class="hidden lg:flex space-x-6 text-sm font-semibold">
         <a href="#about" class="hover:text-indigo-400 transition">About</a>
         <a href="#solutions" class="hover:text-indigo-400 transition">Computer Solutions</a>
-        <a href="#payments" class="hover:text-indigo-400 transition text-emerald-400"><i class="fa-solid fa-credit-card"></i> Services & Hire</a>
+        <a href="#payments" class="hover:text-indigo-400 transition text-emerald-400"><i class="fa-solid fa-coins"></i> Fund Me & Services</a>
         <a href="#docs" class="hover:text-indigo-400 transition">Developer Docs & Notes</a>
         <a href="#playground" class="hover:text-indigo-400 transition">Code Playground</a>
         <a href="#tools" class="hover:text-indigo-400 transition">Developer Tools</a>
@@ -47,7 +47,7 @@
       </p>
       <div class="flex flex-wrap justify-center lg:justify-start gap-4">
         <a href="#payments" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-lg transition shadow-lg flex items-center gap-2">
-          <i class="fas fa-briefcase"></i> Book Services / Hire Slots
+          <i class="fa-solid fa-hand-holding-dollar"></i> Fund Me & Hire Slots
         </a>
         <a href="#docs" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition">
           <i class="fas fa-book-open mr-2"></i> Explore Education & Docs
@@ -131,63 +131,86 @@
     </div>
   </section>
 
-  <!-- SERVICES & PAYMENT BOOKING SLOTS -->
+  <!-- SERVICES, GIFTS & CROWDFUNDING HUB WITH CUSTOM AMOUNT -->
   <section id="payments" class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-800">
     <div class="text-center mb-10">
-      <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Secure Transactions & Booking</span>
-      <h2 class="text-3xl font-extrabold text-white mt-2">Services & Payment Booking Hub</h2>
-      <p class="text-gray-400 text-sm mt-1">Book technical consultation slots, order custom web builds, or support the Global Developer Academy.</p>
+      <span class="bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Secure Transactions & Funding</span>
+      <h2 class="text-3xl font-extrabold text-white mt-2">Services, Gifting & Crowdfunding Hub</h2>
+      <p class="text-gray-400 text-sm mt-1">Book services or enter any custom amount to support, fund, or tip the developer academy.</p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-6">
+    <div class="grid lg:grid-cols-3 gap-8">
       
-      <!-- Option 1 -->
-      <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500 transition">
-        <div>
-          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-lg mb-4">
-            <i class="fa-solid fa-code"></i>
+      <!-- Left: Fixed Service Slots -->
+      <div class="lg:col-span-2 grid md:grid-cols-2 gap-6">
+        
+        <!-- Option 1: Technical Consultation -->
+        <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500 transition">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-lg mb-4">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Technical Consultation</h3>
+            <p class="text-gray-400 text-xs mb-4">Direct code review, system administration setup, or troubleshooting session.</p>
+            <p class="text-2xl font-black text-white mb-4">$25 <span class="text-xs text-gray-500 font-normal">/ session</span></p>
           </div>
-          <h3 class="text-lg font-bold text-white mb-2">Technical Consultation</h3>
-          <p class="text-gray-400 text-xs mb-4">Direct code review, system administration setup, or Termux/Linux troubleshooting session.</p>
-          <p class="text-2xl font-black text-white mb-4">$25 <span class="text-xs text-gray-500 font-normal">/ session</span></p>
+          <a href="https://wa.me/254759668580?text=Hello%20Brian,%20I%20want%20to%20book%20a%20Technical%20Consultation%20slot." target="_blank" 
+             class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 rounded-xl text-xs text-center transition flex items-center justify-center gap-2">
+            <i class="fab fa-whatsapp"></i> Book via WhatsApp
+          </a>
         </div>
-        <a href="https://wa.me/254759668580?text=Hello%20Brian,%20I%20want%20to%20book%20a%20Technical%20Consultation%20slot." target="_blank" 
-           class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 rounded-xl text-xs text-center transition flex items-center justify-center gap-2">
-          <i class="fab fa-whatsapp"></i> Book via WhatsApp
-        </a>
+
+        <!-- Option 2: Custom Web Application -->
+        <div class="bg-gray-900 border border-indigo-500/40 rounded-2xl p-6 flex flex-col justify-between shadow-lg relative">
+          <span class="absolute -top-3 right-4 bg-indigo-500 text-white font-bold text-[10px] px-2.5 py-0.5 rounded-full uppercase">Most Popular</span>
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-lg mb-4">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Custom Web Application</h3>
+            <p class="text-gray-400 text-xs mb-4">Full responsive web app, developer portfolio, or dynamic interactive portal.</p>
+            <p class="text-2xl font-black text-white mb-4">$75+ <span class="text-xs text-gray-500 font-normal">/ project</span></p>
+          </div>
+          <a href="https://wa.me/254759668580?text=Hello%20Brian,%20I%20want%20to%20order%20a%20Custom%20Web%20Application." target="_blank" 
+             class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 rounded-xl text-xs text-center transition flex items-center justify-center gap-2">
+            <i class="fab fa-whatsapp"></i> Order Custom Build
+          </a>
+        </div>
+
       </div>
 
-      <!-- Option 2 -->
-      <div class="bg-gray-900 border border-indigo-500/40 rounded-2xl p-6 flex flex-col justify-between shadow-lg relative">
-        <span class="absolute -top-3 right-4 bg-indigo-500 text-white font-bold text-[10px] px-2.5 py-0.5 rounded-full uppercase">Most Popular</span>
-        <div>
-          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-lg mb-4">
-            <i class="fa-solid fa-laptop-code"></i>
-          </div>
-          <h3 class="text-lg font-bold text-white mb-2">Custom Web Application</h3>
-          <p class="text-gray-400 text-xs mb-4">Full responsive web app, developer portfolio, or dynamic interactive portal built to spec.</p>
-          <p class="text-2xl font-black text-white mb-4">$75+ <span class="text-xs text-gray-500 font-normal">/ project</span></p>
-        </div>
-        <a href="https://wa.me/254759668580?text=Hello%20Brian,%20I%20want%20to%20order%20a%20Custom%20Web%20Application." target="_blank" 
-           class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 rounded-xl text-xs text-center transition flex items-center justify-center gap-2">
-          <i class="fab fa-whatsapp"></i> Order Custom Build
-        </a>
-      </div>
-
-      <!-- Option 3 -->
-      <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500 transition">
+      <!-- Right: Interactive Custom Amount / Fund Me Card -->
+      <div class="bg-gray-900 border border-emerald-500/40 rounded-2xl p-6 flex flex-col justify-between shadow-xl">
         <div>
           <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg mb-4">
-            <i class="fa-solid fa-mug-hot"></i>
+            <i class="fa-solid fa-hand-holding-dollar"></i>
           </div>
-          <h3 class="text-lg font-bold text-white mb-2">Support Academy</h3>
-          <p class="text-gray-400 text-xs mb-4">Support open-source code notes, free cheat-sheets, and continuous updates to the Academy platform.</p>
-          <p class="text-2xl font-black text-white mb-4">$5 <span class="text-xs text-gray-500 font-normal">/ contribution</span></p>
+          <h3 class="text-lg font-bold text-white mb-1">Custom Fund / Tip Creator</h3>
+          <p class="text-gray-400 text-xs mb-4">Nothing is free! Select or type your custom amount to fund open-source tools or tip the developer.</p>
+          
+          <!-- Quick Amount Buttons -->
+          <div class="grid grid-cols-4 gap-2 mb-4">
+            <button type="button" onclick="setAmount(5)" class="bg-gray-800 hover:bg-emerald-600 hover:text-white text-gray-200 text-xs font-bold py-2 rounded-lg transition border border-gray-700">$5</button>
+            <button type="button" onclick="setAmount(10)" class="bg-gray-800 hover:bg-emerald-600 hover:text-white text-gray-200 text-xs font-bold py-2 rounded-lg transition border border-gray-700">$10</button>
+            <button type="button" onclick="setAmount(25)" class="bg-gray-800 hover:bg-emerald-600 hover:text-white text-gray-200 text-xs font-bold py-2 rounded-lg transition border border-gray-700">$25</button>
+            <button type="button" onclick="setAmount(50)" class="bg-gray-800 hover:bg-emerald-600 hover:text-white text-gray-200 text-xs font-bold py-2 rounded-lg transition border border-gray-700">$50</button>
+          </div>
+
+          <!-- Custom Amount Input Field -->
+          <div class="mb-4">
+            <label class="block text-[11px] font-bold text-gray-400 mb-1">Enter Custom Amount (USD / Currency)</label>
+            <div class="relative flex items-center">
+              <span class="absolute left-3 text-emerald-400 font-bold text-sm">$</span>
+              <input type="number" id="customAmountInput" placeholder="Enter amount..." min="1" value="10" 
+                     class="w-full bg-gray-950 text-white font-bold text-sm pl-8 pr-4 py-2.5 rounded-xl border border-gray-800 focus:outline-none focus:border-emerald-500">
+            </div>
+          </div>
         </div>
-        <a href="https://wa.me/254759668580?text=Hello%20Brian,%20I%20want%20to%20support%20the%20Developer%20Academy." target="_blank" 
-           class="w-full bg-gray-800 hover:bg-gray-700 text-indigo-400 border border-gray-700 font-bold py-2.5 rounded-xl text-xs text-center transition flex items-center justify-center gap-2">
-          <i class="fa-solid fa-heart text-red-400"></i> Support Creator
-        </a>
+
+        <!-- Submit Button -->
+        <button onclick="submitCustomFunding()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-lg shadow-emerald-950">
+          <i class="fa-solid fa-coins"></i> Send Custom Funding / Tip
+        </button>
       </div>
 
     </div>
@@ -534,6 +557,23 @@ document.getElementById('parent-container').addEventListener('click', (event) =>
       const msg = document.getElementById('form-message').value;
       
       const text = `Hello Brian, my name is ${name} (${contact}). Issue: ${msg}`;
+      const url = `https://wa.me/254759668580?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    }
+
+    // Custom Amount Selector Helper
+    function setAmount(val) {
+      document.getElementById('customAmountInput').value = val;
+    }
+
+    // Process Custom Funding / Tip
+    function submitCustomFunding() {
+      const amount = document.getElementById('customAmountInput').value;
+      if (!amount || amount <= 0) {
+        alert("Please enter a valid amount.");
+        return;
+      }
+      const text = `Hello Brian, I want to send custom funding/tip of $${amount} for your Developer Academy and services.`;
       const url = `https://wa.me/254759668580?text=${encodeURIComponent(text)}`;
       window.open(url, '_blank');
     }
