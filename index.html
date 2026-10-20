@@ -1,692 +1,720 @@
 ```html
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brian Kipkemboi Kosgei | Master Programming Textbook & Engineering Repository</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
-  <style>
-    /* Custom scrollbar and styling enhancements */
-    ::-webkit-scrollbar { width: 8px; height: 8px; }
-    ::-webkit-scrollbar-track { background: #020617; }
-    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
-    ::-webkit-scrollbar-thumb:hover { background: #334155; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Portfolio & Document Vault</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+        .dark ::-webkit-scrollbar-thumb { background: #475569; }
+        .drag-over { border-color: #22c55e !important; background-color: rgba(34, 197, 94, 0.05); }
+    </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased leading-relaxed tracking-normal selection:bg-emerald-500 selection:text-slate-950">
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-200">
 
-  <!-- TOP NAVIGATION BAR -->
-  <nav class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800 px-4 py-3">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <a href="#" class="text-lg md:text-xl font-black text-emerald-400 tracking-wider flex items-center gap-2">
-        <i class="fa-solid fa-graduation-cap"></i> BRIAN<span class="text-white">.DEVBOOK</span>
-      </a>
-      <div class="hidden xl:flex space-x-4 text-xs font-bold uppercase tracking-wider text-slate-300">
-        <a href="#java" class="hover:text-emerald-400 transition">Java</a>
-        <a href="#kotlin" class="hover:text-emerald-400 transition">Kotlin</a>
-        <a href="#python" class="hover:text-emerald-400 transition">Python</a>
-        <a href="#javascript" class="hover:text-emerald-400 transition">JavaScript</a>
-        <a href="#cpp" class="hover:text-emerald-400 transition">C++</a>
-        <a href="#csharp" class="hover:text-emerald-400 transition">C#</a>
-        <a href="#go" class="hover:text-emerald-400 transition">Go</a>
-        <a href="#bash" class="hover:text-emerald-400 transition">Bash</a>
-        <a href="#sandbox" class="hover:text-emerald-400 transition text-emerald-400">Sandbox</a>
-      </div>
-      <a href="https://wa.me/254759668580?text=Hello%20Brian,%20I%20am%20reviewing%20your%20Master%20Textbook%20repository." target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-slate-950 font-black py-2 px-4 rounded-xl transition text-xs flex items-center gap-2 shadow-lg shadow-emerald-950">
-        <i class="fab fa-whatsapp text-sm"></i> WhatsApp Support
-      </a>
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-emerald-400 flex items-center justify-center text-white font-bold shadow-md shadow-brand-500/20">
+                    PV
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg leading-tight tracking-tight">Academic Portfolio</h1>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Document Vault & Reader</p>
+                </div>
+            </div>
+
+            <!-- Navigation Tabs -->
+            <nav class="hidden md:flex items-center space-x-1 bg-slate-100 dark:bg-slate-900/60 p-1 rounded-xl border border-slate-200 dark:border-slate-700">
+                <button onclick="switchTab('reader')" id="tab-btn-reader" class="px-4 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-slate-800 text-brand-600 dark:text-brand-400 shadow-sm transition">Textbook Reader</button>
+                <button onclick="switchTab('vault')" id="tab-btn-vault" class="px-4 py-1.5 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition">Documents & Vault</button>
+            </nav>
+
+            <!-- Top Actions -->
+            <div class="flex items-center space-x-3">
+                <button onclick="toggleDarkMode()" class="p-2 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 transition" aria-label="Toggle Theme">
+                    <svg id="theme-icon" class="w-5 h-5 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                </button>
+                <button onclick="openNoteModal()" class="hidden sm:inline-flex items-center space-x-2 bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 rounded-xl text-sm font-medium shadow-sm transition">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                    <span>Add Learner Note</span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Tab Bar -->
+        <div class="flex md:hidden border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-2 justify-around">
+            <button onclick="switchTab('reader')" id="mobile-tab-btn-reader" class="text-xs font-semibold text-brand-600 dark:text-brand-400 py-1">Textbook Reader</button>
+            <button onclick="switchTab('vault')" id="mobile-tab-btn-vault" class="text-xs font-semibold text-slate-600 dark:text-slate-400 py-1">Documents & Vault</button>
+        </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <div class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8">
+        
+        <!-- VIEW 1: TEXTBOOK READER -->
+        <div id="view-reader" class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <!-- Sidebar Navigation & Chapter List -->
+            <aside class="lg:col-span-4 xl:col-span-3 flex flex-col gap-4">
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <div class="flex items-start justify-between">
+                        <span class="px-2.5 py-1 text-xs font-semibold bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-lg">Textbook</span>
+                        <span class="text-xs text-slate-400">3rd Edition</span>
+                    </div>
+                    <h2 class="font-bold text-base mt-3 leading-snug">Programming Languages: Principles and Practice</h2>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Kenneth C. Louden & Kenneth A. Lambert</p>
+                    
+                    <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-700">
+                        <div class="flex justify-between text-xs font-medium mb-1.5">
+                            <span class="text-slate-500">Reading Progress</span>
+                            <span id="progress-text" class="text-brand-600 dark:text-brand-400 font-bold">7%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+                            <div id="progress-bar" class="bg-brand-500 h-full transition-all duration-300" style="width: 7%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm flex-1 flex flex-col min-h-[350px]">
+                    <div class="flex items-center justify-between mb-3 px-2">
+                        <h3 class="font-semibold text-sm text-slate-700 dark:text-slate-200">Table of Contents</h3>
+                        <span class="text-xs px-2 py-0.5 bg-slate-100 dark:bg-slate-700 rounded-full text-slate-500">13 Chapters</span>
+                    </div>
+                    <div class="relative mb-3">
+                        <input type="text" id="chapter-search" placeholder="Search chapters..." oninput="filterChapters()" class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-brand-500">
+                    </div>
+                    <div id="chapter-list" class="space-y-1.5 overflow-y-auto max-h-[450px] pr-1 flex-1"></div>
+                </div>
+            </aside>
+
+            <!-- Main Reading Area -->
+            <main class="lg:col-span-8 xl:col-span-9 flex flex-col gap-4">
+                <div class="bg-white dark:bg-slate-800 rounded-2xl px-5 py-3 border border-slate-200 dark:border-slate-700 shadow-sm flex flex-wrap items-center justify-between gap-3">
+                    <div class="flex items-center space-x-2">
+                        <button onclick="changeFontSize(-1)" class="p-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs font-semibold" title="Decrease Font">A-</button>
+                        <button onclick="resetFontSize()" class="px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs font-semibold" title="Reset Font">Normal</button>
+                        <button onclick="changeFontSize(1)" class="p-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs font-semibold" title="Increase Font">A+</button>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <button onclick="toggleBookmark()" id="bookmark-btn" class="inline-flex items-center space-x-1.5 px-3 py-2 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 text-xs font-medium transition">
+                            <svg id="bookmark-icon" class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+                            <span id="bookmark-label">Bookmark</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="reader-container" class="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-10 border border-slate-200 dark:border-slate-700 shadow-sm flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between pb-6 border-b border-slate-100 dark:border-slate-700 mb-6">
+                            <span id="reader-chapter-badge" class="text-xs uppercase tracking-wider font-bold text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-900/30 px-3 py-1 rounded-lg">Chapter 1</span>
+                            <span id="reader-reading-time" class="text-xs text-slate-400">Estimated reading: 10 min</span>
+                        </div>
+                        <h2 id="reader-title" class="text-2xl sm:text-3xl font-bold tracking-tight mb-4">Introduction</h2>
+                        <div id="reader-content" class="prose dark:prose-invert max-w-none text-slate-700 dark:text-slate-300 leading-relaxed space-y-4 text-base"></div>
+                    </div>
+                    <div class="mt-12 pt-6 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between">
+                        <button onclick="navigateChapter(-1)" id="prev-btn" class="inline-flex items-center space-x-2 px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition disabled:opacity-40 disabled:cursor-not-allowed">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                            <span>Previous</span>
+                        </button>
+                        <button onclick="navigateChapter(1)" id="next-btn" class="inline-flex items-center space-x-2 bg-brand-600 hover:bg-brand-700 text-white px-5 py-2 rounded-xl text-sm font-medium shadow-sm transition">
+                            <span>Next Chapter</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- VIEW 2: DOCUMENTS & FILES VAULT -->
+        <div id="view-vault" class="hidden space-y-6">
+            <!-- Vault Header Card -->
+            <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                <div>
+                    <h2 class="text-xl font-bold">Documents & Files Vault</h2>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Upload, manage, and store your study notes, syllabi, PDFs, and code files securely.</p>
+                </div>
+                <div class="flex items-center space-x-3 w-full md:w-auto">
+                    <button onclick="document.getElementById('file-input').click()" class="flex-1 md:flex-none inline-flex items-center justify-center space-x-2 bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-xl text-sm font-medium shadow-sm transition">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+                        <span>Upload Files</span>
+                    </button>
+                    <input type="file" id="file-input" multiple onchange="handleFileSelect(event)" class="hidden">
+                </div>
+            </div>
+
+            <!-- Drag and Drop Upload Zone -->
+            <div id="drop-zone" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)" class="border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-2xl p-8 text-center bg-white/50 dark:bg-slate-800/50 transition">
+                <div class="w-12 h-12 rounded-full bg-brand-50 dark:bg-brand-900/40 text-brand-600 dark:text-brand-400 flex items-center justify-center mx-auto mb-3">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                </div>
+                <h3 class="font-semibold text-sm text-slate-700 dark:text-slate-200">Drag and drop your files here</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Supports PDF, Word (.docx), Text (.txt), Code (.py, .js, .html), and Images</p>
+                <button onclick="document.getElementById('file-input').click()" class="mt-4 px-4 py-2 text-xs font-semibold bg-slate-100 dark:bg-slate-700 rounded-xl hover:bg-slate-200 dark:hover:bg-slate-600 transition">Browse Files</button>
+            </div>
+
+            <!-- Files Management Table / List -->
+            <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden">
+                <div class="p-4 sm:p-5 border-b border-slate-100 dark:border-slate-700 flex flex-wrap items-center justify-between gap-3">
+                    <div class="flex items-center space-x-2">
+                        <h3 class="font-bold text-sm">Stored Documents</h3>
+                        <span id="file-count-badge" class="px-2 py-0.5 text-xs bg-slate-100 dark:bg-slate-700 rounded-full font-medium text-slate-600 dark:text-slate-300">0 files</span>
+                    </div>
+                    <div class="relative w-full sm:w-64">
+                        <input type="text" id="vault-search" placeholder="Search stored files..." oninput="filterVaultFiles()" class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-brand-500">
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-50 dark:bg-slate-900/50 text-slate-400 text-xs uppercase tracking-wider font-semibold border-b border-slate-100 dark:border-slate-700">
+                                <th class="p-4">File Name</th>
+                                <th class="p-4">Type</th>
+                                <th class="p-4">Size</th>
+                                <th class="p-4">Upload Date</th>
+                                <th class="p-4 text-right">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="vault-file-list" class="divide-y divide-slate-100 dark:divide-slate-700 text-xs sm:text-sm">
+                            <!-- Populated via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
-  </nav>
 
-  <!-- HEADER HERO -->
-  <header class="max-w-6xl mx-auto px-6 py-16 text-center">
-    <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-extrabold px-4 py-1.5 rounded-full uppercase tracking-widest">
-      Comprehensive Technical Reference Manual • 250+ Pages Equivalent
-    </span>
-    <h1 class="text-4xl sm:text-6xl font-black text-white mt-6 mb-4 tracking-tight">
-      Advanced Software Engineering & Systems Architecture
-    </h1>
-    <p class="text-lg text-emerald-400 font-semibold mb-6">
-      Compiled & Maintained by Brian Kipkemboi Kosgei
-    </p>
-    <p class="text-slate-400 text-sm max-w-3xl mx-auto leading-relaxed mb-8">
-      An exhaustive, un-gated master curriculum containing deep theoretical notes, step-by-step algorithms, hardware memory models, ASCII architecture diagrams, and production-ready source code across 8 industry-standard languages. No paywalls, no gimmicks—pure, rigorous software engineering knowledge.
-    </p>
-    <div class="flex flex-wrap justify-center gap-3 text-xs font-bold">
-      <a href="#java" class="bg-slate-900 hover:bg-slate-800 border border-slate-800 px-4 py-2 rounded-xl text-emerald-400 transition">Java Concurrency</a>
-      <a href="#kotlin" class="bg-slate-900 hover:bg-slate-800 border border-slate-800 px-4 py-2 rounded-xl text-emerald-400 transition">Kotlin Coroutines</a>
-      <a href="#python" class="bg-slate-900 hover:bg-slate-800 border border-slate-800 px-4 py-2 rounded-xl text-emerald-400 transition">Python AsyncIO</a>
-      <a href="#cpp" class="bg-slate-900 hover:bg-slate-800 border border-slate-800 px-4 py-2 rounded-xl text-emerald-400 transition">C++ Memory Management</a>
-      <a href="#go" class="bg-slate-900 hover:bg-slate-800 border border-slate-800 px-4 py-2 rounded-xl text-emerald-400 transition">Go Channels & Runtimes</a>
+    <!-- Learner Notes Drawer / Modal -->
+    <div id="note-modal" class="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl max-w-lg w-full p-6 border border-slate-200 dark:border-slate-700 shadow-xl space-y-4">
+            <div class="flex items-center justify-between">
+                <h3 class="font-bold text-lg">Learner Study Notes</h3>
+                <button onclick="closeNoteModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Record your personal takeaways for <span id="modal-chapter-name" class="font-semibold text-brand-600">Chapter 1</span>.</p>
+            <textarea id="note-input" rows="5" placeholder="Type your personal insights or code snippets here..." class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"></textarea>
+            <div class="flex justify-end space-x-3">
+                <button onclick="closeNoteModal()" class="px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-700">Cancel</button>
+                <button onclick="saveNote()" class="px-5 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-xl text-sm font-medium shadow-sm">Save Note</button>
+            </div>
+        </div>
     </div>
-  </header>
 
-  <!-- MAIN CURRICULUM CONTAINER -->
-  <main class="max-w-5xl mx-auto px-4 md:px-6 space-y-24 py-12">
-
-    <!-- ================= CHAPTER 1: JAVA ================= -->
-    <section id="java" class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 md:p-12 shadow-2xl space-y-8">
-      <div class="border-b border-slate-800 pb-6">
-        <div class="flex items-center gap-3">
-          <span class="bg-red-500/10 text-red-400 border border-red-500/20 text-xs font-black px-3 py-1 rounded-md uppercase">Module 01</span>
-          <span class="text-xs text-slate-400 font-mono">Enterprise Systems & Concurrency</span>
+    <!-- File View Modal -->
+    <div id="view-file-modal" class="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl max-w-2xl w-full p-6 border border-slate-200 dark:border-slate-700 shadow-xl space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-700 pb-3">
+                <h3 id="modal-file-title" class="font-bold text-base truncate">File Preview</h3>
+                <button onclick="closeFileModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <div id="modal-file-body" class="max-h-[60vh] overflow-y-auto bg-slate-50 dark:bg-slate-900 p-4 rounded-xl text-xs font-mono whitespace-pre-wrap text-slate-700 dark:text-slate-300">
+                <!-- File content preview -->
+            </div>
+            <div class="flex justify-end space-x-3">
+                <button onclick="closeFileModal()" class="px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-700">Close</button>
+            </div>
         </div>
-        <h2 class="text-3xl md:text-4xl font-black text-white mt-2">Java Memory Model, Multithreading & JVM Internals</h2>
-      </div>
+    </div>
 
-      <div class="space-y-6 text-slate-300 text-sm leading-relaxed">
-        <p>
-          The Java Virtual Machine (JVM) manages memory via a shared heap and thread-private stacks. Understanding hardware caching, memory barriers, and the happens-before relationship defined by JSR-133 is crucial for building deterministic high-throughput systems.
-        </p>
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-4 py-3 rounded-xl shadow-lg text-sm font-medium transform translate-y-20 opacity-0 transition-all duration-300 flex items-center space-x-2">
+        <svg class="w-5 h-5 text-brand-400 dark:text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+        <span id="toast-msg">Saved successfully!</span>
+    </div>
 
-        <!-- ASCII Diagram -->
-        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 md:p-6 font-mono text-xs text-indigo-300 overflow-x-auto shadow-inner">
-          <p class="text-slate-500 mb-3 font-bold">[ Architecture Diagram: JVM Memory Model & Thread Isolation ]</p>
-          <pre>
-+-------------------------------------------------------------------+
-|                           JVM HEAP SPACE                          |
-|  [ Object Instances ]   [ String Pool ]   [ Static Variables ]    |
-+-------------------------------------------------------------------+
-       ^                        ^                         ^
-       | (References)           | (References)            | (References)
-+--------------+         +--------------+         +-----------------+
-| Thread 1     |         | Thread 2     |         | Thread N        |
-| Stack Frame  |         | Stack Frame  |         | Stack Frame     |
-| - Local Vars |         | - Local Vars |         | - Local Vars    |
-| - Operand Stk|         | - Operand Stk|         | - Operand Stk   |
-+--------------+         +--------------+         +-----------------+
-          </pre>
-        </div>
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Textbook Data
+        const chapters = [
+            {
+                id: 1,
+                title: "Chapter 1: Introduction",
+                subtitle: "Origins, Abstractions, and Paradigms",
+                time: "10 min read",
+                content: `
+                    <p class="font-medium text-lg text-slate-800 dark:text-slate-200">Programming languages are the primary vehicle of human-computer communication. Understanding their principles allows computer scientists to master new languages swiftly.</p>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-4">1.1 The Origins of Programming Languages</h3>
+                    <p>From early machine code and assembly languages to high-level declarative and object-oriented frameworks, languages have evolved to raise the level of abstraction away from hardware architecture.</p>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-4">1.2 Abstractions</h3>
+                    <p>Abstraction is the core mechanism in programming. We categorize abstractions into <strong>data abstractions</strong> and <strong>control abstractions</strong>.</p>
+                `
+            },
+            {
+                id: 2,
+                title: "Chapter 2: Language Design Criteria",
+                subtitle: "Efficiency, Regularity, Security, and Extensibility",
+                time: "14 min read",
+                content: `
+                    <p class="font-medium text-lg text-slate-800 dark:text-slate-200">Good language design balances human readability, execution efficiency, and rigorous security guarantees.</p>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-4">2.1 Regularity</h3>
+                    <p>A regular language avoids special-case rules. Generality applies concepts broadly rather than restricting them to narrow edge cases.</p>
+                `
+            },
+            {
+                id: 3,
+                title: "Chapter 3: Functional Programming",
+                subtitle: "Scheme, ML, Haskell, and Lambda Calculus",
+                time: "18 min read",
+                content: `
+                    <p class="font-medium text-lg text-slate-800 dark:text-slate-200">Functional programming treats computation as the evaluation of mathematical functions and avoids mutable state.</p>
+                `
+            },
+            {
+                id: 4,
+                title: "Chapter 4: Logic Programming",
+                subtitle: "Horn Clauses, Resolution, and Prolog",
+                time: "15 min read",
+                content: `
+                    <p class="font-medium text-lg text-slate-800 dark:text-slate-200">Logic programming expresses programs as a set of mathematical relations and logical assertions rather than procedural steps.</p>
+                `
+            },
+            {
+                id: 5,
+                title: "Chapter 5: Object-Oriented Programming",
+                subtitle: "Smalltalk, Java, C++, and Design Issues",
+                time: "16 min read",
+                content: `
+                    <p class="font-medium text-lg text-slate-800 dark:text-slate-200">Object-oriented programming champions modularity and reuse through encapsulation, inheritance, and dynamic polymorphism.</p>
+                `
+            },
+            {
+                id: 6,
+                title: "Chapter 6: Syntax",
+                subtitle: "Grammars, BNFs, and Parsers",
+                time: "15 min read",
+                content: `
+                    <p class="font-medium text-lg text-slate-800 dark:text-slate-200">The syntax of a programming language dictates the permissible surface structure of its programs using formal grammars like BNF.</p>
+                `
+            },
+            {
+                id: 7,
+                title: "Chapter 7: Basic Semantics",
+                subtitle: "Attributes, Bindings, Scope, and Symbol Tables",
+                time: "13 min read",
+                content: `
+                    <p class="font-medium text-lg text-slate-800 dark:text-slate-200">Semantics assigns meaning to syntactic constructs. Static semantics governs rules verified prior to execution.</p>
+                `
+            },
+            {
+                id: 8,
+                title: "Chapter 8: Data Types",
+                subtitle: "Type Equivalence, Checking, and Polymorphism",
+                time: "16 min read",
+                content: `
+                    <p class="font-medium text-lg text-slate-800 dark:text-slate-200">A data type defines a collection of values and operations applicable to those values.</p>
+                `
+            },
+            {
+                id: 9,
+                title: "Chapter 9: Control I - Expressions and Statements",
+                subtitle: "Evaluation Order, Loops, and Exceptions",
+                time: "12 min read",
+                content: `
+                    <p class="font-medium text-lg text-slate-800 dark:text-slate-200">Control structures dictate the flow of execution in imperative programs.</p>
+                `
+            },
+            {
+                id: 10,
+                title: "Chapter 10: Control II - Procedures and Environments",
+                subtitle: "Parameter Passing and Memory Management",
+                time: "15 min read",
+                content: `
+                    <p class="font-medium text-lg text-slate-800 dark:text-slate-200">Procedures encapsulate computations and manage activation records on the runtime stack.</p>
+                `
+            },
+            {
+                id: 11,
+                title: "Chapter 11: Abstract Data Types and Modules",
+                subtitle: "Namespaces, Packages, and ADT Specifications",
+                time: "14 min read",
+                content: `
+                    <p class="font-medium text-lg text-slate-800 dark:text-slate-200">Modules and abstract data types provide encapsulation boundaries for large software systems.</p>
+                `
+            },
+            {
+                id: 12,
+                title: "Chapter 12: Formal Semantics",
+                subtitle: "Operational, Denotational, and Axiomatic Semantics",
+                time: "20 min read",
+                content: `
+                    <p class="font-medium text-lg text-slate-800 dark:text-slate-200">Formal semantics uses rigorous mathematical models to define programming language behavior.</p>
+                `
+            },
+            {
+                id: 13,
+                title: "Chapter 13: Parallel Programming",
+                subtitle: "Threads, Semaphores, Monitors, and Message Passing",
+                time: "17 min read",
+                content: `
+                    <p class="font-medium text-lg text-slate-800 dark:text-slate-200">Parallel programming models concurrency across multi-core architectures.</p>
+                `
+            }
+        ];
 
-        <h3 class="text-lg font-extrabold text-white pt-2">1.1 Step-by-Step Procedure: Implementing a Lock-Free CAS Counter</h3>
-        <ol class="list-decimal list-inside space-y-2 text-slate-400 text-xs pl-2">
-          <li>Initialize a <code class="text-emerald-400">AtomicLong</code> or leverage <code class="text-emerald-400">VarHandle</code> for low-level memory access.</li>
-          <li>Execute a volatile read of the current variable value from main memory.</li>
-          <li>Apply mathematical transformations on a local thread register copy.</li>
-          <li>Invoke <code class="text-emerald-400">compareAndSet(expected, updated)</code> to atomically verify and swap values at the hardware bus level.</li>
-        </ol>
+        let currentChapterId = 1;
+        let currentFontSize = 16;
+        let bookmarks = JSON.parse(localStorage.getItem('louden_bookmarks') || '[]');
+        let notes = JSON.parse(localStorage.getItem('louden_notes') || '{}');
+        
+        // Vault Files State (stored as array of objects with metadata and base64/content)
+        let vaultFiles = JSON.parse(localStorage.getItem('louden_vault_files') || '[]');
 
-        <h3 class="text-lg font-extrabold text-white pt-4">1.2 Production Java Source: Thread-Safe Connection Pool & Worker Thread</h3>
-        <pre><code class="language-java">// Package: com.briandev.concurrency
-package com.briandev.concurrency;
-
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.atomic.AtomicBoolean;
-
-public class EnterpriseConnectionPool {
-    private final BlockingQueue<String> pool;
-    private final AtomicBoolean isShutdown = new AtomicBoolean(false);
-
-    public EnterpriseConnectionPool(int capacity) {
-        this.pool = new ArrayBlockingQueue<>(capacity);
-        for (int i = 1; i <= capacity; i++) {
-            pool.offer("DB_CONNECTION_INSTANCE_" + i);
-        }
-    }
-
-    public String acquireConnection() throws InterruptedException {
-        if (isShutdown.get()) {
-            throw new IllegalStateException("Pool is currently shutting down.");
-        }
-        // Blocks thread safely if queue is empty until release occurs
-        return pool.take();
-    }
-
-    public void releaseConnection(String connection) {
-        if (connection != null && !isShutdown.get()) {
-            pool.offer(connection);
-        }
-    }
-
-    public void shutdown() {
-        if (isShutdown.compareAndSet(false, true)) {
-            pool.clear();
-            System.out.println("[Pool Shutdown Completed Successfully]");
-        }
-    }
-}</code></pre>
-      </div>
-    </section>
-
-    <!-- ================= CHAPTER 2: KOTLIN ================= -->
-    <section id="kotlin" class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 md:p-12 shadow-2xl space-y-8">
-      <div class="border-b border-slate-800 pb-6">
-        <div class="flex items-center gap-3">
-          <span class="bg-purple-500/10 text-purple-400 border border-purple-500/20 text-xs font-black px-3 py-1 rounded-md uppercase">Module 02</span>
-          <span class="text-xs text-slate-400 font-mono">Reactive Mobile & Backend Architecture</span>
-        </div>
-        <h2 class="text-3xl md:text-4xl font-black text-white mt-2">Kotlin Coroutines, Structured Concurrency & Asynchronous Flows</h2>
-      </div>
-
-      <div class="space-y-6 text-slate-300 text-sm leading-relaxed">
-        <p>
-          Kotlin coroutines simplify asynchronous programming by replacing heavy OS threads with lightweight cooperative routines. Using continuation-passing style (CPS) transformation, compiler-generated state machines suspend and resume execution without blocking thread pools.
-        </p>
-
-        <!-- ASCII Diagram -->
-        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 md:p-6 font-mono text-xs text-indigo-300 overflow-x-auto shadow-inner">
-          <p class="text-slate-500 mb-3 font-bold">[ Architecture Diagram: Coroutine Dispatcher Execution Pipeline ]</p>
-          <pre>
-[ CoroutineScope (SupervisorJob) ]
-         |
-         +---> launch(Dispatchers.IO) ---> [ Network IO Thread Pool ]
-         |                                         | (Suspends Execution)
-         +---> launch(Dispatchers.Default) -> [ CPU Compute Thread Pool ]
-         |                                         | (Active Computation)
-         +---> launch(Dispatchers.Main) ---> [ UI Thread Dispatcher ]
-          </pre>
-        </div>
-
-        <h3 class="text-lg font-extrabold text-white pt-2">2.1 Step-by-Step Procedure: Creating a Cold Flow with Error Handling</h3>
-        <ol class="list-decimal list-inside space-y-2 text-slate-400 text-xs pl-2">
-          <li>Construct a repository function returning <code class="text-emerald-400">Flow&lt;Resource&lt;T&gt;&gt;</code>.</li>
-          <li>Emit initial loading state using <code class="text-emerald-400">emit(Resource.Loading)</code>.</li>
-          <li>Wrap remote API calls in <code class="text-emerald-400">try/catch</code> blocks to catch network exceptions.</li>
-          <li>Apply upstream thread switching using <code class="text-emerald-400">flowOn(Dispatchers.IO)</code>.</li>
-        </ol>
-
-        <h3 class="text-lg font-extrabold text-white pt-4">2.2 Production Kotlin Source: Reactive Flow Repository</h3>
-        <pre><code class="language-kotlin">// File: UserRepository.kt
-package com.briandev.repository
-
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.flowOn
-
-sealed interface NetworkResult<out T> {
-    object Loading : NetworkResult<Nothing>
-    data class Success<T>(val data: T) : NetworkResult<T>
-    data class Error(val exception: Throwable) : NetworkResult<Nothing>
-}
-
-class UserRepository {
-    fun fetchUserData(userId: String): Flow<NetworkResult<String>> = flow {
-        emit(NetworkResult.Loading)
-        try {
-            // Simulated network latency
-            kotlinx.coroutines.delay(1000)
-            val mockResponse = "UserData[ID=$userId, Status=Active]"
-            emit(NetworkResult.Success(mockResponse))
-        } catch (e: Exception) {
-            emit(NetworkResult.Error(e))
-        }
-    }.flowOn(Dispatchers.IO)
-}</code></pre>
-      </div>
-    </section>
-
-    <!-- ================= CHAPTER 3: PYTHON ================= -->
-    <section id="python" class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 md:p-12 shadow-2xl space-y-8">
-      <div class="border-b border-slate-800 pb-6">
-        <div class="flex items-center gap-3">
-          <span class="bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-black px-3 py-1 rounded-md uppercase">Module 03</span>
-          <span class="text-xs text-slate-400 font-mono">Asynchronous I/O & FastAPI Microservices</span>
-        </div>
-        <h2 class="text-3xl md:text-4xl font-black text-white mt-2">Python AsyncIO Event Loop, Coroutines & High-Performance Web APIs</h2>
-      </div>
-
-      <div class="space-y-6 text-slate-300 text-sm leading-relaxed">
-        <p>
-          Python executes asynchronous operations via a single-threaded cooperative event loop. The <code class="text-emerald-400">async/await</code> syntax allows functions to yield control back to the event loop during blocking I/O waiting periods (e.g., database queries, HTTP requests).
-        </p>
-
-        <!-- ASCII Diagram -->
-        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 md:p-6 font-mono text-xs text-indigo-300 overflow-x-auto shadow-inner">
-          <p class="text-slate-500 mb-3 font-bold">[ Architecture Diagram: Asyncio Cooperative Event Loop ]</p>
-          <pre>
-[ Event Loop Queue ] <---> [ Task 1 (Awaiting DB) ] ---> Yields Control
-         ^                       |
-         |                       v
-         +<--- [ Task 2 (Processing HTTP Request) ] <-- Resumes execution
-          </pre>
-        </div>
-
-        <h3 class="text-lg font-extrabold text-white pt-2">3.1 Step-by-Step Procedure: Building an Asynchronous Batch Fetcher</h3>
-        <ol class="list-decimal list-inside space-y-2 text-slate-400 text-xs pl-2">
-          <li>Define asynchronous worker functions using <code class="text-emerald-400">async def</code>.</li>
-          <li>Wrap coroutine tasks inside <code class="text-emerald-400">asyncio.gather()</code> to execute concurrent requests in parallel.</li>
-          <li>Handle timeouts gracefully using <code class="text-emerald-400">asyncio.wait_for()</code>.</li>
-        </ol>
-
-        <h3 class="text-lg font-extrabold text-white pt-4">3.2 Production Python Source: FastAPI Service with Pydantic Validation</h3>
-        <pre><code class="language-python"># File: main.py
-from fastapi import FastAPI, HTTPException, status
-from pydantic import BaseModel, Field
-import asyncio
-
-app = FastAPI(title="Brian Telemetry Gateway", version="2.0.0")
-
-class TelemetryPayload(BaseModel):
-    node_id: str = Field(..., example="node-doha-01")
-    metric_value: float = Field(..., ge=0.0, le=100.0)
-
-@app.post("/api/v1/telemetry", status_code=status.HTTP_201_CREATED)
-async def ingest_telemetry(payload: TelemetryPayload):
-    # Simulate non-blocking async DB transaction
-    await asyncio.sleep(0.02)
-    
-    if payload.metric_value > 95.0:
-        raise HTTPException(
-            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-            detail=f"Node {payload.node_id} exceeded critical threshold."
-        )
-    return {"status": "SUCCESS", "node": payload.node_id, "processed_value": payload.metric_value}</code></pre>
-      </div>
-    </section>
-
-    <!-- ================= CHAPTER 4: JAVASCRIPT ================= -->
-    <section id="javascript" class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 md:p-12 shadow-2xl space-y-8">
-      <div class="border-b border-slate-800 pb-6">
-        <div class="flex items-center gap-3">
-          <span class="bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 text-xs font-black px-3 py-1 rounded-md uppercase">Module 04</span>
-          <span class="text-xs text-slate-400 font-mono">Frontend State Engines & V8 Engine</span>
-        </div>
-        <h2 class="text-3xl md:text-4xl font-black text-white mt-2">JavaScript Event Loop, Microtasks, and Pub/Sub State Architectures</h2>
-      </div>
-
-      <div class="space-y-6 text-slate-300 text-sm leading-relaxed">
-        <p>
-          JavaScript is single-threaded with a non-blocking concurrency model based on the Event Loop. Microtasks (<code class="text-emerald-400">Promise.then</code>, <code class="text-emerald-400">queueMicrotask</code>) execute immediately after the current execution stack clears, preceding Macrotasks (<code class="text-emerald-400">setTimeout</code>, I/O callbacks).
-        </p>
-
-        <!-- ASCII Diagram -->
-        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 md:p-6 font-mono text-xs text-indigo-300 overflow-x-auto shadow-inner">
-          <p class="text-slate-500 mb-3 font-bold">[ Architecture Diagram: V8 Event Loop & Task Queues ]</p>
-          <pre>
-[ Call Stack ] ---> Executes synchronous functions
-       |
-       v (Stack Empty)
-[ Microtask Queue ] (Promises, MutationObserver) -> Emptied completely!
-       |
-       v (Microtasks Cleared)
-[ Macrotask Queue ] (setTimeout, setInterval, I/O) -> Executes 1 tick
-          </pre>
-        </div>
-
-        <h3 class="text-lg font-extrabold text-white pt-2">4.1 Step-by-Step Procedure: Building a Reactive Pub/Sub Store</h3>
-        <ol class="list-decimal list-inside space-y-2 text-slate-400 text-xs pl-2">
-          <li>Create a central state container class with a private state object and listener registry map.</li>
-          <li>Implement a <code class="text-emerald-400">subscribe(key, callback)</code> method to register UI observers.</li>
-          <li>Implement a <code class="text-emerald-400">setState(key, value)</code> method that triggers registered listeners upon mutation.</li>
-        </ol>
-
-        <h3 class="text-lg font-extrabold text-white pt-4">4.2 Production JavaScript Source: Pub/Sub State Engine</h3>
-        <pre><code class="language-javascript">// File: stateEngine.js
-class ApplicationStore {
-  constructor(initialState = {}) {
-    this.state = initialState;
-    this.listeners = new Map();
-  }
-
-  subscribe(key, callback) {
-    if (!this.listeners.has(key)) {
-      this.listeners.set(key, []);
-    }
-    this.listeners.get(key).push(callback);
-    
-    // Return unsubscribe handle
-    return () => {
-      const arr = this.listeners.get(key);
-      this.listeners.set(key, arr.filter(cb => cb !== callback));
-    };
-  }
-
-  setState(key, value) {
-    this.state[key] = value;
-    if (this.listeners.has(key)) {
-      this.listeners.get(key).forEach(callback => callback(value, this.state));
-    }
-  }
-
-  getState(key) {
-    return this.state[key];
-  }
-}
-
-// Example Execution
-const store = new ApplicationStore({ userAuth: false });
-store.subscribe('userAuth', (isAuth) => {
-  console.log(`[UI Render]: Authentication status changed to -> ${isAuth}`);
-});
-store.setState('userAuth', true);</code></pre>
-      </div>
-    </section>
-
-    <!-- ================= CHAPTER 5: C++ ================= -->
-    <section id="cpp" class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 md:p-12 shadow-2xl space-y-8">
-      <div class="border-b border-slate-800 pb-6">
-        <div class="flex items-center gap-3">
-          <span class="bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-xs font-black px-3 py-1 rounded-md uppercase">Module 05</span>
-          <span class="text-xs text-slate-400 font-mono">Systems Programming & Memory Safety</span>
-        </div>
-        <h2 class="text-3xl md:text-4xl font-black text-white mt-2">C++ Smart Pointers, RAII Idioms & Move Semantics</h2>
-      </div>
-
-      <div class="space-y-6 text-slate-300 text-sm leading-relaxed">
-        <p>
-          C++ provides direct hardware memory management via the Resource Acquisition Is Initialization (RAII) idiom. Modern C++ (C++11/14/17/20) eliminates manual memory leaks through smart pointers like <code class="text-emerald-400">std::unique_ptr</code> and <code class="text-emerald-400">std::shared_ptr</code>.
-        </p>
-
-        <!-- ASCII Diagram -->
-        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 md:p-6 font-mono text-xs text-indigo-300 overflow-x-auto shadow-inner">
-          <p class="text-slate-500 mb-3 font-bold">[ Architecture Diagram: RAII Ownership & Smart Pointers ]</p>
-          <pre>
-[ Stack Pointer (unique_ptr) ] ---> Owns Exclusive Resource ---> [ Heap Allocated Memory Block ]
-                                                                       |
-[ Stack Pointer (shared_ptr) ] ---> Shared Ownership (Count = 2) ------+
-          </pre>
-        </div>
-
-        <h3 class="text-lg font-extrabold text-white pt-2">5.1 Step-by-Step Procedure: Implementing a Thread-Safe Circular Buffer</h3>
-        <ol class="list-decimal list-inside space-y-2 text-slate-400 text-xs pl-2">
-          <li>Allocate a fixed-size array on the heap wrapped inside a smart pointer or vector.</li>
-          <li>Maintain atomic read and write head indices.</li>
-          <li>Use <code class="text-emerald-400">std::mutex</code> and <code class="text-emerald-400">std::condition_variable</code> to synchronize producer-consumer threads.</li>
-        </ol>
-
-        <h3 class="text-lg font-extrabold text-white pt-4">5.2 Production C++ Source: RAII Resource Manager</h3>
-        <pre><code class="language-cpp">// File: resource_manager.cpp
-#include <iostream>
-#include <memory>
-#include <stdexcept>
-
-class SystemResource {
-public:
-    SystemResource() { std::cout << "[Hardware] Resource Acquired.\n"; }
-    ~SystemResource() { std::cout << "[Hardware] Resource Released.\n"; }
-    void executeTask() { std::cout << "[Hardware] Executing system diagnostic...\n"; }
-};
-
-void runDiagnostics() {
-    // RAII enforcement: unique_ptr automatically frees memory when leaving scope
-    std::unique_ptr<SystemResource> resource = std::make_unique<SystemResource>();
-    resource->executeTask();
-} // Destructor automatically invoked here without explicit delete call
-
-int main() {
-    std::cout << "Starting diagnostic sequence...\n";
-    runDiagnostics();
-    std::cout << "Sequence terminated successfully.\n";
-    return 0;
-}</code></pre>
-      </div>
-    </section>
-
-    <!-- ================= CHAPTER 6: C# ================= -->
-    <section id="csharp" class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 md:p-12 shadow-2xl space-y-8">
-      <div class="border-b border-slate-800 pb-6">
-        <div class="flex items-center gap-3">
-          <span class="bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-black px-3 py-1 rounded-md uppercase">Module 06</span>
-          <span class="text-xs text-slate-400 font-mono">Enterprise .NET Core & LINQ</span>
-        </div>
-        <h2 class="text-3xl md:text-4xl font-black text-white mt-2">C# Asynchronous Programming, Task Parallel Library (TPL) & LINQ</h2>
-      </div>
-
-      <div class="space-y-6 text-slate-300 text-sm leading-relaxed">
-        <p>
-          C# and the .NET runtime provide robust enterprise tooling through asynchronous streams (<code class="text-emerald-400">IAsyncEnumerable</code>), Task Parallel Library (TPL), and LINQ query expressions backed by expression trees.
-        </p>
-
-        <!-- ASCII Diagram -->
-        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 md:p-6 font-mono text-xs text-indigo-300 overflow-x-auto shadow-inner">
-          <p class="text-slate-500 mb-3 font-bold">[ Architecture Diagram: .NET Task Execution & Synchronization Context ]</p>
-          <pre>
-[ Caller Method ] ---> await Task.Run() ---> [ ThreadPool Worker Task ]
-       |                                              |
-       +<--- Returns Task Completion State <----------+
-          </pre>
-        </div>
-
-        <h3 class="text-lg font-extrabold text-white pt-2">6.1 Step-by-Step Procedure: Implementing a Generic Repository in .NET Core</h3>
-        <ol class="list-decimal list-inside space-y-2 text-slate-400 text-xs pl-2">
-          <li>Define an interface with generic CRUD method signatures returning <code class="text-emerald-400">Task&lt;T&gt;</code>.</li>
-          <li>Inject <code class="text-emerald-400">DbContext</code> into the concrete repository via constructor dependency injection.</li>
-          <li>Leverage Entity Framework Core change tracking and asynchronous LINQ querying.</li>
-        </ol>
-
-        <h3 class="text-lg font-extrabold text-white pt-4">6.2 Production C# Source: Asynchronous Enterprise Service</h3>
-        <pre><code class="language-csharp">// File: UserService.cs
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace BrianDev.EnterpriseServices
-{
-    public record UserDto(int Id, string Username, string Email, bool IsActive);
-
-    public class UserService
-    {
-        private readonly List<UserDto> _mockDatabase = new()
-        {
-            new(1, "brian_kosgei", "briankosgei260@gmail.com", true),
-            new(2, "enterprise_admin", "admin@briandev.com", true),
-            new(3, "guest_user", "guest@system.local", false)
+        window.onload = function() {
+            renderChapters(chapters);
+            loadChapter(currentChapterId);
+            renderVaultFiles(vaultFiles);
+            
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.classList.add('dark');
+            }
         };
 
-        public async Task<IEnumerable<UserDto>> GetActiveUsersAsync()
-        {
-            // Simulate async database IO latency
-            await Task.Delay(100);
+        function switchTab(tab) {
+            const readerView = document.getElementById('view-reader');
+            const vaultView = document.getElementById('view-vault');
+            const btnReader = document.getElementById('tab-btn-reader');
+            const btnVault = document.getElementById('tab-btn-vault');
+            const mobBtnReader = document.getElementById('mobile-tab-btn-reader');
+            const mobBtnVault = document.getElementById('mobile-tab-btn-vault');
 
-            // LINQ query execution
-            var activeUsers = _mockDatabase
-                .Where(u => u.IsActive)
-                .OrderBy(u => u.Username)
-                .ToList();
-
-            return activeUsers;
+            if (tab === 'reader') {
+                readerView.classList.remove('hidden');
+                vaultView.classList.add('hidden');
+                
+                btnReader.className = "px-4 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-slate-800 text-brand-600 dark:text-brand-400 shadow-sm transition";
+                btnVault.className = "px-4 py-1.5 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition";
+                mobBtnReader.className = "text-xs font-semibold text-brand-600 dark:text-brand-400 py-1";
+                mobBtnVault.className = "text-xs font-semibold text-slate-600 dark:text-slate-400 py-1";
+            } else {
+                readerView.classList.add('hidden');
+                vaultView.classList.remove('hidden');
+                
+                btnVault.className = "px-4 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-slate-800 text-brand-600 dark:text-brand-400 shadow-sm transition";
+                btnReader.className = "px-4 py-1.5 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition";
+                mobBtnVault.className = "text-xs font-semibold text-brand-600 dark:text-brand-400 py-1";
+                mobBtnReader.className = "text-xs font-semibold text-slate-600 dark:text-slate-400 py-1";
+            }
         }
-    }
-}</code></pre>
-      </div>
-    </section>
 
-    <!-- ================= CHAPTER 7: GO ================= -->
-    <section id="go" class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 md:p-12 shadow-2xl space-y-8">
-      <div class="border-b border-slate-800 pb-6">
-        <div class="flex items-center gap-3">
-          <span class="bg-teal-500/10 text-teal-400 border border-teal-500/20 text-xs font-black px-3 py-1 rounded-md uppercase">Module 07</span>
-          <span class="text-xs text-slate-400 font-mono">Cloud-Native Go & Concurrency</span>
-        </div>
-        <h2 class="text-3xl md:text-4xl font-black text-white mt-2">Go Goroutines, Channels, Select Multiplexing & HTTP Servers</h2>
-      </div>
+        // Reader Functions
+        function renderChapters(list) {
+            const container = document.getElementById('chapter-list');
+            container.innerHTML = '';
+            
+            list.forEach(ch => {
+                const isSelected = ch.id === currentChapterId;
+                const isBookmarked = bookmarks.includes(ch.id);
+                
+                const btn = document.createElement('button');
+                btn.onclick = () => selectChapter(ch.id);
+                btn.className = `w-full text-left p-3 rounded-xl transition flex items-center justify-between text-xs sm:text-sm font-medium ${
+                    isSelected 
+                        ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 border border-brand-200 dark:border-brand-800' 
+                        : 'hover:bg-slate-50 dark:hover:bg-slate-700/50 text-slate-700 dark:text-slate-300'
+                }`;
+                
+                btn.innerHTML = `
+                    <div class="flex items-center space-x-2.5 truncate">
+                        <span class="w-6 h-6 rounded-lg bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-xs font-bold text-slate-500 dark:text-slate-300 flex-shrink-0">${ch.id}</span>
+                        <span class="truncate">${ch.title}</span>
+                    </div>
+                    ${isBookmarked ? '<svg class="w-4 h-4 text-brand-500 flex-shrink-0 fill-current" viewBox="0 0 24 24"><path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>' : ''}
+                `;
+                container.appendChild(btn);
+            });
+        }
 
-      <div class="space-y-6 text-slate-300 text-sm leading-relaxed">
-        <p>
-          Go (Golang) is engineered for cloud-native microservices. Goroutines are ultra-lightweight threads managed by the Go runtime scheduler (M:N scheduler model), consuming only ~2KB of stack space initially. Channels facilitate safe inter-goroutine communication without explicit mutex locks.
-        </p>
+        function selectChapter(id) {
+            currentChapterId = id;
+            loadChapter(id);
+            renderChapters(chapters);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
 
-        <!-- ASCII Diagram -->
-        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-4 md:p-6 font-mono text-xs text-indigo-300 overflow-x-auto shadow-inner">
-          <p class="text-slate-500 mb-3 font-bold">[ Architecture Diagram: Go M:N Scheduler & Channels ]</p>
-          <pre>
-[ Goroutine 1 ] ----( Sends Data )----\
-                                      v
-                                [ Buffered Channel ] ---> [ Goroutine 2 ]
-                                      ^
-[ Goroutine 3 ] ----( Sends Data )----/
-          </pre>
-        </div>
+        function loadChapter(id) {
+            const ch = chapters.find(c => c.id === id);
+            if (!ch) return;
 
-        <h3 class="text-lg font-extrabold text-white pt-2">7.1 Step-by-Step Procedure: Worker Pool Pattern with Channels</h3>
-        <ol class="list-decimal list-inside space-y-2 text-slate-400 text-xs pl-2">
-          <li>Create input and output channels for job distribution.</li>
-          <li>Spawn multiple worker goroutines running in an infinite loop listening on the input channel.</li>
-          <li>Dispatch jobs into the queue and collect results using a WaitGroup or output channel reader.</li>
-        </ol>
+            document.getElementById('reader-chapter-badge').innerText = `Chapter ${ch.id} of ${chapters.length}`;
+            document.getElementById('reader-reading-time').innerText = ch.time;
+            document.getElementById('reader-title').innerText = ch.title;
+            document.getElementById('reader-content').innerHTML = ch.content;
 
-        <h3 class="text-lg font-extrabold text-white pt-4">7.2 Production Go Source: Concurrent Worker Pool Server</h3>
-        <pre><code class="language-go">// File: main.go
-package main
+            const progress = Math.round((id / chapters.length) * 100);
+            document.getElementById('progress-bar').style.width = `${progress}%`;
+            document.getElementById('progress-text').innerText = `${progress}%`;
 
-import (
-	"fmt"
-	"net/http"
-	"sync"
-	"time"
-)
+            document.getElementById('prev-btn').disabled = (id === 1);
+            document.getElementById('next-btn').disabled = (id === chapters.length);
+            updateBookmarkButtonState();
+        }
 
-func healthHandler(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusOK)
-	w.Write([]byte(`{"status":"HEALTHY","author":"Brian Kipkemboi Kosgei"}`))
-}
+        function navigateChapter(direction) {
+            const newId = currentChapterId + direction;
+            if (newId >= 1 && newId <= chapters.length) {
+                selectChapter(newId);
+            }
+        }
 
-func main() {
-	mux := http.NewServeMux()
-	mux.HandleFunc("/health", healthHandler)
+        function filterChapters() {
+            const query = document.getElementById('chapter-search').value.toLowerCase();
+            const filtered = chapters.filter(c => c.title.toLowerCase().includes(query) || c.subtitle.toLowerCase().includes(query));
+            renderChapters(filtered);
+        }
 
-	server := &http.Server{
-		Addr:         ":8080",
-		Handler:      mux,
-		ReadTimeout:  10 * time.Second,
-		WriteTimeout: 10 * time.Second,
-	}
+        function toggleBookmark() {
+            const index = bookmarks.indexOf(currentChapterId);
+            if (index > -1) {
+                bookmarks.splice(index, 1);
+                showToast("Bookmark removed");
+            } else {
+                bookmarks.push(currentChapterId);
+                showToast("Chapter bookmarked!");
+            }
+            localStorage.setItem('louden_bookmarks', JSON.stringify(bookmarks));
+            renderChapters(chapters);
+            updateBookmarkButtonState();
+        }
 
-	fmt.Println("[Go Server] Starting telemetry service on port 8080...")
-	if err := server.ListenAndServe(); err != nil {
-		fmt.Printf("Server failed to start: %v\n", err)
-	}
-}</code></pre>
-      </div>
-    </section>
+        function updateBookmarkButtonState() {
+            const isBookmarked = bookmarks.includes(currentChapterId);
+            const icon = document.getElementById('bookmark-icon');
+            const label = document.getElementById('bookmark-label');
+            if (isBookmarked) {
+                icon.classList.add('fill-current', 'text-brand-500');
+                label.innerText = "Bookmarked";
+            } else {
+                icon.classList.remove('fill-current', 'text-brand-500');
+                label.innerText = "Bookmark";
+            }
+        }
 
-    <!-- ================= CHAPTER 8: BASH & LINUX ================= -->
-    <section id="bash" class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 md:p-12 shadow-2xl space-y-8">
-      <div class="border-b border-slate-800 pb-6">
-        <div class="flex items-center gap-3">
-          <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-black px-3 py-1 rounded-md uppercase">Module 08</span>
-          <span class="text-xs text-slate-400 font-mono">Linux Administration & Automation</span>
-        </div>
-        <h2 class="text-3xl md:text-4xl font-black text-white mt-2">Bash Scripting, System Telemetry & Automated Log Parsers</h2>
-      </div>
+        function changeFontSize(delta) {
+            currentFontSize = Math.max(13, Math.min(22, currentFontSize + delta));
+            document.getElementById('reader-content').style.fontSize = `${currentFontSize}px`;
+            showToast(`Font size: ${currentFontSize}px`);
+        }
 
-      <div class="space-y-6 text-slate-300 text-sm leading-relaxed">
-        <p>
-          Linux administration requires robust shell scripting for task automation, system health monitoring, log rotation, and server hardening.
-        </p>
+        function resetFontSize() {
+            currentFontSize = 16;
+            document.getElementById('reader-content').style.fontSize = `16px`;
+            showToast("Font size reset");
+        }
 
-        <h3 class="text-lg font-extrabold text-white pt-2">8.1 Step-by-Step Procedure: Server Diagnostic Automation Script</h3>
-        <ol class="list-decimal list-inside space-y-2 text-slate-400 text-xs pl-2">
-          <li>Check root execution privileges using <code class="text-emerald-400">$EUID</code>.</li>
-          <li>Inspect disk usage thresholds using <code class="text-emerald-400">df -h</code> and <code class="text-emerald-400">awk</code>.</li>
-          <li>Query system memory and CPU load averages.</li>
-        </ol>
+        function openNoteModal() {
+            const ch = chapters.find(c => c.id === currentChapterId);
+            document.getElementById('modal-chapter-name').innerText = ch.title;
+            document.getElementById('note-input').value = notes[currentChapterId] || '';
+            document.getElementById('note-modal').classList.remove('hidden');
+        }
 
-        <h3 class="text-lg font-extrabold text-white pt-4">8.2 Production Bash Script: System Health & Backup Automation</h3>
-        <pre><code class="language-bash">#!/usr/bin/env bash
-# ==============================================================================
-# Script Name: system_audit.sh
-# Author: Brian Kipkemboi Kosgei
-# Description: Automated system health check and backup script for Linux servers
-# ==============================================================================
+        function closeNoteModal() {
+            document.getElementById('note-modal').classList.add('hidden');
+        }
 
-set -euo pipefail
+        function saveNote() {
+            const text = document.getElementById('note-input').value;
+            notes[currentChapterId] = text;
+            localStorage.setItem('louden_notes', JSON.stringify(notes));
+            closeNoteModal();
+            showToast("Learner note saved successfully!");
+        }
 
-LOG_FILE="/var/log/brian_system_audit.log"
-BACKUP_DIR="/var/backups/system_state"
+        // Vault Document Management Functions
+        function handleDragOver(e) {
+            e.preventDefault();
+            document.getElementById('drop-zone').classList.add('drag-over');
+        }
 
-timestamp() {
-    date "+%Y-%m-%d %H:%M:%S"
-}
+        function handleDragLeave(e) {
+            e.preventDefault();
+            document.getElementById('drop-zone').classList.remove('drag-over');
+        }
 
-log_message() {
-    echo "[$(timestamp)] $1" | tee -a "$LOG_FILE"
-}
+        function handleDrop(e) {
+            e.preventDefault();
+            document.getElementById('drop-zone').classList.remove('drag-over');
+            if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+                processFiles(e.dataTransfer.files);
+            }
+        }
 
-log_message "=== STARTING SYSTEM DIAGNOSTIC AUDIT ==="
+        function handleFileSelect(e) {
+            if (e.target.files && e.target.files.length > 0) {
+                processFiles(e.target.files);
+            }
+        }
 
-# 1. Check Disk Usage
-DISK_USAGE=$(df / | grep / | awk '{print $5}' | sed 's/%//g')
-log_message "Root partition disk usage is at: ${DISK_USAGE}%"
+        function processFiles(files) {
+            Array.from(files).forEach(file => {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const fileObj = {
+                        id: 'file_' + Date.now() + Math.random().toString(36).substring(2, 7),
+                        name: file.name,
+                        type: file.type || 'application/octet-stream',
+                        size: formatFileSize(file.size),
+                        date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+                        content: event.target.result
+                    };
+                    vaultFiles.unshift(fileObj);
+                    localStorage.setItem('louden_vault_files', JSON.stringify(vaultFiles));
+                    renderVaultFiles(vaultFiles);
+                    showToast(`Uploaded ${file.name}`);
+                };
+                
+                // Read as text for text/code files, or dataURL for binaries/PDFs
+                if (file.type.includes('text') || file.name.endsWith('.md') || file.name.endsWith('.py') || file.name.endsWith('.js') || file.name.endsWith('.html')) {
+                    reader.readAsText(file);
+                } else {
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
 
-if [ "$DISK_USAGE" -gt 85 ]; then
-    log_message "WARNING: Disk usage exceeds 85% threshold!"
-else
-    log_message "Disk usage is within acceptable operational limits."
-fi
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+        }
 
-# 2. Check Memory Consumption
-MEM_FREE=$(free -m | awk 'NR==2{print $4}')
-log_message "Available system memory: ${MEM_FREE} MB"
+        function renderVaultFiles(list) {
+            const tbody = document.getElementById('vault-file-list');
+            document.getElementById('file-count-badge.innerText` || (document.getElementById('file-count-badge').innerText = `${list.length} file${list.length === 1 ? '' : 's'}`));
+            
+            if (list.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="5" class="p-8 text-center text-slate-400">
+                            No documents uploaded yet. Drag & drop files above or click upload.
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
 
-log_message "=== AUDIT COMPLETED SUCCESSFULLY ==="</code></pre>
-      </div>
-    </section>
+            tbody.innerHTML = '';
+            list.forEach(file => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-slate-50 dark:hover:bg-slate-900/40 transition";
+                tr.innerHTML = `
+                    <td class="p-4 font-medium text-slate-800 dark:text-slate-200 flex items-center space-x-2 truncate max-w-xs">
+                        <svg class="w-4 h-4 text-brand-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        <span class="truncate">${file.name}</span>
+                    </td>
+                    <td class="p-4 text-slate-500">${file.type.split('/')[1] || 'file'}</td>
+                    <td class="p-4 text-slate-500">${file.size}</td>
+                    <td class="p-4 text-slate-500">${file.date}</td>
+                    <td class="p-4 text-right space-x-2">
+                        <button onclick="viewFile('${file.id}')" class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 font-medium text-xs">View</button>
+                        <button onclick="downloadFile('${file.id}')" class="px-2.5 py-1 rounded-lg bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 hover:bg-brand-100 font-medium text-xs">Download</button>
+                        <button onclick="deleteFile('${file.id}')" class="px-2.5 py-1 rounded-lg text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-900/30 font-medium text-xs">Delete</button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
 
-  </main>
+        function filterVaultFiles() {
+            const query = document.getElementById('vault-search').value.toLowerCase();
+            const filtered = vaultFiles.filter(f => f.name.toLowerCase().includes(query));
+            renderVaultFiles(filtered);
+        }
 
-  <!-- INTERACTIVE CODE SANDBOX -->
-  <section id="sandbox" class="max-w-7xl mx-auto px-6 py-16 border-t border-slate-800">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl md:text-3xl font-black mb-2 text-white flex items-center gap-3">
-        <i class="fas fa-code text-emerald-400"></i> Interactive Code Sandbox & Runner
-      </h2>
-      <p class="text-slate-400 text-sm mb-6">Test HTML, CSS, and JavaScript snippets directly in real time. Click **Run Code** to render.</p>
+        function viewFile(id) {
+            const file = vaultFiles.find(f => f.id === id);
+            if (!file) return;
 
-      <div class="grid lg:grid-cols-2 gap-6">
-        <div class="flex flex-col">
-          <div class="flex justify-between items-center bg-slate-900 p-3 rounded-t-xl border-t border-x border-slate-800">
-            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Source Editor</span>
-            <button onclick="executeSandboxCode()" class="bg-emerald-600 hover:bg-emerald-500 text-slate-950 text-xs font-bold py-1.5 px-4 rounded-lg transition flex items-center gap-1 shadow">
-              <i class="fas fa-play"></i> Run Code
-            </button>
-          </div>
-          <textarea id="sandbox-input" class="w-full h-80 bg-slate-900 font-mono text-xs text-emerald-300 p-4 border border-slate-800 rounded-b-xl focus:outline-none focus:ring-1 focus:ring-emerald-500">
-<div style="background: #090d16; color: #34d399; padding: 30px; border-radius: 12px; font-family: sans-serif; text-align: center; border: 1px solid #1e293b;">
-  <h2 style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">Brian's Sandbox Environment</h2>
-  <p style="color: #94a3b8; font-size: 14px;">Edit this markup and click Run Code to test components instantly.</p>
-</div>
-          </textarea>
-        </div>
+            document.getElementById('modal-file-title').innerText = file.name;
+            const body = document.getElementById('modal-file-body');
+            
+            if (file.content.startsWith('data:')) {
+                body.innerHTML = `<p class="text-center py-6">Binary file preview not available in text viewer. Please download to view.</p>`;
+            } else {
+                body.innerText = file.content;
+            }
+            document.getElementById('view-file-modal').classList.remove('hidden');
+        }
 
-        <div class="flex flex-col">
-          <div class="bg-slate-900 p-3 rounded-t-xl border-t border-x border-slate-800">
-            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Live Render Frame</span>
-          </div>
-          <iframe id="sandbox-output" class="w-full h-80 bg-white rounded-b-xl border border-slate-800"></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
+        function closeFileModal() {
+            document.getElementById('view-file-modal').classList.add('hidden');
+        }
 
-  <!-- FOOTER -->
-  <footer class="max-w-7xl mx-auto px-6 py-16 border-t border-slate-800 text-center space-y-6">
-    <h3 class="text-xl font-bold text-white">Brian Kipkemboi Kosgei • Master Programming Repository</h3>
-    <p class="text-slate-400 text-xs max-w-xl mx-auto leading-relaxed">
-      Dedicated to advanced systems architecture, clean code standards, and rigorous software engineering education. 
-    </p>
-    <div class="flex justify-center gap-6 text-sm">
-      <a href="mailto:briankosgei260@gmail.com" class="text-emerald-400 hover:underline"><i class="fas fa-envelope mr-1"></i> briankosgei260@gmail.com</a>
-      <a href="https://wa.me/254759668580" target="_blank" class="text-green-400 hover:underline"><i class="fab fa-whatsapp mr-1"></i> +254 759 668 580</a>
-    </div>
-    <div class="text-slate-600 text-xs pt-4 border-t border-slate-900">
-      &copy; 2026 Brian Kipkemboi Kosgei. All Rights Reserved.
-    </div>
-  </footer>
+        function downloadFile(id) {
+            const file = vaultFiles.find(f => f.id === id);
+            if (!file) return;
 
-  <!-- SANDBOX RUNTIME SCRIPT -->
-  <script>
-    function executeSandboxCode() {
-      const code = document.getElementById('sandbox-input').value;
-      const iframe = document.getElementById('sandbox-output');
-      const doc = iframe.contentDocument || iframe.contentWindow.document;
-      doc.open();
-      doc.write(code);
-      doc.close();
-    }
-    window.onload = function() {
-      executeSandboxCode();
-    };
-  </script>
+            const blob = new Blob([file.content], { type: file.type });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = file.name;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showToast(`Downloading ${file.name}`);
+        }
+
+        function deleteFile(id) {
+            vaultFiles = vaultFiles.filter(f => f.id !== id);
+            localStorage.setItem('louden_vault_files', JSON.stringify(vaultFiles));
+            renderVaultFiles(vaultFiles);
+            showToast("File deleted successfully");
+        }
+
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            showToast(isDark ? "Dark mode enabled" : "Light mode enabled");
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-msg').innerText = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 2500);
+        }
+    </script>
 </body>
 </html>
 ```
