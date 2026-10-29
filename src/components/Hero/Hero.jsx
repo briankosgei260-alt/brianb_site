@@ -108,7 +108,7 @@ const Hero = () => {
     return () => clearInterval(interval)
   }, [])
 
-  // Periodically repeat the Leon Nelson animation sometime after completion
+  // Periodically repeat the BRIAN KOSGEI animation sometime after completion
   useEffect(() => {
     // ~2.6s animation duration + ~6.5s delay after completion = repeats every 9.1s
     const repeatTimer = setInterval(() => {
@@ -136,18 +136,18 @@ const Hero = () => {
       {/* 1. Name: Character Staggered Fade / Blur (Scramble & Reveal) */}
       <h1
         className="hero-giant-typography"
-        aria-label="Leon Nelson Shireku"
+        aria-label="BRIAN KIPKEMBOI KOSGEI"
         onMouseEnter={() => setHoverCount((prev) => prev + 1)}
       >
         <span className="hero-name-stroke">
-          {renderStaggeredChars('LEON', 0)}
+          {renderStaggeredChars('BRIAN', 0)}
         </span>
         <div className="hero-name-right-group">
           <span className="hero-name-solid">
-            {renderStaggeredChars('NELSON', 4)}
+            {renderStaggeredChars('KIPKEMBOI', 4)}
           </span>
           <span className="hero-name-shireku-stroke">
-            {renderStaggeredChars('SHIREKU', 10)}
+            {renderStaggeredChars('KOSGEI', 13)}
           </span>
         </div>
       </h1>
@@ -229,7 +229,7 @@ const Hero = () => {
         </a>
 
         <a
-          href="https://www.instagram.com/leon.nelson.121"
+          href="https://www.instagram.com/i29102005"
           target="_blank"
           rel="noopener noreferrer"
           className="hero-social-pill"
@@ -240,7 +240,7 @@ const Hero = () => {
         </a>
 
         <a
-          href="https://www.tiktok.com/@nelson_leon6?is_from_webapp=1&sender_device=pc"
+          href="https://www.tiktok.com/@brian00?is_from_webapp=1&sender_device=pc"
           target="_blank"
           rel="noopener noreferrer"
           className="hero-social-pill"
