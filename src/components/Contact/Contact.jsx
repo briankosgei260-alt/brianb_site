@@ -5,7 +5,7 @@ import { FaInstagram, FaGithub, FaWhatsapp, FaTiktok } from 'react-icons/fa6'
 
 const Contact = () => {
   const [copied, setCopied] = useState(false)
-  const emailAddress = 'leonshireku@gmail.com'
+  const emailAddress = 'briankosgei260@gmail.com'
   const resumeUrl = 'https://docs.google.com/document/d/1ysB4CDrRh2jZUjOp3PFblqdg8njHe-kTuuGXMdi2ZNQ/edit?usp=sharing'
 
   const handleContactClick = () => {
@@ -64,7 +64,7 @@ const Contact = () => {
             <a
               href="tel:+254741766710"
               className="contact-secondary-btn"
-              aria-label="Call Leon Nelson directly at +254 741 766 710"
+              aria-label="Call  directly at +254 741 766 710"
             >
               <FiPhone className="contact-btn-phone-icon" />
               <span>Call Me</span>
@@ -79,10 +79,10 @@ const Contact = () => {
           <div className="contact-profile-pill">
             <img
               src="/picha.png"
-              alt="Leon Nelson"
+              alt="brian kosgei"
               className="contact-profile-avatar"
             />
-            <span className="contact-profile-name">Leon Nelson</span>
+            <span className="contact-profile-name">brian kosgei</span>
           </div>
 
           {/* Resume Pill */}
@@ -91,7 +91,7 @@ const Contact = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="contact-platform-pill contact-resume-pill"
-            aria-label="View Leon Nelson's Resume"
+            aria-label="View brian kosgei's Resume"
           >
             <FiFileText className="pill-platform-icon resume-icon" />
             <span>Resume / CV</span>
@@ -100,7 +100,7 @@ const Contact = () => {
 
           {/* Platform Pills */}
           <a
-            href="https://github.com/leonshireku"
+            href="https://github.com/briankosgei260-alt"
             target="_blank"
             rel="noopener noreferrer"
             className="contact-platform-pill"
@@ -110,7 +110,7 @@ const Contact = () => {
           </a>
 
           <a
-            href="https://www.instagram.com/leon.nelson.121"
+            href="https://www.instagram.com/i29102005"
             target="_blank"
             rel="noopener noreferrer"
             className="contact-platform-pill"
@@ -120,7 +120,7 @@ const Contact = () => {
           </a>
 
           <a
-            href="https://www.tiktok.com/@nelson_leon6?is_from_webapp=1&sender_device=pc"
+            href="https://www.tiktok.com/@brian00..?is_from_webapp=1&sender_device=pc"
             target="_blank"
             rel="noopener noreferrer"
             className="contact-platform-pill"
@@ -131,7 +131,7 @@ const Contact = () => {
           </a>
 
           <a
-            href="https://wa.me/254741766710"
+            href="https://wa.me/254759668580"
             target="_blank"
             rel="noopener noreferrer"
             className="contact-platform-pill"

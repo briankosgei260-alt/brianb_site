@@ -90,7 +90,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="nav-resume-btn"
-            aria-label="View Leon Nelson's Resume"
+            aria-label="View brian kosgei's Resume"
           >
             <span>Resume</span>
             <FiArrowUpRight className="nav-resume-arrow" />

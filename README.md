@@ -1,8 +1,8 @@
-# ⚡ Leon Nelson Shireku — Full-Stack Software Engineer & Digital Strategist
+# ⚡BRIAN KOSGEI — Full-Stack Software Engineer & Digital Strategist
 
-[![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-leonshireku.me-0047FF?style=for-the-badge&logo=googlechrome&logoColor=white)](https://leonshireku.me/)
-[![Lighthouse Score](https://img.shields.io/badge/Lighthouse-100%20SEO%20%7C%20100%20Best%20Practices-success?style=for-the-badge&logo=lighthouse&logoColor=white)](https://leonshireku.me/)
-[![Agentic Web](https://img.shields.io/badge/Agentic_Browsing-4%2F4%20Verified-blueviolet?style=for-the-badge&logo=openai&logoColor=white)](https://leonshireku.me/llms.txt)
+[![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-briankosgei.me-0047FF?style=for-the-badge&logo=googlechrome&logoColor=white)](https://briankosgei.me/)
+[![Lighthouse Score](https://img.shields.io/badge/Lighthouse-100%20SEO%20%7C%20100%20Best%20Practices-success?style=for-the-badge&logo=lighthouse&logoColor=white)](https://briankosgei.me/)
+[![Agentic Web](https://img.shields.io/badge/Agentic_Browsing-4%2F4%20Verified-blueviolet?style=for-the-badge&logo=openai&logoColor=white)](https://briankosgei.me/llms.txt)
 [![Location](https://img.shields.io/badge/Location-Nairobi%2C%20Kenya-101010?style=for-the-badge&logo=googlemaps&logoColor=white)](https://maps.google.com/?q=Nairobi,Kenya)
 
 A high-performance, modern portfolio engineered with React, Vite, and bespoke CSS architecture. Designed with a luxury editorial aesthetic, interactive micro-animations, and full-spectrum search engine & AI agent discoverability.
@@ -12,22 +12,22 @@ A high-performance, modern portfolio engineered with React, Vite, and bespoke CS
 ## 📸 Portfolio Preview
 
 <div align="center">
-  <img src="./public/projectscreenshot.png" alt="Leon Nelson Portfolio Preview" width="100%" style="border-radius: 12px; box-shadow: 0 12px 36px rgba(0,0,0,0.25);" />
+  <img src=".++++=" alt="BRIAN KOSGEI Portfolio Preview" width="100%" style="border-radius: 12px; box-shadow: 0 12px 36px rgba(0,0,0,0.25);" />
 </div>
 
 ---
 
-## 👤 Who is Leon Shireku?
+## 👤 Who is brian kosgei?
 
 > **"Code without business impact is an expensive toy. Marketing without a resilient technical engine is a leaky funnel. I engineer both."**
 
-**Leon Nelson Shireku** is a Nairobi-based **Full-Stack Software Engineer & Digital Growth Strategist**. He specializes in bridging high-level software architecture with aggressive commercial outcomes—building web platforms that load instantaneously, rank natively on Google, and convert casual visitors into loyal, paying clients.
+**brian k kosgei** is a kenyan-based **Full-Stack Software Engineer & Digital Growth Strategist**. He specializes in bridging high-level software architecture with aggressive commercial outcomes—building web platforms that load instantaneously, rank natively on Google, and convert casual visitors into loyal, paying clients.
 
-Rather than treating engineering and digital marketing as isolated disciplines, Leon operates as a **dual-threat technical partner** for high-growth businesses and ambitious founders worldwide.
+Rather than treating engineering and digital marketing as isolated disciplines, brian operates as a **dual-threat technical partner** for high-growth businesses and ambitious founders worldwide.
 
 ```
        ┌────────────────────────────────────────────────────────┐
-       │                 LEON SHIREKU'S FLYWHEEL                │
+       │              KOSGEI BRIAN FLYWHEEL                │
        └───────────────────────────┬────────────────────────────┘
                                    │
          ┌─────────────────────────┴─────────────────────────┐
@@ -57,13 +57,13 @@ Rather than treating engineering and digital marketing as isolated disciplines, 
 
 | Dimension | Details |
 | :--- | :--- |
-| **Full Name** | Leon Nelson Shireku |
-| **Known Online As** | Leon Shireku / `@leonshireku` |
+| **Full Name** | BRIAN KOSGEI |
+| **Known Online As** | brian kosgei / brian |
 | **Core Discipline** | Full-Stack Web Development, DevOps & Technical SEO |
 | **Geographic Base** | Nairobi, Kenya *(Available Globally for Remote Collaboration & Retainers)* |
 | **Client Portfolio** | Safari & Hospitality Platforms, Tour Booking Engines, Enterprise Web Apps |
 | **Primary Arsenal** | React, Next.js, Node.js, Python, PostgreSQL, Docker, Tailwind/Vanilla CSS |
-| **Curriculum Vitae** | [Verified Google Docs CV](https://docs.google.com/document/d/1ysB4CDrRh2jZUjOp3PFblqdg8njHe-kTuuGXMdi2ZNQ/edit?usp=sharing) |
+| **Curriculum Vitae** | [Verified Google Docs CV]
 
 ---
 
@@ -119,7 +119,7 @@ Rather than treating engineering and digital marketing as isolated disciplines, 
 ## 📂 Project Structure
 
 ```bash
-Leon-Nelson/
+BRIAN /
 ├── public/
 │   ├── .well-known/            # ARD ai-catalog.json and llms.txt discovery
 │   ├── projects/               # WebP mockups & demo video previews
@@ -158,8 +158,8 @@ Leon-Nelson/
 ### Installation
 ```bash
 # 1. Clone repository
-git clone https://github.com/leonshireku/Leon-nelson.git
-cd Leon-nelson
+git clone ttps://github.com/briankosgei260-alt/brianb_site.git
+cd k-brian
 
 # 2. Install dependencies
 npm install
@@ -181,14 +181,14 @@ npm run preview
 
 ## 📬 Contact & Collaboration
 
-- **Live Website**: [leonshireku.me](https://leonshireku.me/)
-- **Email**: [leonshireku@gmail.com](mailto:leonshireku@gmail.com)
-- **Phone / WhatsApp**: [+254 741 766 710](https://wa.me/254741766710)
-- **GitHub**: [@leonshireku](https://github.com/leonshireku)
-- **TikTok**: [@nelson_leon6](https://www.tiktok.com/@nelson_leon6?is_from_webapp=1&sender_device=pc)
-- **Instagram**: [@leon.nelson.121](https://www.instagram.com/leon.nelson.121)
-- **Resume / CV**: [Google Docs Curriculum Vitae](https://docs.google.com/document/d/1ysB4CDrRh2jZUjOp3PFblqdg8njHe-kTuuGXMdi2ZNQ/edit?usp=sharing)
+- **Live Website**: [briankosgei.me](++++=)
+- **Email**: [briankosgei260@gmail.com]
+- **Phone / WhatsApp**: [+254759668580](https://wa.me/254759668580)
+- **GitHub**: [@briankosgei](ttps://github.com/briankosgei260-alt/brianb_site.git)
+- **TikTok**: [@brian00](+++++=)
+- **Instagram**: [@i29102005.121](++++=)
+- **Resume / CV**: [Google Docs Curriculum Vitae](+++++)
 
 ---
 
-&copy; 2026 Leon Nelson Shireku. All rights reserved.
+&copy; 2026 brian kosgei. All rights reserved.
