@@ -1,6 +1,5 @@
 import React from 'react'
 import './footer.css'
-import footer_logo from '../../../../assets/logo.webp'
 import { FaInstagram, FaFacebook, FaGithub } from 'react-icons/fa';
 import { FaTiktok } from 'react-icons/fa6';
 
@@ -9,7 +8,7 @@ function Footer() {
     <div className='footer'>
       <div className="footer-top">
         <div className="footer-top-left">
-          <img src={footer_logo} alt="Brian Logo" width="140" />
+          <img src="/picha.png" alt="Brian Kipkemboi Kosgei" width="140" />
           <p>I make software solutions to real world problems</p>
         </div>
       </div>
