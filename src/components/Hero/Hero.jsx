@@ -162,7 +162,7 @@ const Hero = () => {
         <div className="hero-portrait-container">
           <img
             src="/picha.webp"
-            alt="Leon Nelson Shireku"
+            alt="BRIAN KIPKEMBOI KOSGEI"
             width="671"
             height="817"
             fetchPriority="high"
