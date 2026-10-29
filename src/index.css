@@ -1,0 +1,46 @@
+:root {
+  /* User defined color palette */
+  --color-cobalt: #0047FF;            /* Cobalt Accent */
+  --color-midnight: #101010;          /* Midnight Dark */
+  --color-icewhite: #F5F7FA;          /* Icewhite Primary Background */
+  --color-silver: #D9DCE1;            /* Silver Border & Divider */
+  --color-steel: #8A9099;             /* Steel Muted / Section Background */
+
+  /* Semantic mappings with WCAG AA compliant contrast */
+  --bg-primary: var(--color-icewhite);
+  --bg-surface: #FFFFFF;
+  --bg-accent: var(--color-silver);
+  
+  --text-primary: var(--color-midnight);
+  --text-secondary: #4A515D;          /* High contrast (5.7:1) for readability */
+  --text-muted: #626A76;
+
+  --border-light: var(--color-silver);
+  --border-focus: var(--color-cobalt);
+  --accent-color: var(--color-cobalt);
+}
+
+* {
+  font-family: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
