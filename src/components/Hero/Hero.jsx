@@ -224,13 +224,7 @@ const Hero = () => {
         data-aos-delay="1050"
       >
         <a
-          href="https://github.com/leonshireku"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hero-social-pill"
-          aria-label="GitHub profile"
-        >
-          <FaGithub className="social-pill-icon" />
+          href="https://github.com/briankosgei260-alt/>
           <span>GitHub</span>
         </a>
 
@@ -261,3 +255,4 @@ const Hero = () => {
 }
 
 export default Hero
+

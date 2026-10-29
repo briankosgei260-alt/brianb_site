@@ -100,12 +100,7 @@ const Contact = () => {
 
           {/* Platform Pills */}
           <a
-            href="https://github.com/briankosgei260-alt"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="contact-platform-pill"
-          >
-            <FaGithub className="pill-platform-icon" />
+            href="https://github.com/briankosgei260-alt/>
             <span>GitHub</span>
           </a>
 
@@ -146,3 +141,4 @@ const Contact = () => {
 }
 
 export default Contact
+

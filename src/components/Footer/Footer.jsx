@@ -28,8 +28,7 @@ function Footer() {
     <a href="https://www.facebook.com/share/1Gt78JbMaw/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
         <FaFacebook size={28} />
     </a>
-    <a href="https://github.com/leonshireku" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="GitHub">
-        <FaGithub size={28} />
+    <a href="https://github.com/briankosgei260-alt/>
     </a>
 </div>
             
@@ -41,3 +40,4 @@ function Footer() {
 }
 
 export default Footer
+
