@@ -1,9 +1,9 @@
-# Leon Nelson — Full-Stack Software Engineer & Digital Strategist
+# brian kosgei — Full-Stack Software Engineer & Digital Strategist
 
-> Official portfolio, technical documentation, and service directory for Leon Nelson, specializing in high-performance web applications, cloud DevOps infrastructure, and data-driven SEO growth architecture.
+> Official portfolio, technical documentation, and service directory for brian, specializing in high-performance web applications, cloud DevOps infrastructure, and data-driven SEO growth architecture.
 
 ## Overview
-Leon Nelson is a Nairobi-based Software Engineer and Digital Marketer engineering scalable digital solutions for high-growth enterprises and ambitious startups globally.
+brian kosgei is a moisbridge-based Software Engineer and Digital Marketer engineering scalable digital solutions for high-growth enterprises and ambitious startups globally.
 
 ## Core Capabilities
 - [Full-Stack Web Development](https://briankosgei.me/#services): Production-ready web applications using React, Next.js, Node.js, and modern APIs.
@@ -22,4 +22,4 @@ Leon Nelson is a Nairobi-based Software Engineer and Digital Marketer engineerin
 - [Contact Direct Form](https://briankosgei.me/#contact): Start a conversation or request a project quotation.
 - [GitHub Profile](https://github.com/briankosgei260-alt/brianb_site): Open-source repositories and software contributions.
 - [TikTok Channel]?is_from_webapp=1&sender_device=pc): Technical insights and digital media creations.
-- [Instagram Profile](https://www.instagmnmn.nelson.121): Behind-the-scenes engineering and creative updates.
+- [Instagram Profile](https://www.instagram.com/i29102005?dlrf=MXQxbGRnemRkZ2k3OQ==): Behind-the-scenes engineering and creative updates.
