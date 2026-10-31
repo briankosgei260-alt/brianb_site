@@ -185,9 +185,9 @@ npm run preview
 - **Email**: [briankosgei260@gmail.com]
 - **Phone / WhatsApp**: [+254759668580](https://wa.me/254759668580)
 - **GitHub**: [@briankosgei](ttps://github.com/briankosgei260-alt/brianb_site.git)
-- **TikTok**: [@brian00](+++++=)
-- **Instagram**: [@i29102005.121](++++=)
-- **Resume / CV**: [Google Docs Curriculum Vitae](+++++)
+- **TikTok**: [@brian00](https://www.tiktok.com/@..brian00?_r=1&_t=ZS-9B1T7mAzmsx)
+- **Instagram**: [@i29102005.121](https://www.instagram.com/i29102005?dlrf=MXQxbGRnemRkZ2k3OQ==)
+- **Resume / CV**: [Google Docs Curriculum Vitae](Https://docs.google.com/document/u/0/d/15QB0e8W1ilnUW8wWF0MIZifU54dUaivhn8qMfPwf6cE/mobilebasic?pli=1)
 
 ---
 

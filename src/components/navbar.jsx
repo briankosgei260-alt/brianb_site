@@ -86,7 +86,7 @@ const Navbar = () => {
         {/* Right: Resume Link & Let's Talk CTA button */}
         <div className="nav-cta-wrapper">
           <a
-            href="https://docs.google.com/document/d/1ysB4CDrRh2jZUjOp3PFblqdg8njHe-kTuuGXMdi2ZNQ/edit?usp=sharing"
+            href="https://docs.google.com/document/u/0/d/15QB0e8W1ilnUW8wWF0MIZifU54dUaivhn8qMfPwf6cE/mobilebasic?pli=1"
             target="_blank"
             rel="noopener noreferrer"
             className="nav-resume-btn"

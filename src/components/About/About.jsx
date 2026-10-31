@@ -4,7 +4,7 @@ import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPython, FaAngular, FaNodeJs } from
 import { SiNextdotjs, SiPostgresql, SiDocker } from 'react-icons/si'
 import { FiFileText, FiArrowUpRight } from 'react-icons/fi'
 
-const resumeUrl = 'https://docs.google.com/document/d/1ysB4CDrRh2jZUjOp3PFblqdg8njHe-kTuuGXMdi2ZNQ/edit?usp=sharing'
+const resumeUrl = 'https://docs.google.com/document/u/0/d/15QB0e8W1ilnUW8wWF0MIZifU54dUaivhn8qMfPwf6cE/mobilebasic?pli=1'
 
 const techStack = [
   { name: 'HTML', icon: <FaHtml5 className="tech-icon html-icon" aria-label="HTML" title="HTML" /> },
@@ -49,7 +49,7 @@ const About = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="about-resume-btn"
-              aria-label="View Leon Nelson's Resume"
+              aria-label="View Brian Kosgei's Resume"
             >
               <FiFileText className="about-resume-icon" />
               <span>View Full Resume / CV</span>
