@@ -90,7 +90,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="nav-resume-btn"
-            aria-label="View brian kosgei's Resume"
+            aria-label="View Brian Kosgei's Resume"
           >
             <span>Resume</span>
             <FiArrowUpRight className="nav-resume-arrow" />
@@ -165,11 +165,11 @@ const Navbar = () => {
 
         <div className="mobile-drawer-footer">
           <a
-            href="https://docs.google.com/document/d/1ysB4CDrRh2jZUjOp3PFblqdg8njHe-kTuuGXMdi2ZNQ/edit?usp=sharing"
+            href="https://docs.google.com/document/u/0/d/15QB0e8W1ilnUW8wWF0MIZifU54dUaivhn8qMfPwf6cE/mobilebasic?pli=1"
             target="_blank"
             rel="noopener noreferrer"
             className="nav-resume-btn mobile-resume-btn"
-            aria-label="View Leon Nelson's Resume"
+            aria-label="View Brian Kosgei's Resume"
             onClick={() => setIsMenuOpen(false)}
           >
             <span>Resume / CV</span>
