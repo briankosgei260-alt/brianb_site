@@ -1,19 +1,19 @@
-# Leon Nelson — Full-Stack Software Engineer & Digital Strategist
+# brian kosgei — Full-Stack Software Engineer & Digital Strategist
 
-> Official portfolio, technical documentation, and service directory for Leon Nelson, specializing in high-performance web applications, cloud DevOps infrastructure, and data-driven SEO growth architecture.
+> Official portfolio, technical documentation, and service directory for brian kosgei, specializing in high-performance web applications, cloud DevOps infrastructure, and data-driven SEO growth architecture.
 
 ## Overview
-Leon Nelson is a Nairobi-based Software Engineer and Digital Marketer engineering scalable digital solutions for high-growth enterprises and ambitious startups globally.
+brian kosgei is a Nairobi-based Software Engineer and Digital Marketer engineering scalable digital solutions for high-growth enterprises and ambitious startups globally.
 
 ## Core Capabilities
-- [Full-Stack Web Development](https://leonshireku.me/#services): Production-ready web applications using React, Next.js, Node.js, and modern APIs.
-- [DevOps & Cloud Engineering](https://leonshireku.me/#services): CI/CD automation, Docker containerization, and cloud infrastructure reliability.
-- [SEO & Technical Optimization](https://leonshireku.me/#services): Data-driven search engine optimization, Core Web Vitals, and organic conversion funnels.
-- [Social Media Management](https://leonshireku.me/#services): Brand positioning, audience engagement, and multi-channel content strategy.
+- [Full-Stack Web Development](https://brianbsite.me/#services): Production-ready web applications using React, Next.js, Node.js, and modern APIs.
+- [DevOps & Cloud Engineering](https://brianbsite.me/#services): CI/CD automation, Docker containerization, and cloud infrastructure reliability.
+- [SEO & Technical Optimization](https://brian.me/#services): Data-driven search engine optimization, Core Web Vitals, and organic conversion funnels.
+- [Social Media Management](https://brian.me/#services): Brand positioning, audience engagement, and multi-channel content strategy.
 
 ## Featured Projects
-- [Supreme Adventures Platform](https://leonshireku.me/#work): High-performance booking and exploration platform for expedition tourism.
-- [Lulu & Aurelian Hospitality Platform](https://leonshireku.me/#work): Luxury hospitality management and direct guest reservation ecosystem.
+- [Supreme Adventures Platform](https://brianbsite.me/#work): High-performance booking and exploration platform for expedition tourism.
+- [Lulu & Aurelian Hospitality Platform](https://brianbsite.me/#work): Luxury hospitality management and direct guest reservation ecosystem.
 
 ## Professional Experience & Qualifications
 - [Professional Resume / Curriculum Vitae](https://docs.google.com/document/u/0/d/15QB0e8W1ilnUW8wWF0MIZifU54dUaivhn8qMfPwf6cE/mobilebasic?pli=1): Comprehensive background, technical competencies, and career achievements.
