@@ -6,7 +6,7 @@ import { FaInstagram, FaGithub, FaWhatsapp, FaTiktok } from 'react-icons/fa6'
 const Contact = () => {
   const [copied, setCopied] = useState(false)
   const emailAddress = 'briankosgei260@gmail.com'
-  const resumeUrl = 'https://docs.google.com/document/d/1ysB4CDrRh2jZUjOp3PFblqdg8njHe-kTuuGXMdi2ZNQ/edit?usp=sharing'
+  const resumeUrl = 'https://docs.google.com/document/u/0/d/15QB0e8W1ilnUW8wWF0MIZifU54dUaivhn8qMfPwf6cE/mobilebasic?pli=1'
 
   const handleContactClick = () => {
     if (navigator?.clipboard?.writeText) {
